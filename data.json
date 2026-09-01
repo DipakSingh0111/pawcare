@@ -1,0 +1,282 @@
+{
+  "topbar": {
+    "location": "123 Pet Street, Petland, CA 90210",
+    "phone": "+1 (555) 123-4567",
+    "email": "hello@pawcare.com",
+    "hours": "Mon - Sun: 9:00 AM - 7:00 PM",
+    "socials": {
+      "facebook": "https://facebook.com",
+      "instagram": "https://instagram.com",
+      "map": "https://maps.google.com"
+    }
+  },
+  "navbar": {
+    "logoText": "PawCare",
+    "logoSubtext": "HAPPY PETS - HEALTHY LIVES",
+    "links": [
+      { "label": "Home", "href": "/", "active": true },
+      { "label": "About Us", "href": "/about", "active": false },
+      { "label": "Services", "href": "/services", "hasDropdown": true, "active": false },
+      { "label": "Blogs", "href": "/blogs", "active": false },
+      { "label": "Contact Us", "href": "/contact", "active": false }
+    ],
+    "button": {
+      "text": "Enquire Now",
+      "href": "/enquire"
+    }
+  },
+  "banner": {
+    "badge": "Your Trusted Pet Care Hub",
+    "title": "Everything Your Pet Needs, In",
+    "titleHighlight": "One Place",
+    "description": "Discover premium pet food, toys, grooming, and expert care services — all designed to keep your pets healthy, happy, and loved. Shop easily and book trusted care anytime.",
+    "primaryCta": {
+      "text": "Shop Now",
+      "href": "/shop"
+    },
+    "secondaryCta": {
+      "text": "Book a Service",
+      "href": "/services"
+    },
+    "image": "/images/Banner_image.png",
+    "features": [
+      {
+        "icon": "quality",
+        "title": "Premium Quality",
+        "description": "Only the best for your furry friend."
+      },
+      {
+        "icon": "care",
+        "title": "Expert Care",
+        "description": "Professional care you can trust."
+      },
+      {
+        "icon": "delivery",
+        "title": "Fast Delivery",
+        "description": "Quick & reliable right to your door."
+      },
+      {
+        "icon": "happiness",
+        "title": "Pet Happiness",
+        "description": "Because their happiness is our priority."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "WHO WE ARE",
+    "title": "About PawCare",
+    "description": "At PawCare, we are passionate about pets and committed to their health, happiness, and well-being. From premium products to expert care services — everything we do is designed to give your furry friends the love and care they truly deserve.",
+    "images": {
+      "one": "/images/about_01.jpg",
+      "two": "/images/about_02.jpg",
+      "three": "/images/about_03.jpg"
+    },
+    "features": [
+      {
+        "title": "Trusted Care",
+        "description": "Reliable services you can always count on.",
+        "icon": "trusted"
+      },
+      {
+        "title": "Pet First Approach",
+        "description": "Every decision we make puts pets' well-being first.",
+        "icon": "pet-first"
+      },
+      {
+        "title": "Expert Team",
+        "description": "Experienced and caring professionals for your pets.",
+        "icon": "team"
+      },
+      {
+        "title": "Quality Assured",
+        "description": "Premium products and high standards always.",
+        "icon": "quality"
+      }
+    ],
+    "cta": {
+      "text": "Learn More About Us",
+      "href": "/about"
+    }
+  },
+  "services": {
+    "eyebrow": "OUR SERVICES",
+    "title": "Care Services for",
+    "titleHighlight": "Happy Pets",
+    "description": "We offer a wide range of professional pet care services designed to keep your furry friends healthy, happy, and full of life.",
+    "items": [
+      {
+        "title": "Veterinary Care",
+        "description": "Complete health checkups, vaccinations, and treatments by expert vets.",
+        "href": "/services/veterinary"
+      },
+      {
+        "title": "Grooming & Spa",
+        "description": "Bathing, haircuts, nail trimming, and spa treatments for a fresh look.",
+        "href": "/services/grooming"
+      },
+      {
+        "title": "Boarding & Daycare",
+        "description": "Safe, fun, and comfortable stay for your pets while you're away.",
+        "href": "/services/boarding"
+      },
+      {
+        "title": "Nutrition & Diet",
+        "description": "Personalized meal plans to keep your pets healthy and energetic.",
+        "href": "/services/nutrition"
+      },
+      {
+        "title": "Training & Behavior",
+        "description": "Obedience training and behavior correction with certified trainers.",
+        "href": "/services/training"
+      },
+      {
+        "title": "Pet Wellness Plans",
+        "description": "Monthly care packages for continuous health and happiness.",
+        "href": "/services/wellness"
+      },
+      {
+        "title": "Pet Taxi Service",
+        "description": "Safe and reliable pet transportation for clinics, grooming, or travel.",
+        "href": "/services/taxi"
+      },
+      {
+        "title": "Pet Insurance Assistance",
+        "description": "Guidance and support for choosing the best pet insurance plans.",
+        "href": "/services/insurance"
+      }
+    ]
+  },
+  "footer": {
+    "description": "We provide loving care, trusted services, and expert support to keep your pets healthy, happy, and full of life.",
+    "contact": {
+      "phone": "+91 98765 43210",
+      "email": "hello@pawcare.com",
+      "address": "123 Pet Care Street, Paws City, PC 560001"
+    },
+    "socials": {
+      "facebook": "https://facebook.com",
+      "instagram": "https://instagram.com",
+      "whatsapp": "https://whatsapp.com",
+      "youtube": "https://youtube.com"
+    },
+    "menus": [
+      {
+        "title": "Company",
+        "links": [
+          {"label": "Home", "href": "/"},
+          {"label": "About Us", "href": "/about"},
+          {"label": "Mission & Vision", "href": "/mission"},
+          {"label": "Why Choose Us", "href": "/why-us"},
+          {"label": "Our Team", "href": "/team"},
+          {"label": "How It Works", "href": "/how-it-works"},
+          {"label": "Testimonials", "href": "/testimonials"},
+          {"label": "FAQs", "href": "/faqs"},
+          {"label": "Contact Us", "href": "/contact"}
+        ]
+      },
+      {
+        "title": "Services",
+        "links": [
+          {"label": "Our Services", "href": "/services"},
+          {"label": "Service Detail", "href": "/services/detail"},
+          {"label": "Pricing / Packages", "href": "/pricing"},
+          {"label": "Book a Service", "href": "/book"},
+          {"label": "Appointment", "href": "/appointment"},
+          {"label": "Service Areas", "href": "/areas"},
+          {"label": "Location Detail", "href": "/location"}
+        ]
+      },
+      {
+        "title": "Explore",
+        "links": [
+          {"label": "Blog", "href": "/blog"},
+          {"label": "Blog Detail", "href": "/blog/detail"},
+          {"label": "Gallery", "href": "/gallery"},
+          {"label": "Events", "href": "/events"},
+          {"label": "Event Detail", "href": "/events/detail"},
+          {"label": "Partners", "href": "/partners"}
+        ]
+      },
+      {
+        "title": "Support",
+        "links": [
+          {"label": "Careers", "href": "/careers"},
+          {"label": "Career Detail", "href": "/careers/detail"},
+          {"label": "Privacy Policy", "href": "/privacy-policy"},
+          {"label": "Terms & Conditions", "href": "/terms"},
+          {"label": "Cancellation & Refund Policy", "href": "/refund-policy"},
+          {"label": "Cookie Policy", "href": "/cookie-policy"}
+        ]
+      }
+    ],
+    "features": [
+      {
+        "title": "Loving Care",
+        "description": "We treat every pet like our own.",
+        "icon": "heart"
+      },
+      {
+        "title": "Trusted & Safe",
+        "description": "Your pet's safety and well-being come first.",
+        "icon": "shield"
+      },
+      {
+        "title": "Always Here",
+        "description": "We're available when you need us.",
+        "icon": "247"
+      },
+      {
+        "title": "Support That Cares",
+        "description": "Our team is here to answer and support you.",
+        "icon": "chat"
+      }
+    ],
+    "bottom": {
+      "copyright": "© 2024 Paw Care. All rights reserved.",
+      "links": [
+        {"label": "Privacy Policy", "href": "/privacy-policy"},
+        {"label": "Terms & Conditions", "href": "/terms"},
+        {"label": "Cancellation & Refund Policy", "href": "/refund-policy"},
+        {"label": "Cookie Policy", "href": "/cookie-policy"}
+      ]
+    }
+  },
+  "locations": {
+    "eyebrow": "OUR SERVICE LOCATIONS",
+    "title": "Where We",
+    "titleHighlight": "Serve",
+    "description": "We are committed to bringing trusted pet care services closer to you.\nFind a PawCare center near you.",
+    "places": [
+      {
+        "city": "New Delhi",
+        "address": "Connaught Place, New Delhi, 110001",
+        "image": "/images/delhi.jpg"
+      },
+      {
+        "city": "Mumbai",
+        "address": "Bandra Kurla Complex, Mumbai, 400051",
+        "image": "/images/mumbai.jpg"
+      },
+      {
+        "city": "Bengaluru",
+        "address": "Koramangala, Bengaluru, 560034",
+        "image": "/images/bengaluru.jpg"
+      },
+      {
+        "city": "Hyderabad",
+        "address": "Madhapur, Hyderabad, 500081",
+        "image": "/images/hyderabad.jpg"
+      },
+      {
+        "city": "Pune",
+        "address": "Koregaon Park, Pune, 411001",
+        "image": "/images/pune.jpg"
+      },
+      {
+        "city": "Ahmedabad",
+        "address": "Prahlad Nagar, Ahmedabad, 380015",
+        "image": "/images/ahmedabad.jpg"
+      }
+    ]
+  }
+}
