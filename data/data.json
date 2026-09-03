@@ -1,0 +1,1988 @@
+{
+  "topbar": {
+    "location": "123 Pet Street, Petland, CA 90210",
+    "phone": "+1 (555) 123-4567",
+    "email": "hello@pawcare.com",
+    "hours": "Mon - Sun: 9:00 AM - 7:00 PM",
+    "socials": {
+      "facebook": "https://facebook.com",
+      "instagram": "https://instagram.com",
+      "map": "https://maps.google.com"
+    }
+  },
+  "navbar": {
+    "logoText": "PawCare",
+    "logoSubtext": "HAPPY PETS - HEALTHY LIVES",
+    "links": [
+      {
+        "label": "Home",
+        "href": "/",
+        "active": true
+      },
+      {
+        "label": "About Us",
+        "href": "/about",
+        "hasDropdown": true,
+        "active": false,
+        "subLinks": [
+          {
+            "label": "About Us",
+            "href": "/about"
+          },
+          {
+            "label": "Vision & Mission",
+            "href": "/mission"
+          },
+          {
+            "label": "Why Choose Us",
+            "href": "/why-choose-us"
+          },
+          {
+            "label": "Our Team",
+            "href": "/team"
+          }
+        ]
+      },
+      {
+        "label": "Services",
+        "href": "/services",
+        "hasDropdown": true,
+        "active": false,
+        "subLinks": [
+          {
+            "label": "Our Services",
+            "href": "/services"
+          },
+          {
+            "label": "Service Detail",
+            "href": "/services/detail"
+          },
+          {
+            "label": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "label": "Testimonials",
+            "href": "/testimonials"
+          },
+          {
+            "label": "Gallery",
+            "href": "/gallery"
+          },
+          {
+            "label": "FAQs",
+            "href": "/faqs"
+          }
+        ]
+      },
+      {
+        "label": "Blogs",
+        "href": "/blogs",
+        "active": false
+      },
+      {
+        "label": "Contact Us",
+        "href": "/contact",
+        "active": false
+      }
+    ],
+    "button": {
+      "text": "Book Now",
+      "href": "/appointment"
+    }
+  },
+  "banner": {
+    "badge": "Your Trusted Pet Care Hub",
+    "title": "Everything Your Pet Needs, In",
+    "titleHighlight": "One Place",
+    "description": "Discover premium pet food, toys, grooming, and expert care services — all designed to keep your pets healthy, happy, and loved. Shop easily and book trusted care anytime.",
+    "primaryCta": {
+      "text": "Shop Now",
+      "href": "/shop"
+    },
+    "secondaryCta": {
+      "text": "Book a Service",
+      "href": "/services"
+    },
+    "image": "/images/Banner_image.png",
+    "features": [
+      {
+        "icon": "quality",
+        "title": "Premium Quality",
+        "description": "Only the best for your furry friend."
+      },
+      {
+        "icon": "care",
+        "title": "Expert Care",
+        "description": "Professional care you can trust."
+      },
+      {
+        "icon": "delivery",
+        "title": "Fast Delivery",
+        "description": "Quick & reliable right to your door."
+      },
+      {
+        "icon": "happiness",
+        "title": "Pet Happiness",
+        "description": "Because their happiness is our priority."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "WHO WE ARE",
+    "title": "About PawCare",
+    "description": "At PawCare, we are passionate about pets and committed to their health, happiness, and well-being. From premium products to expert care services — everything we do is designed to give your furry friends the love and care they truly deserve.",
+    "images": {
+      "one": "/images/about_01.jpg",
+      "two": "/images/about_02.jpg",
+      "three": "/images/about_03.jpg"
+    },
+    "features": [
+      {
+        "title": "Trusted Care",
+        "description": "Reliable services you can always count on.",
+        "icon": "trusted"
+      },
+      {
+        "title": "Pet First Approach",
+        "description": "Every decision we make puts pets' well-being first.",
+        "icon": "pet-first"
+      },
+      {
+        "title": "Expert Team",
+        "description": "Experienced and caring professionals for your pets.",
+        "icon": "team"
+      },
+      {
+        "title": "Quality Assured",
+        "description": "Premium products and high standards always.",
+        "icon": "quality"
+      }
+    ],
+    "cta": {
+      "text": "Learn More About Us",
+      "href": "/about"
+    }
+  },
+  "services": {
+    "eyebrow": "OUR SERVICES",
+    "title": "Care Services for",
+    "titleHighlight": "Happy Pets",
+    "description": "We offer a wide range of professional pet care services designed to keep your furry friends healthy, happy, and full of life.",
+    "items": [
+      {
+        "title": "Veterinary Care",
+        "description": "Complete health checkups, vaccinations, and treatments by expert vets.",
+        "href": "/services/veterinary",
+        "image": "/images/Veterinary_Care.png"
+      },
+      {
+        "title": "Grooming & Spa",
+        "description": "Bathing, haircuts, nail trimming, and spa treatments for a fresh look.",
+        "href": "/services/grooming",
+        "image": "/images/Grooming_%26_Spa.png"
+      },
+      {
+        "title": "Boarding & Daycare",
+        "description": "Safe, fun, and comfortable stay for your pets while you're away.",
+        "href": "/services/boarding",
+        "image": "/images/Boarding_%26_Daycare.png"
+      },
+      {
+        "title": "Nutrition & Diet",
+        "description": "Personalized meal plans to keep your pets healthy and energetic.",
+        "href": "/services/nutrition",
+        "image": "/images/Nutrition_%26_Diet.png"
+      },
+      {
+        "title": "Training & Behavior",
+        "description": "Obedience training and behavior correction with certified trainers.",
+        "href": "/services/training",
+        "image": "/images/Training_%26_Behavior.png"
+      },
+      {
+        "title": "Pet Wellness Plans",
+        "description": "Monthly care packages for continuous health and happiness.",
+        "href": "/services/wellness",
+        "image": "/images/Pet_Wellness_Plans.png"
+      },
+      {
+        "title": "Pet Taxi Service",
+        "description": "Safe and reliable pet transportation for clinics, grooming, or travel.",
+        "href": "/services/taxi",
+        "image": "/images/Pet_Taxi_Service.png"
+      },
+      {
+        "title": "Pet Insurance Assistance",
+        "description": "Guidance and support for choosing the best pet insurance plans.",
+        "href": "/services/insurance",
+        "image": "/images/pets.png"
+      }
+    ]
+  },
+  "footer": {
+    "description": "We provide loving care, trusted services, and expert support to keep your pets healthy, happy, and full of life.",
+    "contact": {
+      "phone": "+91 98765 43210",
+      "email": "hello@pawcare.com",
+      "address": "123 Pet Care Street, Paws City, PC 560001"
+    },
+    "socials": {
+      "facebook": "https://facebook.com",
+      "instagram": "https://instagram.com",
+      "whatsapp": "https://whatsapp.com",
+      "youtube": "https://youtube.com"
+    },
+    "menus": [
+      {
+        "title": "Company",
+        "links": [
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "About Us",
+            "href": "/about"
+          },
+          {
+            "label": "Mission & Vision",
+            "href": "/mission"
+          },
+          {
+            "label": "Why Choose Us",
+            "href": "/why-us"
+          },
+          {
+            "label": "Our Team",
+            "href": "/team"
+          },
+          {
+            "label": "How It Works",
+            "href": "/how-it-works"
+          },
+          {
+            "label": "Testimonials",
+            "href": "/testimonials"
+          },
+          {
+            "label": "FAQs",
+            "href": "/faqs"
+          },
+          {
+            "label": "Contact Us",
+            "href": "/contact"
+          }
+        ]
+      },
+      {
+        "title": "Services",
+        "links": [
+          {
+            "label": "Our Services",
+            "href": "/services"
+          },
+          {
+            "label": "Service Detail",
+            "href": "/services/grooming"
+          },
+          {
+            "label": "Pricing / Packages",
+            "href": "/pricing"
+          },
+          {
+            "label": "Book a Service",
+            "href": "/book"
+          },
+          {
+            "label": "Appointment",
+            "href": "/appointment"
+          },
+          {
+            "label": "Service Areas",
+            "href": "/areas"
+          },
+          {
+            "label": "Location Detail",
+            "href": "/location"
+          }
+        ]
+      },
+      {
+        "title": "Explore",
+        "links": [
+          {
+            "label": "Blog",
+            "href": "/blog"
+          },
+          {
+            "label": "Blog Detail",
+            "href": "/blog/detail"
+          },
+          {
+            "label": "Gallery",
+            "href": "/gallery"
+          },
+          {
+            "label": "Events",
+            "href": "/events"
+          },
+          {
+            "label": "Event Detail",
+            "href": "/events/detail"
+          },
+          {
+            "label": "Partners",
+            "href": "/partners"
+          }
+        ]
+      },
+      {
+        "title": "Support",
+        "links": [
+          {
+            "label": "Careers",
+            "href": "/careers"
+          },
+          {
+            "label": "Career Detail",
+            "href": "/careers/detail"
+          },
+          {
+            "label": "Privacy Policy",
+            "href": "/privacy-policy"
+          },
+          {
+            "label": "Terms & Conditions",
+            "href": "/terms"
+          },
+          {
+            "label": "Cancellation & Refund Policy",
+            "href": "/refund-policy"
+          },
+          {
+            "label": "Cookie Policy",
+            "href": "/cookie-policy"
+          }
+        ]
+      }
+    ],
+    "features": [
+      {
+        "title": "Loving Care",
+        "description": "We treat every pet like our own.",
+        "icon": "heart"
+      },
+      {
+        "title": "Trusted & Safe",
+        "description": "Your pet's safety and well-being come first.",
+        "icon": "shield"
+      },
+      {
+        "title": "Always Here",
+        "description": "We're available when you need us.",
+        "icon": "247"
+      },
+      {
+        "title": "Support That Cares",
+        "description": "Our team is here to answer and support you.",
+        "icon": "chat"
+      }
+    ],
+    "bottom": {
+      "copyright": "© 2024 Paw Care. All rights reserved.",
+      "links": [
+        {
+          "label": "Privacy Policy",
+          "href": "/privacy-policy"
+        },
+        {
+          "label": "Terms & Conditions",
+          "href": "/terms"
+        },
+        {
+          "label": "Cancellation & Refund Policy",
+          "href": "/refund-policy"
+        },
+        {
+          "label": "Cookie Policy",
+          "href": "/cookie-policy"
+        }
+      ]
+    }
+  },
+  "locations": {
+    "eyebrow": "OUR SERVICE LOCATIONS",
+    "title": "Where We",
+    "titleHighlight": "Serve",
+    "description": "We are committed to bringing trusted pet care services closer to you.\nFind a PawCare center near you.",
+    "places": [
+      {
+        "city": "New Delhi",
+        "address": "Connaught Place, New Delhi, 110001",
+        "image": "/images/india_gate.jpg"
+      },
+      {
+        "city": "Mumbai",
+        "address": "Bandra Kurla Complex, Mumbai, 400051",
+        "image": "/images/gate_way.jpg"
+      },
+      {
+        "city": "Bengaluru",
+        "address": "Koramangala, Bengaluru, 560034",
+        "image": "/images/Bengaluru.jpg"
+      },
+      {
+        "city": "Hyderabad",
+        "address": "Madhapur, Hyderabad, 500081",
+        "image": "/images/char_minar.jpg"
+      },
+      {
+        "city": "Pune",
+        "address": "Koregaon Park, Pune, 411001",
+        "image": "/images/pune.jpg"
+      },
+      {
+        "city": "Ahmedabad",
+        "address": "Prahlad Nagar, Ahmedabad, 380015",
+        "image": "/images/Ahmedabad.jpg"
+      }
+    ]
+  },
+  "whyChooseUs": {
+    "eyebrow": "WHY CHOOSE US",
+    "title": "Care You",
+    "titleHighlight": "Can Trust",
+    "description": "We go beyond the basics to provide loving care, professional service,\nand complete peace of mind for pet parents.",
+    "leftCard": {
+      "title": "Happy Pets,",
+      "titleHighlight": "Happy Hearts.",
+      "description": "Your pet's happiness and well-being are at the heart of everything we do."
+    },
+    "features": [
+      {
+        "title": "Experienced &\nTrusted Team",
+        "description": "Our certified professionals provide expert care with compassion and dedication.",
+        "icon": "doctor"
+      },
+      {
+        "title": "Quality You\nCan Count On",
+        "description": "We use premium products and proven methods to ensure the best results.",
+        "icon": "ribbon"
+      },
+      {
+        "title": "Safe & Hygienic\nEnvironment",
+        "description": "We maintain the highest standards of cleanliness and safety for your pet's protection.",
+        "icon": "shield"
+      },
+      {
+        "title": "Convenience &\nTimely Service",
+        "description": "On-time appointments, flexible scheduling, and quick support—always when you need us.",
+        "icon": "clock"
+      },
+      {
+        "title": "Personalized Care\nfor Every Pet",
+        "description": "Every pet is unique—so we create customized care plans for their individual needs.",
+        "icon": "heart"
+      },
+      {
+        "title": "We Treat Them\nLike Our Own",
+        "description": "Your pets are family, and we care for them with the love and respect they deserve.",
+        "icon": "house"
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "PRICING PLAN",
+    "title": "Choose Your",
+    "titleHighlight": "Perfect Plan",
+    "description": "Simple & transparent pricing for the best care of your pets.\nChoose a plan that suits your needs.",
+    "plans": [
+      {
+        "id": "basic",
+        "name": "Day Care Regular",
+        "price": "12",
+        "planType": "BASIC PLAN",
+        "billingCycle": "/ Monthly",
+        "isPopular": false,
+        "features": [
+          "1 month support",
+          "Video & audio content",
+          "2 hours personal training",
+          "Lifetime access"
+        ]
+      },
+      {
+        "id": "premium",
+        "name": "Day Care Standard",
+        "price": "45",
+        "planType": "PREMIUM PLAN",
+        "billingCycle": "/ Monthly",
+        "isPopular": true,
+        "features": [
+          "Lifetime access",
+          "2 hours personal training",
+          "1 month support",
+          "Video & audio content"
+        ]
+      },
+      {
+        "id": "advanced",
+        "name": "Day Care Special",
+        "price": "99",
+        "planType": "ADVANCED PLAN",
+        "billingCycle": "/ Monthly",
+        "isPopular": false,
+        "features": [
+          "2 hours personal training",
+          "Video & audio content",
+          "1 month support",
+          "Lifetime access"
+        ]
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "TESTIMONIALS",
+    "title": "Loved by Pet Parents,",
+    "titleHighlight": "Trusted for Care",
+    "description": "Hear from our happy pet parents who trust PawCare for their furry family members.",
+    "reviews": [
+      {
+        "text": "The team at PawCare is amazing! They treated Bruno with so much love and care. I always feel he is in the best hands.",
+        "rating": 5,
+        "name": "Priya Sharma",
+        "location": "Bangalore, India",
+        "image": "/images/team_01.jpg"
+      },
+      {
+        "text": "Excellent service and very professional staff. My cat, Whiskers, is usually shy, but she loves visiting PawCare!",
+        "rating": 5,
+        "name": "Rahul Verma",
+        "location": "Delhi, India",
+        "image": "/images/team_02.jpg"
+      },
+      {
+        "text": "From grooming to nutrition advice, everything is top-notch. Highly recommend PawCare to every pet parent.",
+        "rating": 5,
+        "name": "Anjali Mehta",
+        "location": "Mumbai, India",
+        "image": "/images/team_03.jpg"
+      },
+      {
+        "text": "They truly care for pets like family. The clinic is clean, friendly, and the doctors are very knowledgeable.",
+        "rating": 5,
+        "name": "Vikram Rao",
+        "location": "Hyderabad, India",
+        "image": "/images/team_04.jpg"
+      },
+      {
+        "text": "PawCare's adoption support was wonderful. They helped us find our furry family member and guided us at every step.",
+        "rating": 5,
+        "name": "Neha Kapoor",
+        "location": "Pune, India",
+        "image": "/images/team_01.jpg"
+      },
+      {
+        "text": "I trust PawCare completely for my dog's health. Their team is compassionate and always available.",
+        "rating": 5,
+        "name": "Arjun Nair",
+        "location": "Chennai, India",
+        "image": "/images/team_02.jpg"
+      }
+    ]
+  },
+  "gallery": {
+    "images": {
+      "eyebrow": "IMAGE GALLERY",
+      "title": "Capturing Beautiful Moments",
+      "description": "Stories of love, trust, and companionship.",
+      "cta": {
+        "text": "View More Photos",
+        "href": "#"
+      },
+      "items": [
+        {
+          "src": "/images/gallery/gallery_01.png",
+          "alt": "Happy golden retriever at PawCare"
+        },
+        {
+          "src": "/images/gallery/gallery_02.png",
+          "alt": "Veterinary care for a beagle"
+        },
+        {
+          "src": "/images/gallery/gallery_03.jpg",
+          "alt": "Pet care moment at the clinic"
+        },
+        {
+          "src": "/images/gallery/gallery_04.png",
+          "alt": "Grooming and spa session"
+        },
+        {
+          "src": "/images/gallery/gallery_05.jpg",
+          "alt": "Pet wellness checkup"
+        },
+        {
+          "src": "/images/gallery/gallery_06.png",
+          "alt": "Boarding and daycare playtime"
+        },
+        {
+          "src": "/images/gallery/gallery_07.jpg",
+          "alt": "PawCare team with pets"
+        },
+        {
+          "src": "/images/gallery/gallery_08.png",
+          "alt": "Training and behavior session"
+        }
+      ]
+    },
+    "videos": {
+      "eyebrow": "VIDEO GALLERY",
+      "title": "Healing Lives, One Story at a Time",
+      "description": "Watch heartwarming moments and inspiring stories.",
+      "items": [
+        {
+          "title": "A Day at PawCare Clinic",
+          "description": "See how we care for every pet with love.",
+          "duration": "01:25",
+          "thumbnail": null,
+          "href": "#"
+        },
+        {
+          "title": "Happy Pets, Happy Owners",
+          "description": "Real stories from our loving community.",
+          "duration": "02:10",
+          "thumbnail": null,
+          "href": "#"
+        },
+        {
+          "title": "Behind the Scenes Care",
+          "description": "Meet the team that makes healing possible.",
+          "duration": "01:45",
+          "thumbnail": null,
+          "href": "#"
+        },
+        {
+          "title": "Rescue to Recovery",
+          "description": "Journey of pets finding their forever homes.",
+          "duration": "03:05",
+          "thumbnail": null,
+          "href": "#"
+        },
+        {
+          "title": "Pet Wellness Tips",
+          "description": "Expert advice for healthier, happier pets.",
+          "duration": "02:30",
+          "thumbnail": null,
+          "href": "#"
+        }
+      ]
+    }
+  },
+  "missionVision": {
+    "eyebrow": "OUR PURPOSE",
+    "title": "Vision & Mission",
+    "description": "Guided by compassion and expertise, we strive to create a healthier, happier world for every pet.",
+    "vision": {
+      "label": "Our",
+      "titleHighlight": "Vision",
+      "description": "To be the most trusted pet care partner—where every pet feels loved, every parent feels confident, and every life is nurtured with excellence.",
+      "image": "/images/pets.png"
+    },
+    "mission": {
+      "label": "Our",
+      "titleHighlight": "Mission",
+      "description": "We deliver compassionate, professional pet care through expert teams, premium services, and a pet-first approach that puts wellbeing above everything else.",
+      "image": "/images/pets.png",
+      "features": [
+        {
+          "title": "Trusted Care",
+          "icon": "shield"
+        },
+        {
+          "title": "Pet First",
+          "icon": "paw"
+        },
+        {
+          "title": "Community",
+          "icon": "community"
+        },
+        {
+          "title": "With Love",
+          "icon": "heart"
+        }
+      ]
+    }
+  },
+  "blogs": {
+    "eyebrow": "OUR BLOG",
+    "title": "Tips, Stories &",
+    "titleHighlight": "Pet Care Insights",
+    "description": "Helpful guides and heartwarming stories to keep your pets happy and healthy.",
+    "items": [
+      {
+        "title": "5 Essential Tips for a Healthy Pet Lifestyle",
+        "excerpt": "Simple daily habits that improve your pet's energy, mood, and long-term health.",
+        "href": "/blogs/healthy-pet-lifestyle",
+        "image": "/images/gallery/gallery_01.png",
+        "day": "12",
+        "month": "Aug",
+        "year": "2024",
+        "icon": "paw"
+      },
+      {
+        "title": "How to Choose the Right Food for Your Pet",
+        "excerpt": "Learn how nutrition needs change with age, breed, and activity level.",
+        "href": "/blogs/right-pet-food",
+        "image": "/images/gallery/gallery_04.png",
+        "day": "05",
+        "month": "Sep",
+        "year": "2024",
+        "icon": "bowl"
+      },
+      {
+        "title": "Creating a Safe & Happy Home for Pets",
+        "excerpt": "Practical ways to make your home more comfortable and stress-free for pets.",
+        "href": "/blogs/safe-happy-home",
+        "image": "/images/gallery/gallery_05.jpg",
+        "day": "22",
+        "month": "Jul",
+        "year": "2024",
+        "icon": "home"
+      }
+    ]
+  },
+  "faqs": {
+    "eyebrow": "FAQS",
+    "title": "Frequently Asked",
+    "titleHighlight": "Questions",
+    "description": "Find quick answers to common questions about our services, care, and how we help your pets.",
+    "image": "/images/about_01.jpg",
+    "contactBox": {
+      "title": "Still Have Questions?",
+      "description": "We're here to help! Reach out to our friendly team for any more information.",
+      "buttonText": "Contact Us",
+      "buttonHref": "/contact"
+    },
+    "questions": [
+      {
+        "q": "What services do you offer for pets?",
+        "a": "We offer a wide range of services including pet grooming, veterinary consultations, daycare, walking, sitting, and nutrition guidance — all designed to keep your pets happy and healthy."
+      },
+      {
+        "q": "Are your staff trained and certified?",
+        "a": "Yes, our team consists of experienced and certified professionals who are passionate about providing the best pet care."
+      },
+      {
+        "q": "How do I book an appointment?",
+        "a": "You can easily book an appointment through our website or by giving us a call on our toll-free number."
+      },
+      {
+        "q": "Do you offer emergency pet care?",
+        "a": "Yes, we provide round-the-clock emergency support for all our registered pet parents."
+      },
+      {
+        "q": "What are your service areas?",
+        "a": "We currently serve the greater metropolitan area, and are constantly expanding our reach to help more pets."
+      },
+      {
+        "q": "How do you ensure pet safety?",
+        "a": "Safety is our top priority. All our facilities are highly secure, and pets are always supervised by trained professionals."
+      },
+      {
+        "q": "What payment methods do you accept?",
+        "a": "We accept all major credit cards, UPI, and cash payments for your convenience."
+      }
+    ]
+  },
+  "team": {
+    "eyebrow": "OUR TEAM",
+    "title": "Meet Our",
+    "titleHighlight": "Experts",
+    "description": "Passionate professionals dedicated to giving your pets\nthe best care, love, and attention.",
+    "members": [
+      {
+        "id": "dr-ananya",
+        "name": "Dr. Ananya Sharma",
+        "role": "Lead Veterinarian",
+        "image": "/images/team_01.jpg",
+        "description": "Specializes in preventive care and advanced clinical treatments for dogs and cats.",
+        "fullDescription": "Specializes in preventive care and advanced clinical treatments for dogs and cats. With years of experience and a deep love for animals, they bring skill, empathy, and dedication to every pet they care for.",
+        "stats": [
+          {
+            "title": "Experience",
+            "value": "8+ Years",
+            "icon": "briefcase"
+          },
+          {
+            "title": "Education",
+            "value": "MVSc / Certified",
+            "icon": "graduation"
+          },
+          {
+            "title": "Specialty",
+            "value": "Lead",
+            "icon": "ribbon"
+          }
+        ],
+        "education": [
+          {
+            "title": "Master of Veterinary Science",
+            "institution": "National Veterinary University",
+            "period": "2014 - 2016"
+          },
+          {
+            "title": "Bachelor of Veterinary Science",
+            "institution": "State Agricultural University",
+            "period": "2008 - 2013"
+          }
+        ],
+        "expertise": [
+          {
+            "title": "Preventive Care",
+            "icon": "shield_check"
+          },
+          {
+            "title": "Clinical Diagnosis",
+            "icon": "stethoscope"
+          },
+          {
+            "title": "Vaccinations",
+            "icon": "syringe"
+          },
+          {
+            "title": "Nutrition Guidance",
+            "icon": "food_bowl"
+          },
+          {
+            "title": "Care Planning",
+            "icon": "clipboard"
+          },
+          {
+            "title": "Pet Wellness",
+            "icon": "pets"
+          }
+        ]
+      },
+      {
+        "id": "dr-rohan",
+        "name": "Dr. Rohan Mehta",
+        "role": "Veterinary Surgeon",
+        "image": "/images/team_02.jpg",
+        "description": "Expert in soft-tissue procedures and emergency surgical care for pets.",
+        "fullDescription": "Expert in soft-tissue procedures and emergency surgical care for pets. With years of experience and a deep love for animals, they bring skill, empathy, and dedication to every pet they care for.",
+        "stats": [
+          {
+            "title": "Experience",
+            "value": "8+ Years",
+            "icon": "briefcase"
+          },
+          {
+            "title": "Education",
+            "value": "MVSc / Certified",
+            "icon": "graduation"
+          },
+          {
+            "title": "Specialty",
+            "value": "Veterinary",
+            "icon": "ribbon"
+          }
+        ],
+        "education": [
+          {
+            "title": "Master of Veterinary Science",
+            "institution": "National Veterinary University",
+            "period": "2014 - 2016"
+          },
+          {
+            "title": "Bachelor of Veterinary Science",
+            "institution": "State Agricultural University",
+            "period": "2008 - 2013"
+          }
+        ],
+        "expertise": [
+          {
+            "title": "Preventive Care",
+            "icon": "shield_check"
+          },
+          {
+            "title": "Clinical Diagnosis",
+            "icon": "stethoscope"
+          },
+          {
+            "title": "Vaccinations",
+            "icon": "syringe"
+          },
+          {
+            "title": "Nutrition Guidance",
+            "icon": "food_bowl"
+          },
+          {
+            "title": "Care Planning",
+            "icon": "clipboard"
+          },
+          {
+            "title": "Pet Wellness",
+            "icon": "pets"
+          }
+        ]
+      },
+      {
+        "id": "priya-nair",
+        "name": "Priya Nair",
+        "role": "Senior Groomer",
+        "image": "/images/team_03.jpg",
+        "description": "Creates calm, spa-like grooming experiences tailored to every breed and temperament.",
+        "fullDescription": "Creates calm, spa-like grooming experiences tailored to every breed and temperament. With years of experience and a deep love for animals, they bring skill, empathy, and dedication to every pet they care for.",
+        "stats": [
+          {
+            "title": "Experience",
+            "value": "8+ Years",
+            "icon": "briefcase"
+          },
+          {
+            "title": "Education",
+            "value": "MVSc / Certified",
+            "icon": "graduation"
+          },
+          {
+            "title": "Specialty",
+            "value": "Senior",
+            "icon": "ribbon"
+          }
+        ],
+        "education": [
+          {
+            "title": "Master of Veterinary Science",
+            "institution": "National Veterinary University",
+            "period": "2014 - 2016"
+          },
+          {
+            "title": "Bachelor of Veterinary Science",
+            "institution": "State Agricultural University",
+            "period": "2008 - 2013"
+          }
+        ],
+        "expertise": [
+          {
+            "title": "Breed Cuts",
+            "icon": "scissors"
+          },
+          {
+            "title": "Spa Baths",
+            "icon": "bath"
+          },
+          {
+            "title": "Coat Care",
+            "icon": "pets"
+          },
+          {
+            "title": "Nail Care",
+            "icon": "clipboard"
+          },
+          {
+            "title": "Skin Health",
+            "icon": "shield_check"
+          },
+          {
+            "title": "Pet Comfort",
+            "icon": "stethoscope"
+          }
+        ]
+      },
+      {
+        "id": "arjun-desai",
+        "name": "Arjun Desai",
+        "role": "Behavior Trainer",
+        "image": "/images/team_04.jpg",
+        "description": "Helps pets build confidence through positive, science-backed training methods.",
+        "fullDescription": "Helps pets build confidence through positive, science-backed training methods. With years of experience and a deep love for animals, they bring skill, empathy, and dedication to every pet they care for.",
+        "stats": [
+          {
+            "title": "Experience",
+            "value": "8+ Years",
+            "icon": "briefcase"
+          },
+          {
+            "title": "Education",
+            "value": "MVSc / Certified",
+            "icon": "graduation"
+          },
+          {
+            "title": "Specialty",
+            "value": "Behavior",
+            "icon": "ribbon"
+          }
+        ],
+        "education": [
+          {
+            "title": "Master of Veterinary Science",
+            "institution": "National Veterinary University",
+            "period": "2014 - 2016"
+          },
+          {
+            "title": "Bachelor of Veterinary Science",
+            "institution": "State Agricultural University",
+            "period": "2008 - 2013"
+          }
+        ],
+        "expertise": [
+          {
+            "title": "Obedience",
+            "icon": "clipboard"
+          },
+          {
+            "title": "Behavior Fix",
+            "icon": "pets"
+          },
+          {
+            "title": "Puppy Training",
+            "icon": "food_bowl"
+          },
+          {
+            "title": "Socialization",
+            "icon": "shield_check"
+          },
+          {
+            "title": "Anxiety Care",
+            "icon": "stethoscope"
+          },
+          {
+            "title": "Owner Coaching",
+            "icon": "syringe"
+          }
+        ]
+      }
+    ]
+  },
+  "serviceDetails": {
+    "veterinary": {
+      "bannerTitle": "Veterinary Care",
+      "hero": {
+        "eyebrow": "SERVICE DETAILS",
+        "title": "Expert",
+        "titleHighlight": "Veterinary Care",
+        "description": "Professional care designed around your pet's comfort, safety, and long-term wellbeing—delivered by experienced PawCare specialists.",
+        "image": "/images/Veterinary_Care.png",
+        "features": [
+          {
+            "title": "Certified Experts",
+            "icon": "shield"
+          },
+          {
+            "title": "Gentle Approach",
+            "icon": "leaf"
+          },
+          {
+            "title": "Quality Assured",
+            "icon": "check_shield"
+          },
+          {
+            "title": "Pet-First Care",
+            "icon": "star"
+          }
+        ],
+        "primaryBtn": {
+          "text": "Book Appointment",
+          "href": "/book"
+        },
+        "secondaryBtn": {
+          "text": "View Pricing",
+          "href": "/pricing"
+        }
+      },
+      "whyMatters": {
+        "eyebrow": "WHY IT MATTERS",
+        "title": "Care That Makes a Difference",
+        "description": "Consistent, expert care helps pets stay healthier, happier, and more confident every day.",
+        "image": "/images/Veterinary_Care.png",
+        "points": [
+          "Personalized attention",
+          "Safe & hygienic setup",
+          "Experienced specialists",
+          "Transparent guidance",
+          "Comfort-focused handling",
+          "Follow-up support"
+        ]
+      },
+      "included": {
+        "eyebrow": "WHAT'S INCLUDED",
+        "title": "Everything Your Pet Needs",
+        "items": [
+          {
+            "title": "Health\nCheck",
+            "icon": "bath"
+          },
+          {
+            "title": "Coat &\nSkin Care",
+            "icon": "brush"
+          },
+          {
+            "title": "Trim &\nStyling",
+            "icon": "scissors"
+          },
+          {
+            "title": "Ear\nCleaning",
+            "icon": "ear"
+          },
+          {
+            "title": "Dental\nCare",
+            "icon": "tooth"
+          },
+          {
+            "title": "Care\nReport",
+            "icon": "nail"
+          }
+        ]
+      },
+      "process": {
+        "eyebrow": "OUR PROCESS",
+        "title": "How We Take Care",
+        "steps": [
+          {
+            "stepNumber": "01",
+            "title": "Consultation",
+            "description": "We understand your pet's needs and preferences.",
+            "icon": "message"
+          },
+          {
+            "stepNumber": "02",
+            "title": "Preparation",
+            "description": "Gentle prep for a calm, stress-free experience.",
+            "icon": "bath"
+          },
+          {
+            "stepNumber": "03",
+            "title": "Care Session",
+            "description": "Expert service tailored to your pet.",
+            "icon": "hairdryer"
+          },
+          {
+            "stepNumber": "04",
+            "title": "Quality Check",
+            "description": "We review comfort, safety, and results.",
+            "icon": "heart_check"
+          },
+          {
+            "stepNumber": "05",
+            "title": "Handover",
+            "description": "Tips and follow-up for continued care.",
+            "icon": "heart"
+          }
+        ]
+      }
+    },
+    "grooming": {
+      "bannerTitle": "Grooming & Spa",
+      "hero": {
+        "eyebrow": "SERVICE DETAILS",
+        "title": "Premium",
+        "titleHighlight": "Grooming & Spa",
+        "description": "Professional care designed around your pet's comfort, safety, and long-term wellbeing—delivered by experienced PawCare specialists.",
+        "image": "/images/Grooming_&_Spa.png",
+        "features": [
+          {
+            "title": "Certified Experts",
+            "icon": "shield"
+          },
+          {
+            "title": "Gentle Approach",
+            "icon": "leaf"
+          },
+          {
+            "title": "Quality Assured",
+            "icon": "check_shield"
+          },
+          {
+            "title": "Pet-First Care",
+            "icon": "star"
+          }
+        ],
+        "primaryBtn": {
+          "text": "Book Appointment",
+          "href": "/book"
+        },
+        "secondaryBtn": {
+          "text": "View Pricing",
+          "href": "/pricing"
+        }
+      },
+      "whyMatters": {
+        "eyebrow": "WHY IT MATTERS",
+        "title": "Care That Makes a Difference",
+        "description": "Consistent, expert care helps pets stay healthier, happier, and more confident every day.",
+        "image": "/images/Grooming_&_Spa.png",
+        "points": [
+          "Personalized attention",
+          "Safe & hygienic setup",
+          "Experienced specialists",
+          "Transparent guidance",
+          "Comfort-focused handling",
+          "Follow-up support"
+        ]
+      },
+      "included": {
+        "eyebrow": "WHAT'S INCLUDED",
+        "title": "Everything Your Pet Needs",
+        "items": [
+          {
+            "title": "Health\nCheck",
+            "icon": "bath"
+          },
+          {
+            "title": "Coat &\nSkin Care",
+            "icon": "brush"
+          },
+          {
+            "title": "Trim &\nStyling",
+            "icon": "scissors"
+          },
+          {
+            "title": "Ear\nCleaning",
+            "icon": "ear"
+          },
+          {
+            "title": "Dental\nCare",
+            "icon": "tooth"
+          },
+          {
+            "title": "Care\nReport",
+            "icon": "nail"
+          }
+        ]
+      },
+      "process": {
+        "eyebrow": "OUR PROCESS",
+        "title": "How We Take Care",
+        "steps": [
+          {
+            "stepNumber": "01",
+            "title": "Consultation",
+            "description": "We understand your pet's needs and preferences.",
+            "icon": "message"
+          },
+          {
+            "stepNumber": "02",
+            "title": "Preparation",
+            "description": "Gentle prep for a calm, stress-free experience.",
+            "icon": "bath"
+          },
+          {
+            "stepNumber": "03",
+            "title": "Care Session",
+            "description": "Expert service tailored to your pet.",
+            "icon": "hairdryer"
+          },
+          {
+            "stepNumber": "04",
+            "title": "Quality Check",
+            "description": "We review comfort, safety, and results.",
+            "icon": "heart_check"
+          },
+          {
+            "stepNumber": "05",
+            "title": "Handover",
+            "description": "Tips and follow-up for continued care.",
+            "icon": "heart"
+          }
+        ]
+      }
+    },
+    "boarding": {
+      "bannerTitle": "Boarding & Daycare",
+      "hero": {
+        "eyebrow": "SERVICE DETAILS",
+        "title": "Safe",
+        "titleHighlight": "Boarding & Daycare",
+        "description": "Professional care designed around your pet's comfort, safety, and long-term wellbeing—delivered by experienced PawCare specialists.",
+        "image": "/images/Boarding_&_Daycare.png",
+        "features": [
+          {
+            "title": "Certified Experts",
+            "icon": "shield"
+          },
+          {
+            "title": "Gentle Approach",
+            "icon": "leaf"
+          },
+          {
+            "title": "Quality Assured",
+            "icon": "check_shield"
+          },
+          {
+            "title": "Pet-First Care",
+            "icon": "star"
+          }
+        ],
+        "primaryBtn": {
+          "text": "Book Appointment",
+          "href": "/book"
+        },
+        "secondaryBtn": {
+          "text": "View Pricing",
+          "href": "/pricing"
+        }
+      },
+      "whyMatters": {
+        "eyebrow": "WHY IT MATTERS",
+        "title": "Care That Makes a Difference",
+        "description": "Consistent, expert care helps pets stay healthier, happier, and more confident every day.",
+        "image": "/images/Boarding_&_Daycare.png",
+        "points": [
+          "Personalized attention",
+          "Safe & hygienic setup",
+          "Experienced specialists",
+          "Transparent guidance",
+          "Comfort-focused handling",
+          "Follow-up support"
+        ]
+      },
+      "included": {
+        "eyebrow": "WHAT'S INCLUDED",
+        "title": "Everything Your Pet Needs",
+        "items": [
+          {
+            "title": "Health\nCheck",
+            "icon": "bath"
+          },
+          {
+            "title": "Coat &\nSkin Care",
+            "icon": "brush"
+          },
+          {
+            "title": "Trim &\nStyling",
+            "icon": "scissors"
+          },
+          {
+            "title": "Ear\nCleaning",
+            "icon": "ear"
+          },
+          {
+            "title": "Dental\nCare",
+            "icon": "tooth"
+          },
+          {
+            "title": "Care\nReport",
+            "icon": "nail"
+          }
+        ]
+      },
+      "process": {
+        "eyebrow": "OUR PROCESS",
+        "title": "How We Take Care",
+        "steps": [
+          {
+            "stepNumber": "01",
+            "title": "Consultation",
+            "description": "We understand your pet's needs and preferences.",
+            "icon": "message"
+          },
+          {
+            "stepNumber": "02",
+            "title": "Preparation",
+            "description": "Gentle prep for a calm, stress-free experience.",
+            "icon": "bath"
+          },
+          {
+            "stepNumber": "03",
+            "title": "Care Session",
+            "description": "Expert service tailored to your pet.",
+            "icon": "hairdryer"
+          },
+          {
+            "stepNumber": "04",
+            "title": "Quality Check",
+            "description": "We review comfort, safety, and results.",
+            "icon": "heart_check"
+          },
+          {
+            "stepNumber": "05",
+            "title": "Handover",
+            "description": "Tips and follow-up for continued care.",
+            "icon": "heart"
+          }
+        ]
+      }
+    },
+    "nutrition": {
+      "bannerTitle": "Nutrition & Diet",
+      "hero": {
+        "eyebrow": "SERVICE DETAILS",
+        "title": "Personalized",
+        "titleHighlight": "Nutrition Plans",
+        "description": "Professional care designed around your pet's comfort, safety, and long-term wellbeing—delivered by experienced PawCare specialists.",
+        "image": "/images/Nutrition_&_Diet.png",
+        "features": [
+          {
+            "title": "Certified Experts",
+            "icon": "shield"
+          },
+          {
+            "title": "Gentle Approach",
+            "icon": "leaf"
+          },
+          {
+            "title": "Quality Assured",
+            "icon": "check_shield"
+          },
+          {
+            "title": "Pet-First Care",
+            "icon": "star"
+          }
+        ],
+        "primaryBtn": {
+          "text": "Book Appointment",
+          "href": "/book"
+        },
+        "secondaryBtn": {
+          "text": "View Pricing",
+          "href": "/pricing"
+        }
+      },
+      "whyMatters": {
+        "eyebrow": "WHY IT MATTERS",
+        "title": "Care That Makes a Difference",
+        "description": "Consistent, expert care helps pets stay healthier, happier, and more confident every day.",
+        "image": "/images/Nutrition_&_Diet.png",
+        "points": [
+          "Personalized attention",
+          "Safe & hygienic setup",
+          "Experienced specialists",
+          "Transparent guidance",
+          "Comfort-focused handling",
+          "Follow-up support"
+        ]
+      },
+      "included": {
+        "eyebrow": "WHAT'S INCLUDED",
+        "title": "Everything Your Pet Needs",
+        "items": [
+          {
+            "title": "Health\nCheck",
+            "icon": "bath"
+          },
+          {
+            "title": "Coat &\nSkin Care",
+            "icon": "brush"
+          },
+          {
+            "title": "Trim &\nStyling",
+            "icon": "scissors"
+          },
+          {
+            "title": "Ear\nCleaning",
+            "icon": "ear"
+          },
+          {
+            "title": "Dental\nCare",
+            "icon": "tooth"
+          },
+          {
+            "title": "Care\nReport",
+            "icon": "nail"
+          }
+        ]
+      },
+      "process": {
+        "eyebrow": "OUR PROCESS",
+        "title": "How We Take Care",
+        "steps": [
+          {
+            "stepNumber": "01",
+            "title": "Consultation",
+            "description": "We understand your pet's needs and preferences.",
+            "icon": "message"
+          },
+          {
+            "stepNumber": "02",
+            "title": "Preparation",
+            "description": "Gentle prep for a calm, stress-free experience.",
+            "icon": "bath"
+          },
+          {
+            "stepNumber": "03",
+            "title": "Care Session",
+            "description": "Expert service tailored to your pet.",
+            "icon": "hairdryer"
+          },
+          {
+            "stepNumber": "04",
+            "title": "Quality Check",
+            "description": "We review comfort, safety, and results.",
+            "icon": "heart_check"
+          },
+          {
+            "stepNumber": "05",
+            "title": "Handover",
+            "description": "Tips and follow-up for continued care.",
+            "icon": "heart"
+          }
+        ]
+      }
+    },
+    "training": {
+      "bannerTitle": "Training & Behavior",
+      "hero": {
+        "eyebrow": "SERVICE DETAILS",
+        "title": "Positive",
+        "titleHighlight": "Training Programs",
+        "description": "Professional care designed around your pet's comfort, safety, and long-term wellbeing—delivered by experienced PawCare specialists.",
+        "image": "/images/Training_&_Behavior.png",
+        "features": [
+          {
+            "title": "Certified Experts",
+            "icon": "shield"
+          },
+          {
+            "title": "Gentle Approach",
+            "icon": "leaf"
+          },
+          {
+            "title": "Quality Assured",
+            "icon": "check_shield"
+          },
+          {
+            "title": "Pet-First Care",
+            "icon": "star"
+          }
+        ],
+        "primaryBtn": {
+          "text": "Book Appointment",
+          "href": "/book"
+        },
+        "secondaryBtn": {
+          "text": "View Pricing",
+          "href": "/pricing"
+        }
+      },
+      "whyMatters": {
+        "eyebrow": "WHY IT MATTERS",
+        "title": "Care That Makes a Difference",
+        "description": "Consistent, expert care helps pets stay healthier, happier, and more confident every day.",
+        "image": "/images/Training_&_Behavior.png",
+        "points": [
+          "Personalized attention",
+          "Safe & hygienic setup",
+          "Experienced specialists",
+          "Transparent guidance",
+          "Comfort-focused handling",
+          "Follow-up support"
+        ]
+      },
+      "included": {
+        "eyebrow": "WHAT'S INCLUDED",
+        "title": "Everything Your Pet Needs",
+        "items": [
+          {
+            "title": "Health\nCheck",
+            "icon": "bath"
+          },
+          {
+            "title": "Coat &\nSkin Care",
+            "icon": "brush"
+          },
+          {
+            "title": "Trim &\nStyling",
+            "icon": "scissors"
+          },
+          {
+            "title": "Ear\nCleaning",
+            "icon": "ear"
+          },
+          {
+            "title": "Dental\nCare",
+            "icon": "tooth"
+          },
+          {
+            "title": "Care\nReport",
+            "icon": "nail"
+          }
+        ]
+      },
+      "process": {
+        "eyebrow": "OUR PROCESS",
+        "title": "How We Take Care",
+        "steps": [
+          {
+            "stepNumber": "01",
+            "title": "Consultation",
+            "description": "We understand your pet's needs and preferences.",
+            "icon": "message"
+          },
+          {
+            "stepNumber": "02",
+            "title": "Preparation",
+            "description": "Gentle prep for a calm, stress-free experience.",
+            "icon": "bath"
+          },
+          {
+            "stepNumber": "03",
+            "title": "Care Session",
+            "description": "Expert service tailored to your pet.",
+            "icon": "hairdryer"
+          },
+          {
+            "stepNumber": "04",
+            "title": "Quality Check",
+            "description": "We review comfort, safety, and results.",
+            "icon": "heart_check"
+          },
+          {
+            "stepNumber": "05",
+            "title": "Handover",
+            "description": "Tips and follow-up for continued care.",
+            "icon": "heart"
+          }
+        ]
+      }
+    },
+    "wellness": {
+      "bannerTitle": "Pet Wellness Plans",
+      "hero": {
+        "eyebrow": "SERVICE DETAILS",
+        "title": "Complete",
+        "titleHighlight": "Wellness Plans",
+        "description": "Professional care designed around your pet's comfort, safety, and long-term wellbeing—delivered by experienced PawCare specialists.",
+        "image": "/images/Pet_Wellness_Plans.png",
+        "features": [
+          {
+            "title": "Certified Experts",
+            "icon": "shield"
+          },
+          {
+            "title": "Gentle Approach",
+            "icon": "leaf"
+          },
+          {
+            "title": "Quality Assured",
+            "icon": "check_shield"
+          },
+          {
+            "title": "Pet-First Care",
+            "icon": "star"
+          }
+        ],
+        "primaryBtn": {
+          "text": "Book Appointment",
+          "href": "/book"
+        },
+        "secondaryBtn": {
+          "text": "View Pricing",
+          "href": "/pricing"
+        }
+      },
+      "whyMatters": {
+        "eyebrow": "WHY IT MATTERS",
+        "title": "Care That Makes a Difference",
+        "description": "Consistent, expert care helps pets stay healthier, happier, and more confident every day.",
+        "image": "/images/Pet_Wellness_Plans.png",
+        "points": [
+          "Personalized attention",
+          "Safe & hygienic setup",
+          "Experienced specialists",
+          "Transparent guidance",
+          "Comfort-focused handling",
+          "Follow-up support"
+        ]
+      },
+      "included": {
+        "eyebrow": "WHAT'S INCLUDED",
+        "title": "Everything Your Pet Needs",
+        "items": [
+          {
+            "title": "Health\nCheck",
+            "icon": "bath"
+          },
+          {
+            "title": "Coat &\nSkin Care",
+            "icon": "brush"
+          },
+          {
+            "title": "Trim &\nStyling",
+            "icon": "scissors"
+          },
+          {
+            "title": "Ear\nCleaning",
+            "icon": "ear"
+          },
+          {
+            "title": "Dental\nCare",
+            "icon": "tooth"
+          },
+          {
+            "title": "Care\nReport",
+            "icon": "nail"
+          }
+        ]
+      },
+      "process": {
+        "eyebrow": "OUR PROCESS",
+        "title": "How We Take Care",
+        "steps": [
+          {
+            "stepNumber": "01",
+            "title": "Consultation",
+            "description": "We understand your pet's needs and preferences.",
+            "icon": "message"
+          },
+          {
+            "stepNumber": "02",
+            "title": "Preparation",
+            "description": "Gentle prep for a calm, stress-free experience.",
+            "icon": "bath"
+          },
+          {
+            "stepNumber": "03",
+            "title": "Care Session",
+            "description": "Expert service tailored to your pet.",
+            "icon": "hairdryer"
+          },
+          {
+            "stepNumber": "04",
+            "title": "Quality Check",
+            "description": "We review comfort, safety, and results.",
+            "icon": "heart_check"
+          },
+          {
+            "stepNumber": "05",
+            "title": "Handover",
+            "description": "Tips and follow-up for continued care.",
+            "icon": "heart"
+          }
+        ]
+      }
+    },
+    "taxi": {
+      "bannerTitle": "Pet Taxi Service",
+      "hero": {
+        "eyebrow": "SERVICE DETAILS",
+        "title": "Reliable",
+        "titleHighlight": "Pet Taxi",
+        "description": "Professional care designed around your pet's comfort, safety, and long-term wellbeing—delivered by experienced PawCare specialists.",
+        "image": "/images/Pet_Taxi_Service.png",
+        "features": [
+          {
+            "title": "Certified Experts",
+            "icon": "shield"
+          },
+          {
+            "title": "Gentle Approach",
+            "icon": "leaf"
+          },
+          {
+            "title": "Quality Assured",
+            "icon": "check_shield"
+          },
+          {
+            "title": "Pet-First Care",
+            "icon": "star"
+          }
+        ],
+        "primaryBtn": {
+          "text": "Book Appointment",
+          "href": "/book"
+        },
+        "secondaryBtn": {
+          "text": "View Pricing",
+          "href": "/pricing"
+        }
+      },
+      "whyMatters": {
+        "eyebrow": "WHY IT MATTERS",
+        "title": "Care That Makes a Difference",
+        "description": "Consistent, expert care helps pets stay healthier, happier, and more confident every day.",
+        "image": "/images/Pet_Taxi_Service.png",
+        "points": [
+          "Personalized attention",
+          "Safe & hygienic setup",
+          "Experienced specialists",
+          "Transparent guidance",
+          "Comfort-focused handling",
+          "Follow-up support"
+        ]
+      },
+      "included": {
+        "eyebrow": "WHAT'S INCLUDED",
+        "title": "Everything Your Pet Needs",
+        "items": [
+          {
+            "title": "Health\nCheck",
+            "icon": "bath"
+          },
+          {
+            "title": "Coat &\nSkin Care",
+            "icon": "brush"
+          },
+          {
+            "title": "Trim &\nStyling",
+            "icon": "scissors"
+          },
+          {
+            "title": "Ear\nCleaning",
+            "icon": "ear"
+          },
+          {
+            "title": "Dental\nCare",
+            "icon": "tooth"
+          },
+          {
+            "title": "Care\nReport",
+            "icon": "nail"
+          }
+        ]
+      },
+      "process": {
+        "eyebrow": "OUR PROCESS",
+        "title": "How We Take Care",
+        "steps": [
+          {
+            "stepNumber": "01",
+            "title": "Consultation",
+            "description": "We understand your pet's needs and preferences.",
+            "icon": "message"
+          },
+          {
+            "stepNumber": "02",
+            "title": "Preparation",
+            "description": "Gentle prep for a calm, stress-free experience.",
+            "icon": "bath"
+          },
+          {
+            "stepNumber": "03",
+            "title": "Care Session",
+            "description": "Expert service tailored to your pet.",
+            "icon": "hairdryer"
+          },
+          {
+            "stepNumber": "04",
+            "title": "Quality Check",
+            "description": "We review comfort, safety, and results.",
+            "icon": "heart_check"
+          },
+          {
+            "stepNumber": "05",
+            "title": "Handover",
+            "description": "Tips and follow-up for continued care.",
+            "icon": "heart"
+          }
+        ]
+      }
+    },
+    "insurance": {
+      "bannerTitle": "Pet Insurance",
+      "hero": {
+        "eyebrow": "SERVICE DETAILS",
+        "title": "Smart",
+        "titleHighlight": "Insurance Support",
+        "description": "Professional care designed around your pet's comfort, safety, and long-term wellbeing—delivered by experienced PawCare specialists.",
+        "image": "/images/pets.png",
+        "features": [
+          {
+            "title": "Certified Experts",
+            "icon": "shield"
+          },
+          {
+            "title": "Gentle Approach",
+            "icon": "leaf"
+          },
+          {
+            "title": "Quality Assured",
+            "icon": "check_shield"
+          },
+          {
+            "title": "Pet-First Care",
+            "icon": "star"
+          }
+        ],
+        "primaryBtn": {
+          "text": "Book Appointment",
+          "href": "/book"
+        },
+        "secondaryBtn": {
+          "text": "View Pricing",
+          "href": "/pricing"
+        }
+      },
+      "whyMatters": {
+        "eyebrow": "WHY IT MATTERS",
+        "title": "Care That Makes a Difference",
+        "description": "Consistent, expert care helps pets stay healthier, happier, and more confident every day.",
+        "image": "/images/pets.png",
+        "points": [
+          "Personalized attention",
+          "Safe & hygienic setup",
+          "Experienced specialists",
+          "Transparent guidance",
+          "Comfort-focused handling",
+          "Follow-up support"
+        ]
+      },
+      "included": {
+        "eyebrow": "WHAT'S INCLUDED",
+        "title": "Everything Your Pet Needs",
+        "items": [
+          {
+            "title": "Health\nCheck",
+            "icon": "bath"
+          },
+          {
+            "title": "Coat &\nSkin Care",
+            "icon": "brush"
+          },
+          {
+            "title": "Trim &\nStyling",
+            "icon": "scissors"
+          },
+          {
+            "title": "Ear\nCleaning",
+            "icon": "ear"
+          },
+          {
+            "title": "Dental\nCare",
+            "icon": "tooth"
+          },
+          {
+            "title": "Care\nReport",
+            "icon": "nail"
+          }
+        ]
+      },
+      "process": {
+        "eyebrow": "OUR PROCESS",
+        "title": "How We Take Care",
+        "steps": [
+          {
+            "stepNumber": "01",
+            "title": "Consultation",
+            "description": "We understand your pet's needs and preferences.",
+            "icon": "message"
+          },
+          {
+            "stepNumber": "02",
+            "title": "Preparation",
+            "description": "Gentle prep for a calm, stress-free experience.",
+            "icon": "bath"
+          },
+          {
+            "stepNumber": "03",
+            "title": "Care Session",
+            "description": "Expert service tailored to your pet.",
+            "icon": "hairdryer"
+          },
+          {
+            "stepNumber": "04",
+            "title": "Quality Check",
+            "description": "We review comfort, safety, and results.",
+            "icon": "heart_check"
+          },
+          {
+            "stepNumber": "05",
+            "title": "Handover",
+            "description": "Tips and follow-up for continued care.",
+            "icon": "heart"
+          }
+        ]
+      }
+    }
+  }
+}

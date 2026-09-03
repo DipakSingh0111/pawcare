@@ -18,10 +18,51 @@
   --font-sans: var(--font-poppins);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Matches Navbar/logo horizontal alignment on all breakpoints */
+.site-container {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 1rem; /* px-4 */
+}
+
+@media (min-width: 640px) {
+  .site-container {
+    padding-inline: 1.5rem; /* sm:px-6 */
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-container {
+    padding-inline: 2.5rem; /* lg:px-10 */
+  }
+}
+
+/* Consistent vertical rhythm between home sections */
+.site-section {
+  padding-block: 2rem; /* py-8 */
+}
+
+@media (min-width: 640px) {
+  .site-section {
+    padding-block: 2.5rem; /* sm:py-10 */
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-section {
+    padding-block: 3rem; /* lg:py-12 */
+  }
 }
 
 @keyframes fade-up {

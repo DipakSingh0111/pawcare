@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { MapPin, PawPrint } from "lucide-react";
-import data from "../../data.json";
+import data from "@/data/data.json";
 
 export default function LocationsSection() {
   const { locations } = data;
 
   return (
-    <section className="w-full pt-8 pb-20 relative bg-white overflow-hidden">
+    <section className="site-section relative w-full overflow-hidden bg-white !pt-4 sm:!pt-6 lg:!pt-6">
       {/* Background Decorators */}
       {/* Left dots pattern */}
       <div className="absolute left-0 opacity-20 pointer-events-none">
@@ -38,10 +38,10 @@ export default function LocationsSection() {
         </svg>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 md:px-8 relative z-10">
+      <div className="site-container relative z-10">
         {/* Header Section */}
-        <div className="flex flex-col items-center text-center mb-16">
-          <div className="flex items-center space-x-2 mb-4">
+        <div className="mb-10 flex flex-col items-center text-center sm:mb-12">
+          <div className="mb-3 flex items-center space-x-2">
             <PawPrint className="w-5 h-5 text-[#0b1324]" />
             <span className="text-[#ffb016] font-bold text-sm tracking-wider uppercase">
               {locations.eyebrow}
@@ -87,8 +87,8 @@ export default function LocationsSection() {
                     />
                   </div>
                   {/* Floating Pin */}
-                  <div className="absolute top-0 left-0 -translate-x-2 -translate-y-2 w-8 h-8 bg-[#0b1324] rounded-full flex items-center justify-center border-2 border-white shadow-sm">
-                    <MapPin className="w-4 h-4 text-[#ffb016] fill-current" />
+                  <div className="absolute top-0 left-0 -translate-x-2 -translate-y-2 w-9 h-9 bg-[#0b1324] rounded-t-full rounded-bl-full rounded-br-sm rotate-45 flex items-center justify-center border-2 border-white shadow-md z-10">
+                    <div className="w-3 h-3 bg-[#ffb016] rounded-full"></div>
                   </div>
                 </div>
 
@@ -126,3 +126,4 @@ export default function LocationsSection() {
     </section>
   );
 }
+

@@ -1,7 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail, MapPin, PawPrint, Heart } from "lucide-react";
-import data from "../../data.json";
+import data from "@/data/data.json";
 
 function FeatureIcon({ type }: { type: string }) {
   if (type === "heart") {
@@ -108,7 +110,7 @@ export default function Footer() {
       />
 
       {/* Main footer */}
-      <div className="relative z-10 mx-auto max-w-[1440px] px-4 py-14 sm:px-6 lg:px-10 lg:py-16">
+      <div className="site-container relative z-10 py-14 lg:py-16">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.15fr_auto_1fr_1fr_1fr_1fr] lg:gap-8 xl:gap-10">
           {/* Brand + contact */}
           <div className="max-w-sm">
@@ -218,6 +220,7 @@ export default function Footer() {
                   <li key={link.href + link.label}>
                     <Link
                       href={link.href}
+                      onClick={() => window.scrollTo(0, 0)}
                       className="text-sm text-[#0b1324]/75 transition-colors hover:text-[#ffb016]"
                     >
                       {link.label}
@@ -232,7 +235,7 @@ export default function Footer() {
 
       {/* Features bar */}
       <div className="relative z-10 border-y border-[#e5e8ee] bg-[#F1F2F4]">
-        <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-6 px-4 py-8 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:gap-0 lg:px-10 lg:py-9">
+        <div className="site-container grid grid-cols-1 gap-6 py-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:py-9">
           {footer.features.map((feature, index) => (
             <div
               key={feature.title}
@@ -258,7 +261,7 @@ export default function Footer() {
 
       {/* Copyright bar */}
       <div className="relative z-10 border-t-2 border-[#ffb016] bg-[#0b1324]">
-        <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-between gap-4 px-4 py-5 sm:px-6 lg:flex-row lg:px-10">
+        <div className="site-container flex flex-col items-center justify-between gap-4 py-5 lg:flex-row">
           <div className="flex items-center gap-2 text-sm text-white/80">
             <PawPrint
               className="h-4 w-4 text-[#ffb016]"
@@ -277,6 +280,7 @@ export default function Footer() {
               <span key={link.href} className="flex items-center">
                 <Link
                   href={link.href}
+                  onClick={() => window.scrollTo(0, 0)}
                   className="px-2 transition-colors hover:text-[#ffb016] sm:px-3"
                 >
                   {link.label}
@@ -299,3 +303,4 @@ export default function Footer() {
     </footer>
   );
 }
+

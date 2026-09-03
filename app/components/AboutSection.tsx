@@ -1,14 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Heart, PawPrint } from "lucide-react";
-import data from "../../data.json";
+import data from "@/data/data.json";
 
 function AboutIcon({ type }: { type: string }) {
   const common = "h-5 w-5";
 
   if (type === "trusted") {
     return (
-      <Heart className={common} stroke="#ffb016" strokeWidth={1.75} fill="none" />
+      <Heart
+        className={common}
+        stroke="#ffb016"
+        strokeWidth={1.75}
+        fill="none"
+      />
     );
   }
 
@@ -65,9 +70,15 @@ function AboutIcon({ type }: { type: string }) {
 
 function DotGrid({ className }: { className?: string }) {
   return (
-    <div className={`grid grid-cols-4 gap-[5px] ${className ?? ""}`} aria-hidden>
+    <div
+      className={`grid grid-cols-4 gap-[5px] ${className ?? ""}`}
+      aria-hidden
+    >
       {Array.from({ length: 16 }).map((_, i) => (
-        <span key={i} className="h-[5px] w-[5px] rounded-full bg-[#0b1324]/35" />
+        <span
+          key={i}
+          className="h-[5px] w-[5px] rounded-full bg-[#0b1324]/35"
+        />
       ))}
     </div>
   );
@@ -143,7 +154,7 @@ export default function AboutSection() {
   const { eyebrow, title, description, features, cta, images } = data.about;
 
   return (
-    <section className="relative overflow-hidden bg-white pt-8 pb-8 sm:pt-10 sm:pb-12 lg:pt-12 lg:pb-16">
+    <section className="site-section relative overflow-hidden bg-white !pb-4 sm:!pb-6 lg:!pb-6">
       <PawPrint
         className="pointer-events-none absolute -bottom-6 right-[6%] h-40 w-40 text-[#f3ebe1] sm:h-56 sm:w-56"
         strokeWidth={1}
@@ -160,9 +171,13 @@ export default function AboutSection() {
         aria-hidden
       />
 
-      <div className="relative z-10 mx-auto grid max-w-[1440px] items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-10 xl:gap-20">
+      <div className="site-container relative z-10 grid items-center gap-10 lg:grid-cols-2 lg:gap-14 xl:gap-16">
         <div className="animate-fade-up">
-          <AboutCollage one={images.one} two={images.two} three={images.three} />
+          <AboutCollage
+            one={images.one}
+            two={images.two}
+            three={images.three}
+          />
         </div>
 
         {/* Right content */}

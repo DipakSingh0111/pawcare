@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CalendarDays, PawPrint } from "lucide-react";
-import data from "../../data.json";
+import data from "@/data/data.json";
 
 function FeatureIcon({ type }: { type: string }) {
   const common = "h-7 w-7";
@@ -104,9 +104,9 @@ export default function HomeBanner() {
 
   return (
     <section className="relative w-full overflow-hidden bg-white">
-      <div className="relative mx-auto min-h-[560px] max-w-[1440px] lg:min-h-[640px]">
+      <div className="site-container relative min-h-[560px] lg:min-h-[640px]">
         {/* Hero image — baked-in left curve blends into white content area */}
-        <div className="relative h-[300px] w-full sm:h-[360px] lg:absolute lg:inset-y-0 lg:right-0 lg:h-auto lg:w-[58%]">
+        <div className="relative -mx-4 h-[300px] w-[calc(100%+2rem)] sm:-mx-6 sm:h-[360px] sm:w-[calc(100%+3rem)] lg:absolute lg:inset-y-0 lg:right-0 lg:mx-0 lg:h-auto lg:w-[58%]">
           <Image
             src={image}
             alt="Happy golden retriever and tabby cat on a sofa"
@@ -117,8 +117,8 @@ export default function HomeBanner() {
           />
         </div>
 
-        {/* Left content */}
-        <div className="relative z-10 flex w-full flex-col justify-center px-6 py-10 sm:px-10 md:px-14 lg:min-h-[640px] lg:w-[48%] lg:py-16 xl:px-20">
+        {/* Left content — aligns with logo */}
+        <div className="relative z-10 flex w-full flex-col justify-center py-10 lg:min-h-[640px] lg:w-[48%] lg:py-16">
           <p className="animate-fade-up mb-5 flex items-center gap-2 text-sm font-semibold tracking-wide text-[#0b1324] sm:text-[0.95rem]">
             <PawPrint className="h-4 w-4 shrink-0 text-[#0b1324]" strokeWidth={2.25} />
             <span>{badge}</span>
@@ -138,17 +138,17 @@ export default function HomeBanner() {
             {description}
           </p>
 
-          <div className="animate-fade-up animation-delay-300 mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
+          <div className="animate-fade-up animation-delay-300 mt-8 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 max-w-[320px] sm:max-w-none">
             <Link
               href={primaryCta.href}
-              className="inline-flex items-center gap-2 rounded-md bg-[#ffb016] px-6 py-3.5 text-sm font-bold text-[#0b1324] shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#e09a0f] hover:shadow-md sm:text-base"
+              className="flex w-full items-center justify-center gap-2 rounded-md bg-[#ffb016] px-6 py-3.5 text-sm font-bold text-[#0b1324] shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#e09a0f] hover:shadow-md sm:w-auto sm:text-base"
             >
               <PawPrint className="h-4 w-4" strokeWidth={2.5} />
               {primaryCta.text}
             </Link>
             <Link
               href={secondaryCta.href}
-              className="inline-flex items-center gap-2 rounded-md border-[1.5px] border-[#0b1324] bg-white px-6 py-3.5 text-sm font-bold text-[#0b1324] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0b1324] hover:text-white sm:text-base"
+              className="flex w-full items-center justify-center gap-2 rounded-md border-[1.5px] border-[#0b1324] bg-white px-6 py-3.5 text-sm font-bold text-[#0b1324] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0b1324] hover:text-white sm:w-auto sm:text-base"
             >
               <CalendarDays className="h-4 w-4" strokeWidth={2.25} />
               {secondaryCta.text}
@@ -158,7 +158,7 @@ export default function HomeBanner() {
       </div>
 
       {/* Feature bar */}
-      <div className="relative z-20 mx-auto max-w-[1440px] px-4 pb-10 sm:px-6 lg:-mt-6 lg:px-10">
+      <div className="site-container relative z-20 pb-0 lg:-mt-6">
         <div className="animate-fade-up animation-delay-400 grid grid-cols-1 overflow-hidden rounded-2xl bg-[#FDF8F3] sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => {
             const borders = [
@@ -190,3 +190,4 @@ export default function HomeBanner() {
     </section>
   );
 }
+
