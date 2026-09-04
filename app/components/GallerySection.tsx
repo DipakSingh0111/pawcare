@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -12,6 +12,137 @@ import {
   X,
 } from "lucide-react";
 import data from "@/data/data.json";
+
+type VideoItem = { title: string; description: string; src: string };
+
+function VideoGallerySection({
+  videos,
+}: {
+  videos: { eyebrow: string; title: string; description: string; items: VideoItem[] };
+}) {
+  const [activeVideo, setActiveVideo] = useState<VideoItem | null>(null);
+  const modalRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (!activeVideo) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setActiveVideo(null); };
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKey);
+    return () => { document.body.style.overflow = ""; window.removeEventListener("keydown", onKey); };
+  }, [activeVideo]);
+
+  useEffect(() => {
+    if (activeVideo && modalRef.current) {
+      modalRef.current.load();
+      modalRef.current.play().catch(() => {});
+    }
+  }, [activeVideo]);
+
+  return (
+    <>
+      <section className="site-section relative overflow-hidden bg-[#F7F8FA]">
+        <div className="site-container relative z-10">
+          <SectionHeader
+            eyebrow={videos.eyebrow}
+            title={videos.title}
+            description={videos.description}
+          />
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 lg:gap-5">
+            {videos.items.map((video) => (
+              <VideoCard key={video.src} video={video} onPlay={() => setActiveVideo(video)} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Video lightbox modal */}
+      {activeVideo && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 sm:p-8"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Video player"
+          onClick={() => setActiveVideo(null)}
+        >
+          <button
+            type="button"
+            onClick={() => setActiveVideo(null)}
+            className="absolute top-4 right-4 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
+            aria-label="Close video"
+          >
+            <X className="h-6 w-6" strokeWidth={2.25} />
+          </button>
+          <div
+            className="relative w-full max-w-4xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <video
+              ref={modalRef}
+              src={activeVideo.src}
+              controls
+              autoPlay
+              className="w-full rounded-xl bg-black"
+              style={{ maxHeight: "80vh" }}
+            />
+            <p className="mt-3 text-center text-sm font-semibold text-white">
+              {activeVideo.title}
+            </p>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
+function VideoCard({ video, onPlay }: { video: VideoItem; onPlay: () => void }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    const el = videoRef.current;
+    if (!el) return;
+    if (isHovered) {
+      el.play().catch(() => {});
+    } else {
+      el.pause();
+      el.currentTime = 0;
+    }
+  }, [isHovered]);
+
+  return (
+    <article
+      className="group cursor-pointer"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onClick={onPlay}
+    >
+      <div className="relative mb-3 aspect-video overflow-hidden rounded-xl bg-[#0b1324]">
+        <video
+          ref={videoRef}
+          src={video.src}
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          className="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-60"
+        />
+        {/* Play overlay */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white/90 shadow-lg transition-transform duration-300 group-hover:scale-110">
+            <Play className="ml-0.5 h-5 w-5 fill-[#0b1324] text-[#0b1324]" strokeWidth={0} />
+          </span>
+        </div>
+      </div>
+      <h3 className="text-[0.9rem] font-bold leading-snug text-[#0b1324] sm:text-[0.95rem]">
+        {video.title}
+      </h3>
+      <p className="mt-1 text-sm leading-relaxed text-[#5a6577]">
+        {video.description}
+      </p>
+    </article>
+  );
+}
+
 
 function SectionHeader({
   eyebrow,
@@ -133,55 +264,8 @@ export default function GallerySection() {
         </div>
       </section>
 
-      {/* Video Gallery — empty thumbnails */}
-      <section className="site-section relative overflow-hidden bg-[#F7F8FA]">
-        <div className="site-container relative z-10">
-          <SectionHeader
-            eyebrow={videos.eyebrow}
-            title={videos.title}
-            description={videos.description}
-          />
-
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:gap-5">
-            {videos.items.map((video) => (
-              <article key={video.title} className="group">
-                <Link href={video.href} className="block">
-                  <div className="relative mb-3 aspect-[16/10] overflow-hidden rounded-xl bg-[#e8eaee]">
-                    {video.thumbnail ? (
-                      <Image
-                        src={video.thumbnail}
-                        alt={video.title}
-                        fill
-                        className="object-cover"
-                      />
-                    ) : null}
-
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/95 shadow-md transition-transform duration-300 group-hover:scale-110">
-                        <Play
-                          className="ml-0.5 h-4 w-4 fill-[#0b1324] text-[#0b1324]"
-                          strokeWidth={0}
-                        />
-                      </span>
-                    </div>
-
-                    <span className="absolute bottom-2.5 right-2.5 rounded bg-[#0b1324]/70 px-1.5 py-0.5 text-[10px] font-semibold tracking-wide text-white">
-                      {video.duration}
-                    </span>
-                  </div>
-
-                  <h3 className="text-[0.95rem] font-bold leading-snug text-[#0b1324] sm:text-base">
-                    {video.title}
-                  </h3>
-                  <p className="mt-1 text-sm leading-relaxed text-[#5a6577]">
-                    {video.description}
-                  </p>
-                </Link>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Video Gallery */}
+      <VideoGallerySection videos={videos} />
 
       {/* Fullscreen lightbox */}
       {activeImage && activeIndex !== null && (

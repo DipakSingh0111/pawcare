@@ -72,6 +72,10 @@
           {
             "label": "FAQs",
             "href": "/faqs"
+          },
+          {
+            "label": "Locations",
+            "href": "/locations"
           }
         ]
       },
@@ -251,15 +255,11 @@
           },
           {
             "label": "Why Choose Us",
-            "href": "/why-us"
+            "href": "/why-choose-us"
           },
           {
             "label": "Our Team",
             "href": "/team"
-          },
-          {
-            "label": "How It Works",
-            "href": "/how-it-works"
           },
           {
             "label": "Testimonials",
@@ -284,27 +284,15 @@
           },
           {
             "label": "Service Detail",
-            "href": "/services/grooming"
+            "href": "/services/detail"
           },
           {
             "label": "Pricing / Packages",
             "href": "/pricing"
           },
           {
-            "label": "Book a Service",
-            "href": "/book"
-          },
-          {
-            "label": "Appointment",
-            "href": "/appointment"
-          },
-          {
-            "label": "Service Areas",
-            "href": "/areas"
-          },
-          {
-            "label": "Location Detail",
-            "href": "/location"
+            "label": "Locations",
+            "href": "/locations"
           }
         ]
       },
@@ -312,42 +300,22 @@
         "title": "Explore",
         "links": [
           {
-            "label": "Blog",
-            "href": "/blog"
-          },
-          {
-            "label": "Blog Detail",
-            "href": "/blog/detail"
+            "label": "Blogs",
+            "href": "/blogs"
           },
           {
             "label": "Gallery",
             "href": "/gallery"
           },
           {
-            "label": "Events",
-            "href": "/events"
-          },
-          {
-            "label": "Event Detail",
-            "href": "/events/detail"
-          },
-          {
-            "label": "Partners",
-            "href": "/partners"
+            "label": "Site-Map",
+            "href": "/sitemap"
           }
         ]
       },
       {
         "title": "Support",
         "links": [
-          {
-            "label": "Careers",
-            "href": "/careers"
-          },
-          {
-            "label": "Career Detail",
-            "href": "/careers/detail"
-          },
           {
             "label": "Privacy Policy",
             "href": "/privacy-policy"
@@ -644,37 +612,27 @@
         {
           "title": "A Day at PawCare Clinic",
           "description": "See how we care for every pet with love.",
-          "duration": "01:25",
-          "thumbnail": null,
-          "href": "#"
+          "src": "/images/video_01.mp4"
         },
         {
           "title": "Happy Pets, Happy Owners",
           "description": "Real stories from our loving community.",
-          "duration": "02:10",
-          "thumbnail": null,
-          "href": "#"
+          "src": "/images/video_02.mp4"
         },
         {
           "title": "Behind the Scenes Care",
           "description": "Meet the team that makes healing possible.",
-          "duration": "01:45",
-          "thumbnail": null,
-          "href": "#"
+          "src": "/images/video_03.mp4"
         },
         {
           "title": "Rescue to Recovery",
           "description": "Journey of pets finding their forever homes.",
-          "duration": "03:05",
-          "thumbnail": null,
-          "href": "#"
+          "src": "/images/video_04.mp4"
         },
         {
           "title": "Pet Wellness Tips",
           "description": "Expert advice for healthier, happier pets.",
-          "duration": "02:30",
-          "thumbnail": null,
-          "href": "#"
+          "src": "/images/video_05.mp4"
         }
       ]
     }
@@ -721,34 +679,70 @@
     "description": "Helpful guides and heartwarming stories to keep your pets happy and healthy.",
     "items": [
       {
-        "title": "5 Essential Tips for a Healthy Pet Lifestyle",
-        "excerpt": "Simple daily habits that improve your pet's energy, mood, and long-term health.",
-        "href": "/blogs/healthy-pet-lifestyle",
+        "title": "How to Introduce a New Pet to Your Home",
+        "excerpt": "A step-by-step guide to help your new pet feel welcome and settle in comfortably.",
+        "href": "/blogs/how-to-introduce-a-new-pet",
         "image": "/images/gallery/gallery_01.png",
-        "day": "12",
-        "month": "Aug",
+        "day": "18",
+        "month": "May",
         "year": "2024",
-        "icon": "paw"
+        "icon": "home",
+        "category": "Pet Parents Corner"
       },
       {
-        "title": "How to Choose the Right Food for Your Pet",
-        "excerpt": "Learn how nutrition needs change with age, breed, and activity level.",
-        "href": "/blogs/right-pet-food",
+        "title": "Grooming Tips for a Healthy and Happy Pet",
+        "excerpt": "Regular grooming is more than just keeping your pet looking good—it's essential.",
+        "href": "/blogs/grooming-tips",
         "image": "/images/gallery/gallery_04.png",
-        "day": "05",
-        "month": "Sep",
+        "day": "15",
+        "month": "May",
         "year": "2024",
-        "icon": "bowl"
+        "icon": "paw",
+        "category": "Health & Wellness"
       },
       {
-        "title": "Creating a Safe & Happy Home for Pets",
-        "excerpt": "Practical ways to make your home more comfortable and stress-free for pets.",
-        "href": "/blogs/safe-happy-home",
-        "image": "/images/gallery/gallery_05.jpg",
-        "day": "22",
-        "month": "Jul",
+        "title": "The Ultimate Guide to Pet Nutrition",
+        "excerpt": "Learn what your pet really needs to eat for strong immunity and a long, happy life.",
+        "href": "/blogs/pet-nutrition-guide",
+        "image": "/images/gallery/gallery_03.jpg",
+        "day": "12",
+        "month": "May",
         "year": "2024",
-        "icon": "home"
+        "icon": "bowl",
+        "category": "Nutrition"
+      },
+      {
+        "title": "Daily Exercise Ideas to Keep Your Pet Active",
+        "excerpt": "Fun and easy exercise ideas to keep your pet physically fit and mentally stimulated.",
+        "href": "/blogs/daily-exercise",
+        "image": "/images/gallery/gallery_06.png",
+        "day": "08",
+        "month": "May",
+        "year": "2024",
+        "icon": "paw",
+        "category": "Training & Behavior"
+      },
+      {
+        "title": "Understanding Your Cat's Behavior",
+        "excerpt": "Decode your cat's body language and behaviors to build a stronger bond.",
+        "href": "/blogs/cat-behavior",
+        "image": "/images/gallery/gallery_05.jpg",
+        "day": "05",
+        "month": "May",
+        "year": "2024",
+        "icon": "paw",
+        "category": "Training & Behavior"
+      },
+      {
+        "title": "Routine Vet Checkups: Why They Matter",
+        "excerpt": "Regular vet visits can prevent health issues and ensure a longer, healthier life.",
+        "href": "/blogs/routine-vet-checkups",
+        "image": "/images/gallery/gallery_02.png",
+        "day": "01",
+        "month": "May",
+        "year": "2024",
+        "icon": "paw",
+        "category": "Pet Care Tips"
       }
     ]
   },
@@ -1084,7 +1078,7 @@
         ],
         "primaryBtn": {
           "text": "Book Appointment",
-          "href": "/book"
+          "href": "/appointment"
         },
         "secondaryBtn": {
           "text": "View Pricing",
@@ -1984,5 +1978,171 @@
         ]
       }
     }
+  },
+  "sitemap": {
+    "groups": [
+      {
+        "title": "1. Main Pages",
+        "links": [
+          { "label": "Home", "href": "/" },
+          { "label": "About Us", "href": "/about" },
+          { "label": "Mission & Vision", "href": "/mission" },
+          { "label": "Why Choose Us", "href": "/why-choose-us" },
+          { "label": "Pricing / Packages", "href": "/pricing" },
+          { "label": "Gallery", "href": "/gallery" },
+          { "label": "Testimonials", "href": "/testimonials" },
+          { "label": "FAQs", "href": "/faqs" },
+          { "label": "Contact Us", "href": "/contact" }
+        ]
+      },
+      {
+        "title": "2. Services",
+        "links": [
+          { "label": "Our Services", "href": "/services" },
+          { "label": "Service Detail", "href": "/services/detail" }
+        ]
+      },
+      {
+        "title": "3. Team",
+        "links": [
+          { "label": "Our Team", "href": "/team" }
+        ]
+      },
+      {
+        "title": "4. Locations",
+        "links": [
+          { "label": "Service Areas / Locations", "href": "/locations" },
+          { "label": "Location Detail", "href": "/location/mumbai-andheri" }
+        ]
+      },
+      {
+        "title": "5. Blog",
+        "links": [
+          { "label": "Blog", "href": "/blogs" },
+          { "label": "Blog Detail", "href": "/blogs/detail" }
+        ]
+      },
+      {
+        "title": "6. Legal Pages",
+        "links": [
+          { "label": "Terms & Conditions", "href": "/terms" },
+          { "label": "Privacy Policy", "href": "/privacy-policy" },
+          { "label": "Refund Policy", "href": "/refund-policy" },
+          { "label": "Cookie Policy", "href": "/cookie-policy" }
+        ]
+      }
+    ]
+  },
+  "privacyPolicy": {
+    "intro": "Welcome to PawCare's Privacy Policy. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you as to how we look after your personal data when you visit our website.",
+    "sections": [
+      {
+        "title": "1. Information We Collect",
+        "content": "We may collect, use, store and transfer different kinds of personal data about you which we have grouped together as follows: Identity Data, Contact Data, Financial Data, Transaction Data, Technical Data, Profile Data, Usage Data, and Marketing and Communications Data."
+      },
+      {
+        "title": "2. How We Use Your Information",
+        "content": "We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances: Where we need to perform the contract we are about to enter into or have entered into with you, or where it is necessary for our legitimate interests."
+      },
+      {
+        "title": "3. Data Security",
+        "content": "We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed."
+      },
+      {
+        "title": "4. Contact Us",
+        "content": "If you have any questions about this Privacy Policy, please contact us at hello@pawcare.com."
+      }
+    ],
+    "lastUpdated": "May 20, 2025",
+    "footer": "Thank you for trusting PawCare."
+  },
+  "terms": {
+    "intro": "Welcome to PawCare. By accessing or using our website and services, you agree to be bound by the following Terms and Conditions. If you do not agree with any part of these terms, please do not use our website or services.",
+    "sections": [
+      {
+        "title": "1. Use of Our Website",
+        "content": "You agree to use this website only for lawful purposes and in a way that does not infringe the rights of, restrict, or inhibit anyone else's use and enjoyment of the site. You must not misuse our site by introducing viruses or attempting to gain unauthorized access."
+      },
+      {
+        "title": "2. Services",
+        "content": "PawCare provides pet care and related services as described on our website. We reserve the right to modify, suspend, or discontinue any service at any time without prior notice."
+      },
+      {
+        "title": "3. Appointments and Cancellations",
+        "content": "Appointments can be booked through our website or by contacting us directly. We request you to inform us in advance if you need to reschedule or cancel an appointment. Missed appointments without prior notice may be subject to a cancellation charge."
+      },
+      {
+        "title": "4. User Responsibilities",
+        "content": "You are responsible for providing accurate information when using our services. You agree not to hold PawCare liable for any issues arising from incorrect or incomplete information provided by you."
+      },
+      {
+        "title": "5. Intellectual Property",
+        "content": "All content on this website, including text, images, logos, and designs, is the property of PawCare and is protected by applicable copyright and trademark laws. You may not use any content without our prior written permission."
+      },
+      {
+        "title": "6. Limitation of Liability",
+        "content": "PawCare shall not be liable for any indirect, incidental, or consequential damages arising out of the use of our website or services. Our total liability, if any, shall be limited to the amount paid for the service."
+      },
+      {
+        "title": "7. Changes to These Terms",
+        "content": "We may update these Terms and Conditions from time to time. Any changes will be posted on this page with the updated effective date. Your continued use of our website and services constitutes acceptance of the revised terms."
+      },
+      {
+        "title": "8. Governing Law",
+        "content": "These Terms and Conditions shall be governed by and construed in accordance with the laws of India. Any disputes shall be subject to the exclusive jurisdiction of the courts in Bangalore, Karnataka."
+      },
+      {
+        "title": "9. Contact Us",
+        "content": "If you have any questions about these Terms and Conditions, please contact us at hello@pawcare.com or call us at +91 98765 43210."
+      }
+    ],
+    "lastUpdated": "May 20, 2025",
+    "footer": "Thank you for trusting PawCare."
+  },
+  "refundPolicy": {
+    "intro": "Thank you for choosing PawCare. We understand that plans can change, and we strive to make our cancellation and refund processes as simple and transparent as possible.",
+    "sections": [
+      {
+        "title": "1. Cancellation of Appointments",
+        "content": "If you need to cancel or reschedule an appointment, we kindly ask that you provide us with at least 24 hours notice. Cancellations made within 24 hours of the appointment time may be subject to a cancellation fee."
+      },
+      {
+        "title": "2. Refund Eligibility",
+        "content": "Refunds are issued for services paid in advance if the cancellation is made within the acceptable timeframe. Refunds will not be provided for services that have already been rendered."
+      },
+      {
+        "title": "3. Processing Refunds",
+        "content": "Approved refunds will be processed and credited back to the original method of payment within 5-7 business days."
+      },
+      {
+        "title": "4. Contact Us",
+        "content": "If you have any questions about our Cancellation & Refund Policy, please contact us at hello@pawcare.com."
+      }
+    ],
+    "lastUpdated": "May 20, 2025",
+    "footer": "Thank you for trusting PawCare."
+  },
+  "cookiePolicy": {
+    "intro": "At PawCare, we believe in being clear and open about how we collect and use data related to you. This Cookie Policy provides detailed information about how and when we use cookies on our website.",
+    "sections": [
+      {
+        "title": "1. What are cookies?",
+        "content": "Cookies are small text files that are placed on your computer or mobile device by websites that you visit. They are widely used in order to make websites work, or work more efficiently, as well as to provide information to the owners of the site."
+      },
+      {
+        "title": "2. How we use cookies",
+        "content": "We use cookies for the following purposes: Essential cookies (required for operation), Analytical/performance cookies (to count visitors and see how they move around), and Functionality cookies (to recognize you when you return)."
+      },
+      {
+        "title": "3. Managing cookies",
+        "content": "Most web browsers allow some control of most cookies through the browser settings. To find out more about cookies, including how to see what cookies have been set, visit www.aboutcookies.org or www.allaboutcookies.org."
+      },
+      {
+        "title": "4. Contact Us",
+        "content": "If you have any questions about our Cookie Policy, please contact us at hello@pawcare.com."
+      }
+    ],
+    "lastUpdated": "May 20, 2025",
+    "footer": "Thank you for trusting PawCare."
   }
 }

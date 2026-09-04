@@ -276,7 +276,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-x-0 gap-y-2 text-sm text-white/75">
-            {footer.bottom.links.map((link, index) => (
+            {[...footer.bottom.links, { label: "Sitemap", href: "/sitemap" }].map((link, index, arr) => (
               <span key={link.href} className="flex items-center">
                 <Link
                   href={link.href}
@@ -285,7 +285,7 @@ export default function Footer() {
                 >
                   {link.label}
                 </Link>
-                {index < footer.bottom.links.length - 1 && (
+                {index < arr.length - 1 && (
                   <span className="text-white/30" aria-hidden>
                     |
                   </span>

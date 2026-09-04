@@ -29,7 +29,7 @@ export default function Home() {
         <HomeTestimonialsSection />
       </FadeIn>
       <FadeIn delay={100}>
-        <BlogsSection />
+        <BlogsSection limit={3} />
       </FadeIn>
     </main>
   );

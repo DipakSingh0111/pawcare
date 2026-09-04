@@ -117,3 +117,14 @@ body {
     animation: none;
   }
 }
+
+/* Global cursor pointer for all interactive elements */
+button,
+a,
+[role="button"],
+[onClick],
+label[for],
+select,
+summary {
+  cursor: pointer;
+}

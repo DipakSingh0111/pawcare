@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { MapPin, PawPrint } from "lucide-react";
 import data from "@/data/data.json";
 
@@ -71,10 +72,22 @@ export default function LocationsSection() {
 
         {/* Locations Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {locations.places.map((place, index) => (
-            <div
+          {locations.places.map((place, index) => {
+            const citySlugMap: Record<string, string> = {
+              "New Delhi": "delhi-south-extension",
+              "Mumbai": "mumbai-andheri",
+              "Bengaluru": "bengaluru-koramangala",
+              "Hyderabad": "hyderabad-banjara-hills",
+              "Pune": "pune-kalyani-nagar",
+              "Ahmedabad": "ahmedabad-prahlad-nagar"
+            };
+            const slug = citySlugMap[place.city] || place.city.toLowerCase().replace(/ /g, '-');
+            
+            return (
+            <Link
+              href={`/location/${slug}`}
               key={index}
-              className="bg-[#fafaf9] rounded-2xl p-6 relative border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="bg-[#fafaf9] rounded-2xl p-6 relative border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 block"
             >
               <div className="flex items-center space-x-6 relative">
                 {/* Image Container with floating pin */}
@@ -119,8 +132,8 @@ export default function LocationsSection() {
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            </Link>
+          )})}
         </div>
       </div>
     </section>

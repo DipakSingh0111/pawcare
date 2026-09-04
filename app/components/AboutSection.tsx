@@ -94,55 +94,54 @@ function AboutCollage({
   three: string;
 }) {
   return (
-    <div className="relative mx-auto h-[460px] w-full max-w-[480px] sm:h-[540px] lg:mx-0 lg:h-[600px] lg:max-w-[560px]">
-      {/* Yellow block behind top-left */}
-      <div className="absolute left-[2%] top-[3%] z-[1] h-[48%] w-[44%] rounded-[2.5rem] bg-[#ffb016] sm:rounded-[3rem]" />
+    <div className="relative mx-auto h-[480px] w-full max-w-[480px] sm:h-[560px] lg:mx-0 lg:h-[580px] lg:max-w-[520px]">
 
-      {/* Yellow bar under collage */}
-      <div className="absolute bottom-[5%] left-[28%] z-[1] h-[18%] w-[42%] rounded-[1.75rem] bg-[#ffb016]" />
+      {/* ── Gold rectangle behind top-left photo ── */}
+      <div className="absolute left-[0%] top-[2%] z-[1] h-[47%] w-[43%] rounded-[2.25rem] bg-[#ffb016]" />
 
-      {/* Navy peek behind big image (top) */}
-      <div className="absolute right-[14%] top-[6%] z-[1] h-[14%] w-[16%] rounded-[1.25rem] bg-[#0b1324]" />
+      {/* ── Gold rounded bar bottom-center ── */}
+      <div className="absolute bottom-[3%] left-[24%] z-[1] h-[16%] w-[48%] rounded-[1.5rem] bg-[#ffb016]" />
 
-      {/* Small yellow accent */}
-      <div className="absolute right-[8%] top-[16%] z-[6] h-[8%] w-[9%] rounded-[0.85rem] bg-[#ffb016]" />
+      {/* ── Navy square accent top-right of left column ── */}
+      <div className="absolute left-[30%] top-[7%] z-[2] h-[12%] w-[13%] rounded-[1rem] bg-[#0b1324]" />
 
-      {/* Navy peek bottom-right */}
-      <div className="absolute bottom-[3%] right-[4%] z-[1] h-[10%] w-[18%] rounded-2xl bg-[#0b1324]" />
+      {/* ── Small gold square accent ── */}
+      <div className="absolute left-[35%] top-[18%] z-[6] h-[7%] w-[8%] rounded-[0.75rem] bg-[#ffb016]" />
 
-      <DotGrid className="absolute right-[1%] top-[1%] z-[2]" />
-      <DotGrid className="absolute bottom-[1%] left-[1%] z-[2]" />
+      {/* ── Dot grids ── */}
+      <DotGrid className="absolute right-[2%] top-[2%] z-[2]" />
+      <DotGrid className="absolute bottom-[2%] left-[1%] z-[2]" />
 
-      {/* 1 — Top-left */}
-      <div className="absolute left-[5%] top-[6%] z-10 h-[40%] w-[38%] overflow-hidden rounded-[2.25rem] border-[10px] border-[#ffb016] bg-[#ffb016] shadow-sm sm:rounded-[2.75rem] sm:border-[12px]">
+      {/* 1 — Top-left: Dog photo (gold border) */}
+      <div className="absolute left-[3%] top-[4%] z-10 h-[43%] w-[39%] overflow-hidden rounded-[2rem] border-[10px] border-[#ffb016] bg-[#ffb016] shadow-md sm:border-[12px]">
         <Image
           src={one}
-          alt="Pet portrait"
+          alt="Happy dog"
           fill
-          className="object-cover object-center"
-          sizes="200px"
+          className="object-cover object-top"
+          sizes="210px"
           priority
         />
       </div>
 
-      {/* 2 — Bottom-left */}
-      <div className="absolute bottom-[12%] left-[5%] z-30 h-[32%] w-[34%] overflow-hidden rounded-[2rem] border-[10px] border-[#0b1324] bg-[#0b1324] shadow-md sm:rounded-[2.5rem] sm:border-[12px]">
+      {/* 2 — Bottom-left: Cat photo (navy border, smaller) */}
+      <div className="absolute bottom-[10%] left-[3%] z-30 h-[35%] w-[36%] overflow-hidden rounded-[1.75rem] border-[10px] border-[#0b1324] bg-[#0b1324] shadow-lg sm:border-[12px]">
         <Image
           src={two}
-          alt="Pet in sweater"
+          alt="Cat portrait"
           fill
-          className="object-cover object-[center_10%]"
-          sizes="170px"
+          className="object-cover object-center"
+          sizes="190px"
         />
       </div>
 
-      {/* 3 — Big tall image (overlaps left column) */}
-      <div className="absolute bottom-[8%] left-[36%] top-[12%] z-20 w-[58%] overflow-hidden rounded-[2.25rem] border-[8px] border-white bg-white shadow-[0_16px_40px_rgba(11,19,36,0.18)] sm:rounded-[2.75rem] sm:border-[10px]">
+      {/* 3 — Big tall centre-right: Woman with puppy */}
+      <div className="absolute bottom-[6%] left-[37%] top-[8%] z-20 w-[60%] overflow-hidden rounded-[2rem] border-[8px] border-white bg-white shadow-[0_16px_48px_rgba(11,19,36,0.16)] sm:border-[10px]">
         <Image
           src={three}
-          alt="Pet on couch"
+          alt="Woman with puppy"
           fill
-          className="object-cover object-[center_20%]"
+          className="object-cover object-top"
           sizes="320px"
         />
       </div>
@@ -154,7 +153,7 @@ export default function AboutSection() {
   const { eyebrow, title, description, features, cta, images } = data.about;
 
   return (
-    <section className="site-section relative overflow-hidden bg-white !pb-4 sm:!pb-6 lg:!pb-6">
+    <section className="site-section relative overflow-hidden bg-white">
       <PawPrint
         className="pointer-events-none absolute -bottom-6 right-[6%] h-40 w-40 text-[#f3ebe1] sm:h-56 sm:w-56"
         strokeWidth={1}
@@ -165,13 +164,9 @@ export default function AboutSection() {
         strokeWidth={1}
         aria-hidden
       />
-      <PawPrint
-        className="pointer-events-none absolute -left-10 top-24 h-28 w-28 -rotate-12 text-[#f6f0e8] opacity-60"
-        strokeWidth={1}
-        aria-hidden
-      />
 
-      <div className="site-container relative z-10 grid items-center gap-10 lg:grid-cols-2 lg:gap-14 xl:gap-16">
+      <div className="site-container relative z-10 grid items-center gap-12 lg:grid-cols-2 lg:gap-14 xl:gap-16">
+        {/* Left — Collage */}
         <div className="animate-fade-up">
           <AboutCollage
             one={images.one}
@@ -180,8 +175,9 @@ export default function AboutSection() {
           />
         </div>
 
-        {/* Right content */}
+        {/* Right — Content */}
         <div className="animate-fade-up animation-delay-100">
+          {/* Eyebrow */}
           <p className="mb-3 flex items-center gap-2 text-sm font-bold uppercase tracking-[0.14em] text-[#ffb016]">
             <PawPrint
               className="h-4 w-4 text-[#0b1324]"
@@ -191,30 +187,34 @@ export default function AboutSection() {
             {eyebrow}
           </p>
 
-          <h2 className="text-3xl font-extrabold tracking-tight text-[#0b1324] sm:text-4xl lg:text-[2.75rem]">
+          {/* Title */}
+          <h2 className="text-4xl font-extrabold tracking-tight text-[#0b1324] sm:text-5xl lg:text-[3rem]">
             {title}
           </h2>
 
-          <div className="mt-4 flex items-center gap-2">
-            <span className="h-[3px] w-14 rounded-full bg-[#ffb016]" />
-            <Heart className="h-4 w-4 fill-[#ffb016] text-[#ffb016]" />
+          {/* Gold divider + heart */}
+          <div className="mt-4 flex items-center gap-3">
+            <span className="h-[3px] w-12 rounded-full bg-[#ffb016]" />
+            <Heart className="h-4 w-4 text-[#ffb016]" strokeWidth={1.75} fill="none" />
           </div>
 
-          <p className="mt-6 max-w-xl text-[0.95rem] leading-relaxed text-[#5a6577] sm:text-base">
+          {/* Description */}
+          <p className="mt-5 max-w-xl text-[0.95rem] leading-relaxed text-[#5a6577] sm:text-base">
             {description}
           </p>
 
-          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-7">
+          {/* 2×2 Feature grid */}
+          <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-6">
             {features.map((feature) => (
               <div key={feature.title} className="flex items-start gap-3.5">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#0b1324]">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#0b1324]">
                   <AboutIcon type={feature.icon} />
                 </div>
                 <div>
-                  <h3 className="text-[15px] font-bold text-[#0b1324] sm:text-base">
+                  <h3 className="text-[14px] font-bold leading-snug text-[#0b1324] sm:text-[15px]">
                     {feature.title}
                   </h3>
-                  <p className="mt-1 text-sm leading-snug text-[#5a6577]">
+                  <p className="mt-0.5 text-[13px] leading-snug text-[#5a6577]">
                     {feature.description}
                   </p>
                 </div>
@@ -222,6 +222,7 @@ export default function AboutSection() {
             ))}
           </div>
 
+          {/* CTA Button */}
           <Link
             href={cta.href}
             className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#ffb016] px-6 py-3.5 text-sm font-bold text-[#0b1324] shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#e09a0f] hover:shadow-md sm:text-[15px]"

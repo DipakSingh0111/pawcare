@@ -42,8 +42,10 @@ function BlogIcon({ type }: { type: string }) {
   return <PawPrint className={common} strokeWidth={2} fill="currentColor" />;
 }
 
-export default function BlogsSection() {
+export default function BlogsSection({ limit }: { limit?: number } = {}) {
   const { eyebrow, title, titleHighlight, description, items } = data.blogs;
+  
+  const displayItems = limit ? items.slice(0, limit) : items;
 
   return (
     <section className="site-section relative overflow-hidden bg-[#F7F8FA]">
@@ -87,7 +89,7 @@ export default function BlogsSection() {
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-6 sm:mt-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-7">
-          {items.map((item) => (
+          {displayItems.map((item) => (
             <article
               key={item.href}
               className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-[0_8px_28px_rgba(11,19,36,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_36px_rgba(11,19,36,0.1)]"

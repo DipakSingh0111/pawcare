@@ -1,11 +1,5 @@
 import Link from "next/link";
-import {
-  PawPrint,
-  Check,
-  ArrowRight,
-  ShieldCheck,
-  Star,
-} from "lucide-react";
+import { PawPrint, Check, ArrowRight, ShieldCheck, Star } from "lucide-react";
 import data from "@/data/data.json";
 
 function DotGrid({ className }: { className?: string }) {
@@ -35,7 +29,7 @@ export default function PricingSection() {
         {/* Header */}
         <div className="mx-auto mb-12 max-w-2xl text-center sm:mb-14">
           <div className="mb-4 inline-flex items-center gap-2.5 rounded-full border border-[#ffb016] px-4 py-1.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#ffb016]" />
+            <span className="h-1 w-10 rounded-full bg-[#ffb016]" />
             <PawPrint
               className="h-3.5 w-3.5 text-[#ffb016]"
               strokeWidth={2.5}
@@ -120,9 +114,9 @@ export default function PricingSection() {
                   className="group flex w-full items-center justify-center gap-2 rounded-md border-[1.5px] border-[#ffb016] px-6 py-3.5 text-[14px] font-bold transition-all duration-300 bg-white text-[#0b1324] hover:bg-[#ffb016] hover:text-white"
                 >
                   <span>Choose Plan</span>
-                  <ArrowRight 
-                    className="h-[18px] w-[18px] transition-colors text-[#ffb016] group-hover:text-white" 
-                    strokeWidth={2} 
+                  <ArrowRight
+                    className="h-[18px] w-[18px] transition-colors text-[#ffb016] group-hover:text-white"
+                    strokeWidth={2}
                   />
                 </Link>
               </div>
