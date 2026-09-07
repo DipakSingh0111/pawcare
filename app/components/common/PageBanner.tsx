@@ -9,25 +9,25 @@ interface PageBannerProps {
   hasGradient?: boolean;
 }
 
-export default function PageBanner({ title, breadcrumbs, bgImage = "/images/page_banner_01.png", hasGradient = false }: PageBannerProps) {
+export default function PageBanner({ title, breadcrumbs, bgImage = "/images/page_banner_03.webp", hasGradient = false }: PageBannerProps) {
   const textColor = hasGradient ? "text-white" : "text-[#0b1324]";
   const iconColor = hasGradient ? "text-white" : "text-[#0b1324]/80";
   const iconMuted = hasGradient ? "text-white/70" : "text-[#0b1324]/50";
 
   return (
-    <section className="relative w-full h-[240px] sm:h-[300px] lg:h-[360px] flex items-center overflow-hidden">
+    <section className="relative w-full h-[300px] sm:h-[400px] lg:h-[450px] flex items-center overflow-hidden">
       {/* Background Image */}
       <div className={`absolute inset-0 z-0 ${hasGradient ? 'bg-[#e69300]' : 'bg-[#ffb016]'}`}>
         <Image
           src={bgImage}
           alt="Banner Background"
           fill
-          className={`object-cover ${hasGradient ? 'object-[75%_center] lg:object-[80%_30%]' : 'object-[75%_center] md:object-[right_center]'}`}
+          className={`object-cover object-center w-full h-full`}
           priority
         />
-        {/* Overlay for non-gradient banners on mobile and tablet for text readability */}
+        {/* Overlay for text readability on all screen sizes */}
         {!hasGradient && (
-          <div className="absolute inset-0 bg-gradient-to-r from-[#ffb016]/95 via-[#ffb016]/70 to-transparent lg:hidden w-full md:w-[75%]"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-transparent w-full md:w-[60%] lg:w-[50%]"></div>
         )}
         
         {hasGradient && (

@@ -91,23 +91,28 @@ export default function ServiceDetailsHero({ detail }: { detail: ServiceDetail }
             </div>
           </div>
 
-          <div className="relative mx-auto flex h-[280px] w-[280px] items-center justify-center sm:h-[360px] sm:w-[360px] lg:h-[400px] lg:w-[400px]">
-            <PawPrint
-              className="absolute -right-2 -top-2 h-10 w-10 text-[#ffb016]/40 sm:h-12 sm:w-12"
-              fill="#ffb016"
-              strokeWidth={0}
-              aria-hidden
-            />
-            <div className="absolute inset-0 rounded-full border-2 border-[#ffb016]/60" />
-            <div className="relative h-[92%] w-[92%] overflow-hidden rounded-full border-[8px] border-white shadow-[0_16px_40px_rgba(11,19,36,0.12)]">
-              <Image
-                src={hero.image}
-                alt={`${hero.title} ${hero.titleHighlight}`}
-                fill
-                className="object-cover"
-                priority
-                sizes="400px"
+          <div className="relative mx-auto flex h-[350px] w-full max-w-[350px] items-center justify-center sm:h-[450px] sm:max-w-[450px] lg:h-full lg:max-w-none lg:min-h-[550px]">
+            <div className="lg:absolute lg:right-[2%] lg:top-1/2 lg:h-[500px] lg:w-[500px] lg:-translate-y-1/2 xl:right-[5%] xl:h-[550px] xl:w-[550px]">
+              <PawPrint
+                className="absolute right-[12%] top-[8%] z-10 h-10 w-10 text-[#ffb016]/30 sm:h-12 sm:w-12 lg:h-16 lg:w-16"
+                fill="#ffb016"
+                strokeWidth={0}
+                aria-hidden
               />
+              {/* Offset orange border */}
+              <div className="absolute inset-0 -translate-x-4 -translate-y-4 rounded-full border-[1.5px] border-[#ffb016] lg:-translate-x-8 lg:-translate-y-6" />
+              
+              {/* Main image container */}
+              <div className="absolute inset-0 overflow-hidden rounded-full bg-white shadow-lg">
+                <Image
+                  src={hero.image}
+                  alt={`${hero.title} ${hero.titleHighlight}`}
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="(max-width: 1024px) 450px, 800px"
+                />
+              </div>
             </div>
           </div>
         </div>
