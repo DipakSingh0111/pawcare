@@ -1,6 +1,6 @@
 import PageBanner from "@/app/components/common/PageBanner";
 import BlogDetailSection from "@/app/components/BlogDetailSection";
-import { site } from "@/data";
+import { site } from "@/data/index";
 
 import { Metadata } from "next";
 
