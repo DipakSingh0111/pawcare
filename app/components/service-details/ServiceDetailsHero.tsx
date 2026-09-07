@@ -42,7 +42,7 @@ export default function ServiceDetailsHero({ detail }: { detail: ServiceDetail }
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
           <div>
             <div className="mb-3 flex items-center gap-2">
-              <PawPrint className="h-4 w-4 text-[#ffb016]" strokeWidth={2.5} fill="#ffb016" />
+              <PawPrint className="h-6 w-6 text-[#ffb016]" strokeWidth={2.5} fill="#ffb016" />
               <p className="text-sm font-bold uppercase tracking-[0.14em] text-[#ffb016]">
                 {hero.eyebrow}
               </p>

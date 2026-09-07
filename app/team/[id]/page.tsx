@@ -2,21 +2,22 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import PageBanner from "@/app/components/common/PageBanner";
 import TeamDetailSection from "@/app/components/TeamDetailSection";
-import data from "@/data/data.json";
+import { site } from "@/data";
 
 type PageProps = {
   params: Promise<{ id: string }>;
 };
 
 export function generateStaticParams() {
-  return data.team.members.map((member) => ({
-    id: member.id,
+  return Object.keys(site.teamDetail.bySlug).map((slug) => ({
+    id: slug,
   }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { id } = await params;
-  const member = data.team.members.find((m) => m.id === id);
+  const details = site.teamDetail.bySlug as Record<string, any>;
+  const member = details[id];
   if (!member) return { title: "Team Member | PawCare" };
 
   return {
@@ -27,7 +28,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function TeamDetailPage({ params }: PageProps) {
   const { id } = await params;
-  const member = data.team.members.find((m) => m.id === id);
+  const details = site.teamDetail.bySlug as Record<string, any>;
+  const member = details[id];
 
   if (!member) {
     notFound();

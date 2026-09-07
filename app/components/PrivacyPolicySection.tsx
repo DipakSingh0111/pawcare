@@ -1,7 +1,8 @@
-import data from "@/data/data.json";
+import { site, SectionProps, LegalContentData } from "@/data";
 
-export default function PrivacyPolicySection() {
-  const { intro, sections, lastUpdated, footer } = data.privacyPolicy;
+export default function PrivacyPolicySection({ data, className }: SectionProps<LegalContentData> = {}) {
+  const componentData = data || site.legalContent;
+  const { intro, sections, lastUpdated, footer } = componentData.bySlug["privacy-policy"];
 
   return (
     <section className="py-16 md:py-24 bg-white">

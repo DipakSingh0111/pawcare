@@ -1,3 +1,4 @@
+import { site, SectionProps, TeamDetailData } from "@/data";
 import Image from "next/image";
 import { PawPrint, Briefcase, GraduationCap, Award, ShieldCheck, Stethoscope, Syringe, Drumstick, ClipboardList, Dog, Scissors, Bath } from "lucide-react";
 
@@ -26,7 +27,8 @@ function ExpertiseIcon({ type }: { type: string }) {
   }
 }
 
-export default function TeamDetailSection({ member }: { member: any }) {
+export default function TeamDetailSection({ member, data, className }: { member: any } & SectionProps<TeamDetailData>) {
+  const componentData = data || site.teamDetail;
   return (
     <section className="w-full bg-white pt-20 pb-24">
       <div className="mx-auto max-w-[1440px] px-4 md:px-8 xl:px-10">
@@ -66,7 +68,7 @@ export default function TeamDetailSection({ member }: { member: any }) {
           {/* Right: Content */}
           <div className="flex flex-col relative z-10 lg:pr-10">
             <div className="mb-4 flex items-center gap-3">
-              <PawPrint className="h-4 w-4 text-[#ffb016]" strokeWidth={2.5} fill="#ffb016" />
+              <PawPrint className="h-6 w-6 text-[#ffb016]" strokeWidth={2.5} fill="#ffb016" />
               <p className="text-[13px] font-bold uppercase tracking-[0.2em] text-[#ffb016]">
                 TEAM MEMBER
               </p>

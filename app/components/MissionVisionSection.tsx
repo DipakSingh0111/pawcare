@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
 import { Eye, Target, Heart, Shield, Check, PawPrint, Users } from "lucide-react";
-import data from "@/data/data.json";
+import { site, SectionProps, MissionVisionData } from "@/data";
 
 function FeatureIcon({ type }: { type: string }) {
   if (type === "shield") {
@@ -77,11 +77,12 @@ function CircleImage({
   );
 }
 
-export default function MissionVisionSection() {
-  const { eyebrow, title, description, vision, mission } = data.missionVision;
+export default function MissionVisionSection({ data, className }: SectionProps<MissionVisionData> = {}) {
+  const componentData = data || site.missionVision;
+  const { eyebrow, title, description, vision, mission } = componentData;
 
   return (
-    <section className="relative overflow-hidden bg-white pt-16 pb-0 lg:pt-24 lg:pb-0">
+    <section className="relative overflow-hidden bg-white pt-4 pb-0 sm:pt-6 lg:pt-8 lg:pb-0">
       {/* Background Decoratives */}
       <div
         className="pointer-events-none absolute -left-20 top-12 h-64 w-64 rounded-full bg-[#fff8ea] opacity-80 blur-3xl"
@@ -138,7 +139,7 @@ export default function MissionVisionSection() {
             </p>
             <span className="h-[1px] w-8 bg-[#ffab00]/60" />
           </div>
-          <PawPrint className="mx-auto mb-2 h-4 w-4 text-[#0b1324]" />
+          <PawPrint className="mx-auto mb-2 h-6 w-6 text-[#0b1324]" />
           <h2 className="text-3xl font-extrabold text-[#0d1b3e] sm:text-4xl lg:text-5xl">
             {title}
           </h2>

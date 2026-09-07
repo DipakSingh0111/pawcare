@@ -1,89 +1,120 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { PawPrint, ArrowRight } from "lucide-react";
-import data from "@/data/data.json";
+import { PawPrint, ArrowRight, ChevronUp } from "lucide-react";
+import { site, SectionProps, TeamData } from "@/data";
 
 function DotGrid({ className }: { className?: string }) {
   return (
     <div className={`grid grid-cols-4 gap-2 ${className ?? ""}`} aria-hidden>
       {Array.from({ length: 16 }).map((_, i) => (
-        <span key={i} className="h-1.5 w-1.5 rounded-full bg-[#ffb016]/40" />
+        <span key={i} className="h-1.5 w-1.5 rounded-full bg-[#d6c4a8]" />
       ))}
     </div>
   );
 }
 
-export default function TeamSection() {
-  const { team } = data;
+export default function TeamSection({
+  data,
+  className,
+}: SectionProps<TeamData> = {}) {
+  const team = data || site.team;
+  const initialCount = team.initialCount ?? 4;
+  const [expanded, setExpanded] = useState(false);
+
+  const visibleMembers = expanded
+    ? team.members
+    : team.members.slice(0, initialCount);
+  const hasMore = team.members.length > initialCount;
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#FAFBFC] py-20 lg:py-24">
-      {/* Background Decorators */}
+    <section
+      className={`relative w-full overflow-hidden bg-[#FAFBFC] py-14 sm:py-16 lg:py-20 ${className ?? ""}`}
+    >
       <PawPrint
-        className="pointer-events-none absolute left-[5%] top-[20%] h-32 w-32 text-[#ffb016]/5 -rotate-12"
+        className="pointer-events-none absolute top-10 left-[4%] h-36 w-36 -rotate-12 text-[#e8dcc8]/70 sm:h-48 sm:w-48"
         strokeWidth={1}
+        aria-hidden
       />
-      <DotGrid className="absolute left-[3%] top-[40%] z-0" />
-      
-      <div className="pointer-events-none absolute -right-[10%] top-[10%] h-96 w-96 rounded-full border-[2px] border-dashed border-[#ffb016]/10" />
-      <div className="pointer-events-none absolute -right-[5%] top-[20%] h-64 w-64 rounded-full border-[1px] border-[#ffb016]/10" />
+      <DotGrid className="absolute top-[28%] left-[3%] z-0 sm:left-[4%]" />
 
-      <div className="mx-auto max-w-[1440px] px-4 md:px-8 xl:px-10 relative z-10">
-        
+      {/* Diagonal gold lines — top right */}
+      <div
+        className="pointer-events-none absolute top-8 right-[4%] flex flex-col gap-2 opacity-40 sm:right-[6%]"
+        aria-hidden
+      >
+        {Array.from({ length: 5 }).map((_, i) => (
+          <span
+            key={i}
+            className="h-px w-16 origin-right rotate-[-28deg] bg-[#ffb016] sm:w-20"
+            style={{ marginRight: `${i * 4}px` }}
+          />
+        ))}
+      </div>
+
+      <div className="site-container relative z-10">
         {/* Header */}
-        <div className="mx-auto mb-16 max-w-2xl text-center">
+        <div className="mx-auto mb-12 max-w-2xl text-center sm:mb-14">
           <div className="mb-3 flex items-center justify-center gap-3">
-            <div className="h-[1.5px] w-8 bg-[#ffb016]/50"></div>
-            <PawPrint className="h-4 w-4 text-[#ffb016]" strokeWidth={2.5} fill="#ffb016" />
-            <p className="text-[13px] font-bold uppercase tracking-[0.2em] text-[#ffb016]">
-              {team.eyebrow}
+            <span className="h-[1.5px] w-8 bg-[#ffb016] sm:w-10" />
+            <p className="text-[13px] font-bold tracking-[0.2em] text-[#ffb016] uppercase">
+              {team.tagline}
             </p>
-            <div className="h-[1.5px] w-8 bg-[#ffb016]/50"></div>
+            <span className="h-[1.5px] w-8 bg-[#ffb016] sm:w-10" />
           </div>
-          
-          <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-extrabold text-[#0b1324] leading-[1.2] mb-5 font-serif">
+
+          <PawPrint
+            className="mx-auto mb-3 h-4 w-4 text-[#ffb016]"
+            strokeWidth={2.5}
+            fill="#ffb016"
+          />
+
+          <h2 className="mb-3 font-serif text-3xl font-extrabold leading-tight text-[#0b1324] md:text-4xl lg:text-[2.75rem]">
             {team.title}{" "}
             <span className="text-[#ffb016]">{team.titleHighlight}</span>
           </h2>
 
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="h-[1.5px] w-12 bg-gray-200"></div>
-            <PawPrint className="h-[14px] w-[14px] text-[#ffb016]" strokeWidth={2.5} fill="#ffb016" />
-            <div className="h-[1.5px] w-12 bg-gray-200"></div>
-          </div>
+          <PawPrint
+            className="mx-auto mb-4 h-3.5 w-3.5 text-[#ffb016]"
+            strokeWidth={2.5}
+            fill="#ffb016"
+          />
 
-          <p className="text-[#5a6577] text-[15px] leading-relaxed max-w-lg mx-auto whitespace-pre-line">
+          <p className="mx-auto max-w-xl text-[15px] leading-relaxed text-[#5a6577]">
             {team.description}
           </p>
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16">
-          {team.members.map((member: any, idx: number) => (
+        <div className="mb-12 grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-7 lg:grid-cols-4 lg:gap-8">
+          {visibleMembers.map((member) => (
             <Link
-              key={idx}
-              href={`/team/${member.id}`}
-              className="group flex flex-col items-center bg-white rounded-2xl p-6 shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 text-center"
+              key={member.id}
+              href={`/team/${member.slug || member.id}`}
+              className="group flex flex-col items-center rounded-2xl border border-[#f0ebe3] bg-white p-6 text-center shadow-[0_4px_24px_rgba(11,19,36,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_32px_rgba(11,19,36,0.08)] sm:p-7"
             >
               <div className="relative mb-6">
-                {/* Decorative Arc */}
-                <div className="absolute -right-2 -top-2 h-[80px] w-[80px] rounded-tr-full border-t-[2px] border-r-[2px] border-[#ffb016] z-0 transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110"></div>
-                <div className="absolute right-[76px] -top-3 h-2 w-2 rounded-full bg-[#ffb016] z-10 transition-transform duration-500 group-hover:-translate-x-2 group-hover:translate-y-1"></div>
-                
-                <div className="relative h-[200px] w-[200px] overflow-hidden rounded-full border-4 border-white shadow-md z-10 bg-gray-100">
+                {/* Gold arc accent */}
+                <div className="absolute -top-1 -right-1 z-0 h-[78px] w-[78px] rounded-tr-full border-t-[2px] border-r-[2px] border-[#ffb016] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6" />
+                <span className="absolute top-[-6px] right-[72px] z-10 h-1.5 w-1.5 rounded-full bg-[#ffb016]" />
+
+                <div className="relative z-10 h-[180px] w-[180px] overflow-hidden rounded-full border-4 border-white bg-gray-100 shadow-md sm:h-[190px] sm:w-[190px]">
                   <Image
                     src={member.image}
                     alt={member.name}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="190px"
                   />
                 </div>
               </div>
 
-              <h3 className="text-[19px] font-bold text-[#0b1324] font-serif mb-1.5 group-hover:text-[#ffb016] transition-colors">
+              <h3 className="mb-1.5 font-serif text-[19px] font-bold text-[#0b1324] transition-colors group-hover:text-[#ffb016]">
                 {member.name}
               </h3>
-              <p className="text-[11px] font-bold uppercase tracking-widest text-[#ffb016] mb-4">
+              <p className="mb-3 text-[11px] font-bold tracking-[0.18em] text-[#ffb016] uppercase">
                 {member.role}
               </p>
               <p className="text-[13px] leading-relaxed text-[#5a6577]">
@@ -93,18 +124,39 @@ export default function TeamSection() {
           ))}
         </div>
 
-        {/* View All Button */}
-        <div className="flex justify-center">
-          <Link
-            href="/team"
-            className="inline-flex items-center justify-center gap-2 rounded-md border-[1.5px] border-[#ffb016] bg-white px-8 py-3.5 text-[14px] font-bold text-[#0b1324] transition-all hover:bg-[#ffb016] hover:text-white group"
-          >
-            <PawPrint className="h-[18px] w-[18px] text-[#ffb016] group-hover:text-white transition-colors" strokeWidth={2.5} fill="currentColor" />
-            <span className="tracking-wide">VIEW OUR TEAM</span>
-            <ArrowRight className="h-[18px] w-[18px] text-[#ffb016] group-hover:text-white transition-colors" strokeWidth={2} />
-          </Link>
-        </div>
-
+        {/* View Our Team — expands more members */}
+        {hasMore && (
+          <div className="flex justify-center">
+            <button
+              type="button"
+              onClick={() => setExpanded((prev) => !prev)}
+              className="group inline-flex items-center justify-center gap-2.5 rounded-md border-[1.5px] border-[#ffb016] bg-white px-8 py-3.5 text-[14px] font-bold text-[#0b1324] transition-all hover:bg-[#ffb016] hover:text-white"
+              aria-expanded={expanded}
+            >
+              <PawPrint
+                className="h-[18px] w-[18px] text-[#ffb016] transition-colors group-hover:text-white"
+                strokeWidth={2.5}
+                fill="currentColor"
+              />
+              <span className="tracking-wide">
+                {expanded
+                  ? team.cta?.collapseLabel || "SHOW LESS"
+                  : team.cta?.label || "VIEW OUR TEAM"}
+              </span>
+              {expanded ? (
+                <ChevronUp
+                  className="h-[18px] w-[18px] text-[#ffb016] transition-colors group-hover:text-white"
+                  strokeWidth={2.25}
+                />
+              ) : (
+                <ArrowRight
+                  className="h-[18px] w-[18px] text-[#ffb016] transition-colors group-hover:text-white"
+                  strokeWidth={2}
+                />
+              )}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

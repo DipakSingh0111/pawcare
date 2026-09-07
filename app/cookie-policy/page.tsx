@@ -12,7 +12,7 @@ export default function CookiePolicyPage() {
       <PageBanner
         title="Cookie Policy"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Cookie Policy" }]}
-        hasGradient={true}
+
       />
       <CookiePolicySection />
     </main>

@@ -12,7 +12,7 @@ export default function TermsPage() {
       <PageBanner
         title="Terms and Conditions"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Terms and Conditions" }]}
-        hasGradient={true}
+
       />
       <TermsSection />
     </main>

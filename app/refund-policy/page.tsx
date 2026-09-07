@@ -12,7 +12,7 @@ export default function RefundPolicyPage() {
       <PageBanner
         title="Cancellation & Refund Policy"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Cancellation & Refund Policy" }]}
-        hasGradient={true}
+
       />
       <RefundPolicySection />
     </main>

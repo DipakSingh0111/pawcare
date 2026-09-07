@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { MapPin, PawPrint, Star } from "lucide-react";
-import data from "@/data/data.json";
+import { site, SectionProps, TestimonialData } from "@/data";
 
 function DotGrid({ className }: { className?: string }) {
   return (
@@ -12,8 +12,9 @@ function DotGrid({ className }: { className?: string }) {
   );
 }
 
-export default function TestimonialsSection() {
-  const { testimonials } = data;
+export default function TestimonialsSection({ data, className }: SectionProps<TestimonialData> = {}) {
+  const componentData = data || site.testimonial;
+  const testimonials = componentData;
 
   return (
     <section className="site-section relative w-full overflow-hidden bg-white">
@@ -26,78 +27,87 @@ export default function TestimonialsSection() {
       />
 
       <div className="site-container relative z-10">
-        <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-          <div className="mb-3 flex items-center justify-center gap-3">
-            <span className="h-[2px] w-8 bg-[#ffb016] sm:w-10" />
-            <PawPrint
-              className="h-4 w-4 text-[#ffb016]"
-              strokeWidth={2.5}
-              fill="#ffb016"
-            />
-            <p className="text-sm font-bold tracking-[0.16em] text-[#ffb016] uppercase">
-              {testimonials.eyebrow}
-            </p>
-            <PawPrint
-              className="h-4 w-4 text-[#ffb016]"
-              strokeWidth={2.5}
-              fill="#ffb016"
-            />
-            <span className="h-[2px] w-8 bg-[#ffb016] sm:w-10" />
+        <div className="mx-auto mb-10 max-w-4xl text-center sm:mb-12">
+          <div className="mb-4 flex items-center justify-center">
+            <span className="h-[1.5px] w-10 shrink-0 bg-[#ffb016] sm:w-12" aria-hidden />
+            <div className="mx-3 flex items-center gap-2">
+              <PawPrint
+                className="h-4 w-4 shrink-0 text-[#ffb016]"
+                strokeWidth={2.5}
+                fill="#ffb016"
+              />
+              <p className="text-sm font-bold tracking-[0.16em] text-[#ffb016] uppercase">
+                {testimonials.tagline}
+              </p>
+            </div>
+            <span className="h-[1.5px] w-10 shrink-0 bg-[#ffb016] sm:w-12" aria-hidden />
           </div>
 
-          <h2 className="text-3xl font-extrabold tracking-tight text-[#0b1324] sm:text-4xl lg:text-[2.5rem]">
+          <h2 className="whitespace-nowrap font-serif text-[1.35rem] font-extrabold tracking-tight text-[#0b1324] sm:text-3xl md:text-4xl lg:text-[2.5rem]">
             {testimonials.title.trim()}{" "}
             <span className="text-[#ffb016]">{testimonials.titleHighlight}</span>
           </h2>
 
-          <PawPrint
-            className="mx-auto mt-3 h-4 w-4 text-[#ffb016]"
-            strokeWidth={2.5}
-            fill="#ffb016"
-          />
+          <div className="mt-4 flex w-full items-center justify-center">
+            <span className="h-[1.5px] w-12 shrink-0 bg-[#ffb016] sm:w-14" aria-hidden />
+            <PawPrint
+              className="mx-2.5 h-4 w-4 shrink-0 text-[#ffb016]"
+              strokeWidth={2.5}
+              fill="#ffb016"
+            />
+            <span className="h-[1.5px] w-12 shrink-0 bg-[#ffb016] sm:w-14" aria-hidden />
+          </div>
 
-          <p className="mx-auto mt-3 max-w-xl text-[0.95rem] leading-relaxed text-[#5a6577] sm:text-base">
+          <p className="mx-auto mt-4 whitespace-nowrap text-sm leading-relaxed text-[#5a6577] sm:text-base">
             {testimonials.description}
           </p>
         </div>
 
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-7">
-          {testimonials.reviews.map((review) => (
+          {testimonials.items.slice(0, 6).map((review) => (
             <article
               key={`${review.name}-${review.location}`}
-              className="relative flex flex-col overflow-hidden rounded-2xl border border-[#eee8df] bg-white p-6 shadow-[0_8px_28px_rgba(11,19,36,0.04)] sm:p-7"
+              className="relative flex flex-col overflow-hidden rounded-2xl bg-white p-6 shadow-[0_10px_30px_rgba(11,19,36,0.06)] sm:p-7"
             >
-              <PawPrint
-                className="pointer-events-none absolute right-3 bottom-3 h-20 w-20 text-[#7cb342]/10"
-                strokeWidth={1}
-                fill="currentColor"
+              {/* Bottom-right green quarter + dots */}
+              <div
+                className="pointer-events-none absolute -right-1 -bottom-1 h-24 w-24 rounded-tl-[100%] bg-[#c8e6c9]/70"
                 aria-hidden
-              />
+              >
+                <div className="absolute right-4 bottom-4 grid grid-cols-3 gap-1.5">
+                  {Array.from({ length: 9 }).map((_, i) => (
+                    <span key={i} className="h-1.5 w-1.5 rounded-full bg-white/90" />
+                  ))}
+                </div>
+              </div>
 
               <span
-                className="mb-3 font-serif text-5xl leading-none text-[#8bc34a]/70"
+                className="mb-2 font-serif text-[3.25rem] leading-none text-[#a5d6a7]"
                 aria-hidden
               >
                 “
               </span>
 
-              <p className="relative z-10 mb-5 flex-1 text-center text-[0.95rem] leading-relaxed text-[#5a6577]">
-                {review.text}
+              <p className="relative z-10 mb-5 flex-1 text-center text-[0.95rem] leading-[1.7] text-[#3d4656]">
+                {review.quote}
               </p>
 
-              <div className="relative z-10 mb-5 flex items-center justify-center gap-1">
-                {[...Array(review.rating)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="h-4 w-4 fill-[#ffb016] text-[#ffb016]"
-                  />
-                ))}
-                {[...Array(5 - review.rating)].map((_, i) => (
-                  <Star
-                    key={`empty-${i}`}
-                    className="h-4 w-4 fill-gray-200 text-gray-200"
-                  />
-                ))}
+              <div className="relative z-10 mb-4 flex flex-col items-center">
+                <div className="flex items-center justify-center gap-1">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-4 w-4 fill-[#ffb016] text-[#ffb016]"
+                    />
+                  ))}
+                  {[...Array(5 - review.rating)].map((_, i) => (
+                    <Star
+                      key={`empty-${i}`}
+                      className="h-4 w-4 fill-gray-200 text-gray-200"
+                    />
+                  ))}
+                </div>
+                <span className="mt-4 h-px w-full bg-[#e8eaee]" aria-hidden />
               </div>
 
               <div className="relative z-10 flex items-center gap-3">
@@ -118,6 +128,7 @@ export default function TestimonialsSection() {
                     <MapPin
                       className="h-3.5 w-3.5 text-[#8bc34a]"
                       strokeWidth={2.25}
+                      fill="#8bc34a"
                     />
                     {review.location}
                   </p>

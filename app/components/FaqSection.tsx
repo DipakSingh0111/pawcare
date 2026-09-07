@@ -4,10 +4,11 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { PawPrint, Heart, ArrowRight, Minus, Plus } from "lucide-react";
-import data from "@/data/data.json";
+import { site, SectionProps, FAQData } from "@/data";
 
-export default function FaqSection() {
-  const { faqs } = data;
+export default function FaqSection({ data, className }: SectionProps<FAQData> = {}) {
+  const componentData = data || site.faq;
+  const faqs = componentData;
   const [openIdx, setOpenIdx] = useState<number>(0);
 
   return (
@@ -54,11 +55,11 @@ export default function FaqSection() {
           <div className="mb-2 flex items-center justify-center gap-2">
             <span className="h-[2px] w-10 bg-[#ffab00]/60" />
             <p className="text-lg font-bold uppercase tracking-widest text-[#ffab00]">
-              {faqs.eyebrow}
+              {faqs.tagline}
             </p>
             <span className="h-[2px] w-10 bg-[#ffab00]/60" />
           </div>
-          <PawPrint className="mx-auto mb-3 h-4 w-4 text-[#0b1324]" />
+          <PawPrint className="mx-auto mb-3 h-6 w-6 text-[#0b1324]" />
           <h2 className="text-3xl font-extrabold text-[#0b1324] sm:text-4xl lg:text-[2.75rem] font-serif mb-4">
             {faqs.title}{" "}
             <span className="text-[#0b1324]">{faqs.titleHighlight}</span>
@@ -115,7 +116,7 @@ export default function FaqSection() {
 
           {/* Right Column - Accordion */}
           <div className="flex flex-col space-y-3 lg:mt-4">
-            {faqs.questions.map((faq, idx) => {
+            {faqs.items.map((faq, idx) => {
               const isOpen = openIdx === idx;
 
               return (
@@ -147,7 +148,7 @@ export default function FaqSection() {
                         )}
                       </div>
                       <span className="text-[15px] font-bold text-[#0b1324]">
-                        {faq.q}
+                        {faq.question}
                       </span>
                     </div>
                     <ChevronIcon isOpen={isOpen} />
@@ -163,7 +164,7 @@ export default function FaqSection() {
                     <div className="overflow-hidden">
                       <div className="px-5 pb-5 pt-1 sm:px-6 sm:pb-6 pl-14 sm:pl-16">
                         <p className="text-sm leading-relaxed text-slate-500">
-                          {faq.a}
+                          {faq.answer}
                         </p>
                       </div>
                     </div>

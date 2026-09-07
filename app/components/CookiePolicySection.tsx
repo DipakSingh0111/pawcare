@@ -1,7 +1,8 @@
-import data from "@/data/data.json";
+import { site, SectionProps, LegalContentData } from "@/data";
 
-export default function CookiePolicySection() {
-  const { intro, sections, lastUpdated, footer } = data.cookiePolicy;
+export default function CookiePolicySection({ data, className }: SectionProps<LegalContentData> = {}) {
+  const componentData = data || site.legalContent;
+  const { intro, sections, lastUpdated, footer } = componentData.bySlug["cookie-policy"];
 
   return (
     <section className="py-16 md:py-24 bg-white">

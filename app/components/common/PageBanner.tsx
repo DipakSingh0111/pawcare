@@ -1,3 +1,4 @@
+import { site, SectionProps, PageBannerData } from "@/data";
 import Link from "next/link";
 import { ChevronRight, Home } from "lucide-react";
 import Image from "next/image";
@@ -9,7 +10,8 @@ interface PageBannerProps {
   hasGradient?: boolean;
 }
 
-export default function PageBanner({ title, breadcrumbs, bgImage = "/images/page_banner_03.webp", hasGradient = false }: PageBannerProps) {
+export default function PageBanner({ title, breadcrumbs, bgImage = "/images/page_banner_03.webp", hasGradient = false, data, className }: PageBannerProps & SectionProps<PageBannerData>) {
+  const componentData = data || site.pageBanner;
   const textColor = hasGradient ? "text-white" : "text-[#0b1324]";
   const iconColor = hasGradient ? "text-white" : "text-[#0b1324]/80";
   const iconMuted = hasGradient ? "text-white/70" : "text-[#0b1324]/50";

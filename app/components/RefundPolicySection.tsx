@@ -1,7 +1,8 @@
-import data from "@/data/data.json";
+import { site, SectionProps, LegalContentData } from "@/data";
 
-export default function RefundPolicySection() {
-  const { intro, sections, lastUpdated, footer } = data.refundPolicy;
+export default function RefundPolicySection({ data, className }: SectionProps<LegalContentData> = {}) {
+  const componentData = data || site.legalContent;
+  const { intro, sections, lastUpdated, footer } = componentData.bySlug["refund-policy"];
 
   return (
     <section className="py-16 md:py-24 bg-white">

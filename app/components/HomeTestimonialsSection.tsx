@@ -2,12 +2,13 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { PawPrint, Star, ChevronLeft, ChevronRight, Heart } from "lucide-react";
-import data from "@/data/data.json";
+import { PawPrint, Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { site, SectionProps, TestimonialData } from "@/data";
 
-export default function HomeTestimonialsSection() {
-  const { testimonials } = data;
-  const reviews = testimonials.reviews;
+export default function HomeTestimonialsSection({ data, className }: SectionProps<TestimonialData> = {}) {
+  const componentData = data || site.testimonial;
+  const testimonials = componentData;
+  const reviews = testimonials.items;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activeArrow, setActiveArrow] = useState<'prev' | 'next'>('next');
 
@@ -28,33 +29,39 @@ export default function HomeTestimonialsSection() {
       <div className="site-container">
         
         {/* Header */}
-        <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-          <div className="mb-3 flex items-center justify-center gap-3">
-            <span className="h-[1px] w-8 bg-[#ffb016] sm:w-10" />
-            <PawPrint
-              className="h-4 w-4 text-[#0b1324]"
-              strokeWidth={2.5}
-              fill="#0b1324"
-            />
-            <p className="text-sm font-bold tracking-widest text-[#ffb016] uppercase">
-              {testimonials.eyebrow}
-            </p>
-            <span className="h-[1px] w-8 bg-[#ffb016] sm:w-10" />
+        <div className="mx-auto mb-10 max-w-4xl text-center sm:mb-12">
+          <div className="mb-4 flex items-center justify-center">
+            <span className="h-[1.5px] w-10 shrink-0 bg-[#ffb016] sm:w-12" aria-hidden />
+            <div className="mx-3 flex items-center gap-2">
+              <PawPrint
+                className="h-4 w-4 shrink-0 text-[#ffb016]"
+                strokeWidth={2.5}
+                fill="#ffb016"
+              />
+              <p className="text-sm font-bold tracking-[0.16em] text-[#ffb016] uppercase">
+                {testimonials.tagline}
+              </p>
+            </div>
+            <span className="h-[1.5px] w-10 shrink-0 bg-[#ffb016] sm:w-12" aria-hidden />
           </div>
 
-          <h2 className="text-3xl font-extrabold tracking-tight text-[#0b1324] sm:text-4xl lg:text-[2.5rem] mb-4 font-serif">
+          <h2 className="whitespace-nowrap font-serif text-[1.35rem] font-extrabold tracking-tight text-[#0b1324] sm:text-3xl md:text-4xl lg:text-[2.5rem]">
             {testimonials.title.trim()}{" "}
             <span className="text-[#ffb016]">{testimonials.titleHighlight}</span>
           </h2>
 
-          <div className="flex items-center justify-center gap-2 mb-4">
-             <span className="h-[1px] w-12 bg-gray-200" />
-             <Heart className="h-4 w-4 text-[#ffb016]" fill="#ffb016" strokeWidth={0} />
-             <span className="h-[1px] w-12 bg-gray-200" />
+          <div className="mt-4 mb-4 flex w-full items-center justify-center">
+            <span className="h-[1.5px] w-12 shrink-0 bg-[#ffb016] sm:w-14" aria-hidden />
+            <PawPrint
+              className="mx-2.5 h-4 w-4 shrink-0 text-[#ffb016]"
+              strokeWidth={2.5}
+              fill="#ffb016"
+            />
+            <span className="h-[1.5px] w-12 shrink-0 bg-[#ffb016] sm:w-14" aria-hidden />
           </div>
 
-          <p className="mx-auto max-w-xl text-[0.95rem] leading-relaxed text-[#5a6577] sm:text-base">
-            See how we've made a difference in the lives of pets and the people who love them.
+          <p className="mx-auto whitespace-nowrap text-sm leading-relaxed text-[#5a6577] sm:text-base">
+            {testimonials.description}
           </p>
         </div>
 
@@ -89,13 +96,13 @@ export default function HomeTestimonialsSection() {
                 ))}
               </div>
 
-              <p className="text-[#0b1324] text-lg md:text-xl italic font-serif leading-relaxed mb-8">
-                "{currentReview.text}"
+              <p className="mb-6 text-[15px] italic leading-relaxed text-[#4a5568]">
+                &quot;{currentReview.quote}&quot;
               </p>
 
               <div>
                 <h4 className="text-[#0b1324] font-extrabold text-lg mb-1">{currentReview.name}</h4>
-                <p className="text-[#5a6577] text-sm mb-3">Pet Lover</p>
+                <p className="text-[#5a6577] text-sm mb-3">{currentReview.role || "Pet Lover"}</p>
                 <div className="w-8 h-[3px] bg-[#ffb016] rounded-full"></div>
               </div>
 

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PawPrint, Check, ArrowRight, ShieldCheck, Star } from "lucide-react";
-import data from "@/data/data.json";
+import { site, SectionProps, PricingData } from "@/data";
 
 function DotGrid({ className }: { className?: string }) {
   return (
@@ -12,8 +12,9 @@ function DotGrid({ className }: { className?: string }) {
   );
 }
 
-export default function PricingSection() {
-  const { pricing } = data;
+export default function PricingSection({ data, className }: SectionProps<PricingData> = {}) {
+  const componentData = data || site.pricing;
+  const pricing = componentData;
 
   return (
     <section className="site-section relative overflow-hidden bg-white">
@@ -28,17 +29,21 @@ export default function PricingSection() {
       <div className="site-container relative z-10">
         {/* Header */}
         <div className="mx-auto mb-12 max-w-2xl text-center sm:mb-14">
-          <div className="mb-4 inline-flex items-center gap-2.5 rounded-full border border-[#ffb016] px-4 py-1.5">
-            <span className="h-1 w-10 rounded-full bg-[#ffb016]" />
-            <PawPrint
-              className="h-3.5 w-3.5 text-[#ffb016]"
-              strokeWidth={2.5}
-              fill="#ffb016"
-            />
-            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#ffb016]">
-              {pricing.eyebrow}
-            </p>
-            <span className="h-1.5 w-1.5 rounded-full bg-[#ffb016]" />
+          <div className="mb-5 flex items-center justify-center">
+            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#ffb016]" aria-hidden />
+            <span className="h-px w-8 shrink-0 bg-[#ffb016] sm:w-10" aria-hidden />
+            <div className="mx-0 inline-flex items-center gap-2 rounded-full border border-[#ffb016] bg-white px-4 py-1.5 sm:px-5">
+              <PawPrint
+                className="h-3.5 w-3.5 text-[#ffb016]"
+                strokeWidth={2.5}
+                fill="#ffb016"
+              />
+              <p className="text-xs font-bold tracking-[0.16em] text-[#ffb016] uppercase">
+                {pricing.tagline}
+              </p>
+            </div>
+            <span className="h-px w-8 shrink-0 bg-[#ffb016] sm:w-10" aria-hidden />
+            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#ffb016]" aria-hidden />
           </div>
 
           <h2 className="text-3xl font-extrabold tracking-tight text-[#0b1324] sm:text-4xl lg:text-[2.6rem]">

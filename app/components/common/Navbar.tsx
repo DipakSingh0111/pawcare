@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { ChevronDown, PawPrint, ArrowRight, Menu, X } from "lucide-react";
-import data from "@/data/data.json";
+import { site, SectionProps, HeaderData } from "@/data";
 
 function MobileNavItem({ link, setOpen }: { link: any, setOpen: (open: boolean) => void }) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -63,15 +63,26 @@ function MobileNavItem({ link, setOpen }: { link: any, setOpen: (open: boolean) 
   );
 }
 
-export default function Navbar() {
+export default function Navbar({ data, className }: SectionProps<HeaderData> = {}) {
   const [open, setOpen] = useState(false);
-  const { logoText, links, button } = data.navbar;
+  const navbarData = data || site.header;
+  
+  // Map new schema to expected props
+  const logoText = navbarData.logo?.name || "PawCare";
+  const links = navbarData.menuItems?.map((item: any) => ({
+    label: item.label,
+    href: item.href,
+    active: item.active,
+    hasDropdown: item.hasDropdown,
+    subLinks: item.dropdownItems
+  })) || [];
+  const button = navbarData.cta ? { text: navbarData.cta.label, href: navbarData.cta.href } : null;
 
   return (
-    <div className="relative w-full border-b border-[#eee8df] bg-white">
+    <div className={`relative w-full border-b border-[#eee8df] bg-white ${className || ''}`}>
       <div className="site-container flex items-center justify-between gap-4 py-3 lg:py-4">
         {/* Logo */}
-        <Link href="/" className="relative z-20 shrink-0 -ml-2 sm:-ml-3 lg:-ml-4" onClick={() => setOpen(false)}>
+        <Link href="/" className="relative z-20 shrink-0" onClick={() => setOpen(false)}>
           <Image
             src="/images/logo.png"
             alt={logoText}
@@ -122,13 +133,13 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <Link
-          href={button.href}
+          href={button?.href || "#"}
           className="hidden items-center gap-2.5 rounded-md bg-[#ffb016] px-5 py-3 text-[15px] font-bold text-[#0b1324] shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#e09a0f] hover:shadow-md lg:inline-flex"
         >
           <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white">
             <PawPrint className="h-3.5 w-3.5 text-[#0b1324]" strokeWidth={2.5} fill="#0b1324" />
           </span>
-          <span>{button.text}</span>
+          <span>{button?.text}</span>
           <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
         </Link>
 
@@ -158,14 +169,14 @@ export default function Navbar() {
           </nav>
 
           <Link
-            href={button.href}
+            href={button?.href || "#"}
             onClick={() => setOpen(false)}
             className="mt-4 inline-flex w-full items-center justify-center gap-2.5 rounded-md bg-[#ffb016] px-5 py-3.5 text-[15px] font-bold text-[#0b1324]"
           >
             <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white">
               <PawPrint className="h-3.5 w-3.5 text-[#0b1324]" strokeWidth={2.5} fill="#0b1324" />
             </span>
-            <span>{button.text}</span>
+            <span>{button?.text}</span>
             <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
           </Link>
         </div>

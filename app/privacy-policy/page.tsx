@@ -12,7 +12,7 @@ export default function PrivacyPolicyPage() {
       <PageBanner
         title="Privacy Policy"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Privacy Policy" }]}
-        hasGradient={true}
+
       />
       <PrivacyPolicySection />
     </main>

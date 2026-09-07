@@ -1,8 +1,9 @@
 import Link from "next/link";
-import data from "@/data/data.json";
+import { site, SectionProps, SitemapData } from "@/data";
 
-export default function SitemapSection() {
-  const { groups } = data.sitemap;
+export default function SitemapSection({ data, className }: SectionProps<SitemapData> = {}) {
+  const componentData = data || site.sitemap;
+  const groups = componentData.categories;
 
   return (
     <section className="site-section bg-white pt-16 pb-24">

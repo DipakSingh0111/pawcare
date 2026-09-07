@@ -1,32 +1,44 @@
 import PageBanner from "@/app/components/common/PageBanner";
 import BlogDetailSection from "@/app/components/BlogDetailSection";
-import data from "@/data/data.json";
+import { site } from "@/data";
 
-export const metadata = {
-  title: "Blog Detail | PawCare",
-  description: "Read our full blog article.",
+import { Metadata } from "next";
+
+type PageProps = {
+  params: Promise<{ slug: string }>;
 };
 
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const blog = site.blog.posts.find((p) => p.slug === slug);
+  return {
+    title: blog?.title || "Blog Detail | PawCare",
+    description: "Read our full blog article.",
+  };
+}
+
 export function generateStaticParams() {
-  const blogs = data.blogs.items;
-  return blogs.map((blog) => ({
-    slug: blog.href.replace("/blogs/", ""),
+  return site.blog.posts.map((post) => ({
+    slug: post.slug,
   }));
 }
 
-export default async function BlogDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function BlogDetailPage({ params }: PageProps) {
   const { slug } = await params;
   
-  const blogs = data.blogs.items;
-  const activeBlog = blogs.find((b) => b.href.includes(slug)) || blogs[0];
-  const blogTitle = activeBlog.title || "Blog Detail";
+  const posts = site.blog.posts;
+  const activeBlog = posts.find((p) => p.slug === slug);
+  const blogTitle = activeBlog?.title || "Blog Detail";
 
-  const recentPosts = blogs.slice(0, 3).map(b => ({
-    title: b.title,
-    date: `${b.month} ${b.day}, ${b.year}`,
-    image: b.image,
-    href: b.href
-  }));
+  const recentPosts = posts.filter((p) => p.slug !== slug).slice(0, 3).map((b) => {
+    const dateObj = new Date(b.date || new Date());
+    return {
+      title: b.title,
+      date: `${dateObj.toLocaleString('default', { month: 'short' })} ${dateObj.getDate()}, ${dateObj.getFullYear()}`,
+      image: b.image,
+      href: `/blogs/${b.slug}`,
+    };
+  });
 
   const allCategories = [
     "Pet Care Tips", 
@@ -36,10 +48,10 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
     "Adoption Stories", 
     "Pet Parents Corner"
   ].map(catName => {
-    const blogForCat = blogs.find(b => b.category === catName);
+    const blogForCat = posts.find((b: any) => b.category === catName);
     return {
       name: catName,
-      href: blogForCat ? blogForCat.href : "/blogs"
+      href: blogForCat ? `/blogs/${blogForCat.slug}` : "/blogs"
     };
   });
 

@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
   ArrowLeft,
@@ -11,7 +10,7 @@ import {
   Play,
   X,
 } from "lucide-react";
-import data from "@/data/data.json";
+import { site, SectionProps, GalleryData } from "@/data";
 
 type VideoItem = { title: string; description: string; src: string };
 
@@ -163,15 +162,19 @@ function SectionHeader({
         <span className="h-[2px] w-8 bg-[#ffb016] sm:w-10" />
       </div>
 
-      <h2 className="text-3xl font-extrabold tracking-tight text-[#0b1324] sm:text-4xl lg:text-[2.5rem]">
+          <h2 className="text-3xl font-extrabold tracking-tight text-[#0b1324] sm:text-4xl lg:text-[2.5rem]">
         {title}
       </h2>
 
-      <PawPrint
-        className="mx-auto mt-3 h-4 w-4 text-[#ffb016]"
-        strokeWidth={2.5}
-        fill="#ffb016"
-      />
+      <div className="mt-3 flex w-full items-center justify-center">
+        <span className="h-[1.5px] w-12 shrink-0 bg-[#ffb016] sm:w-14" aria-hidden />
+        <PawPrint
+          className="mx-2.5 h-5 w-5 shrink-0 text-[#ffb016]"
+          strokeWidth={2.5}
+          fill="#ffb016"
+        />
+        <span className="h-[1.5px] w-12 shrink-0 bg-[#ffb016] sm:w-14" aria-hidden />
+      </div>
 
       <p className="mx-auto mt-3 max-w-lg text-[0.95rem] leading-relaxed text-[#5a6577] sm:text-base">
         {description}
@@ -180,10 +183,16 @@ function SectionHeader({
   );
 }
 
-export default function GallerySection() {
-  const { images, videos } = data.gallery;
+export default function GallerySection({ data, className }: SectionProps<GalleryData> = {}) {
+  const componentData = data || site.gallery;
+  const { images, videos } = componentData;
   const items = images.items;
+  const initialCount = images.initialCount ?? 8;
+  const [expanded, setExpanded] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const visibleItems = expanded ? items : items.slice(0, initialCount);
+  const hasMore = items.length > initialCount;
 
   const closeLightbox = useCallback(() => setActiveIndex(null), []);
 
@@ -223,7 +232,7 @@ export default function GallerySection() {
   return (
     <>
       {/* Image Gallery */}
-      <section className="site-section relative overflow-hidden bg-white">
+      <section className={`site-section relative overflow-hidden bg-white ${className ?? ""}`}>
         <div className="site-container relative z-10">
           <SectionHeader
             eyebrow={images.eyebrow}
@@ -232,35 +241,49 @@ export default function GallerySection() {
           />
 
           <div className="grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-3 lg:grid-cols-4 lg:gap-6">
-            {items.map((item, index) => (
-              <button
-                key={item.src}
-                type="button"
-                onClick={() => setActiveIndex(index)}
-                className="group relative aspect-[4/3] cursor-pointer overflow-hidden rounded-xl sm:rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffb016]"
-                aria-label={`View ${item.alt}`}
-              >
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  fill
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </button>
-            ))}
+            {visibleItems.map((item, index) => {
+              const realIndex = expanded ? index : index;
+              const fullIndex = items.findIndex((entry) => entry.src === item.src);
+
+              return (
+                <button
+                  key={item.src}
+                  type="button"
+                  onClick={() => setActiveIndex(fullIndex >= 0 ? fullIndex : realIndex)}
+                  className="group relative aspect-[4/3] cursor-pointer overflow-hidden rounded-xl sm:rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffb016]"
+                  aria-label={`View ${item.alt}`}
+                >
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </button>
+              );
+            })}
           </div>
 
-          <div className="mt-10 flex justify-center sm:mt-12">
-            <Link
-              href={images.cta.href}
-              className="inline-flex items-center gap-2.5 rounded-lg border border-[#ffb016] bg-white px-5 py-2.5 text-sm font-semibold text-[#ffb016] transition-colors hover:bg-[#ffb016] hover:text-white"
-            >
-              <Images className="h-4 w-4" strokeWidth={2} />
-              {images.cta.text}
-              <ArrowRight className="h-4 w-4" strokeWidth={2.25} />
-            </Link>
-          </div>
+          {hasMore && (
+            <div className="mt-10 flex justify-center sm:mt-12">
+              <button
+                type="button"
+                onClick={() => setExpanded((prev) => !prev)}
+                className="inline-flex items-center gap-2.5 rounded-lg border border-[#ffb016] bg-white px-5 py-2.5 text-sm font-semibold text-[#ffb016] transition-colors hover:bg-[#ffb016] hover:text-white"
+                aria-expanded={expanded}
+              >
+                <Images className="h-4 w-4" strokeWidth={2} />
+                {expanded
+                  ? images.cta.collapseText || "Show Less Photos"
+                  : images.cta.text || "View More Photos"}
+                <ArrowRight
+                  className={`h-4 w-4 transition-transform duration-300 ${expanded ? "rotate-90" : ""}`}
+                  strokeWidth={2.25}
+                />
+              </button>
+            </div>
+          )}
         </div>
       </section>
 

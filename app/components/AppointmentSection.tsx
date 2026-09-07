@@ -2,9 +2,12 @@
 
 import React, { useState } from "react";
 import { User, Phone, Mail, PawPrint, Calendar, Clock, Edit3, ShieldCheck, ChevronDown, CalendarDays, ArrowRight } from "lucide-react";
-import data from "@/data/data.json";
+import { site, SectionProps, AppointmentData } from "@/data";
 
-export default function AppointmentSection() {
+export default function AppointmentSection({ data, className }: SectionProps<AppointmentData> = {}) {
+  const componentData = data || site.appointment;
+  const { tagline, title, description, submitLabel, trustNote, fields } = componentData;
+
   const [formData, setFormData] = useState({
     fullName: "",
     phone: "",
@@ -26,7 +29,6 @@ export default function AppointmentSection() {
     e.preventDefault();
     console.log("Form submitted", formData);
     alert("Appointment request submitted successfully!");
-    // Reset form
     setFormData({
       fullName: "",
       phone: "",
@@ -42,7 +44,7 @@ export default function AppointmentSection() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-[#fffaf5] relative overflow-hidden">
+    <section className={`py-16 md:py-24 bg-[#fffaf5] relative overflow-hidden ${className || ""}`}>
       {/* Background decorations */}
       <div className="absolute left-10 top-32 opacity-20 hidden md:block">
         <div className="grid grid-cols-4 gap-2">
@@ -70,13 +72,13 @@ export default function AppointmentSection() {
             <div className="h-[1px] w-12 bg-[#e69300]/30"></div>
             <div className="flex items-center gap-2 text-[#e69300] font-bold text-sm tracking-wider uppercase">
               <PawPrint className="w-4 h-4" />
-              Appointment
+              {tagline}
             </div>
             <div className="h-[1px] w-12 bg-[#e69300]/30"></div>
           </div>
           
           <h2 className="text-4xl md:text-5xl font-extrabold text-[#0b1324] mb-6 font-serif">
-            Book an Appointment
+            {title}
           </h2>
           
           <div className="flex justify-center mb-6">
@@ -88,7 +90,7 @@ export default function AppointmentSection() {
           </div>
 
           <p className="text-gray-600">
-            Fill out the form below and we'll get back to you to confirm your appointment.
+            {description}
           </p>
         </div>
 
@@ -98,7 +100,7 @@ export default function AppointmentSection() {
               
               {/* Full Name */}
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-[#0b1324]">Full Name</label>
+                <label className="text-sm font-semibold text-[#0b1324]">{fields.fullName.label}</label>
                 <div className="relative">
                   <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <input
@@ -106,16 +108,16 @@ export default function AppointmentSection() {
                     name="fullName"
                     value={formData.fullName}
                     onChange={handleChange}
-                    placeholder="Enter your full name"
+                    placeholder={fields.fullName.placeholder}
                     className="w-full pl-12 pr-4 py-3.5 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-[#ffb016] focus:ring-1 focus:ring-[#ffb016] transition-all text-sm"
                     required
                   />
                 </div>
               </div>
 
-              {/* Phone Number */}
+              {/* Phone */}
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-[#0b1324]">Phone Number</label>
+                <label className="text-sm font-semibold text-[#0b1324]">{fields.phone.label}</label>
                 <div className="relative">
                   <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <input
@@ -123,16 +125,16 @@ export default function AppointmentSection() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="Enter your phone number"
+                    placeholder={fields.phone.placeholder}
                     className="w-full pl-12 pr-4 py-3.5 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-[#ffb016] focus:ring-1 focus:ring-[#ffb016] transition-all text-sm"
                     required
                   />
                 </div>
               </div>
 
-              {/* Email Address */}
+              {/* Email */}
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-[#0b1324]">Email Address</label>
+                <label className="text-sm font-semibold text-[#0b1324]">{fields.email.label}</label>
                 <div className="relative">
                   <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <input
@@ -140,7 +142,7 @@ export default function AppointmentSection() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="Enter your email address"
+                    placeholder={fields.email.placeholder}
                     className="w-full pl-12 pr-4 py-3.5 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-[#ffb016] focus:ring-1 focus:ring-[#ffb016] transition-all text-sm"
                     required
                   />
@@ -149,7 +151,7 @@ export default function AppointmentSection() {
 
               {/* Pet Name */}
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-[#0b1324]">Pet Name</label>
+                <label className="text-sm font-semibold text-[#0b1324]">{fields.petName.label}</label>
                 <div className="relative">
                   <PawPrint className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <input
@@ -157,7 +159,7 @@ export default function AppointmentSection() {
                     name="petName"
                     value={formData.petName}
                     onChange={handleChange}
-                    placeholder="Enter your pet's name"
+                    placeholder={fields.petName.placeholder}
                     className="w-full pl-12 pr-4 py-3.5 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-[#ffb016] focus:ring-1 focus:ring-[#ffb016] transition-all text-sm"
                     required
                   />
@@ -166,7 +168,7 @@ export default function AppointmentSection() {
 
               {/* Pet Type */}
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-[#0b1324]">Pet Type</label>
+                <label className="text-sm font-semibold text-[#0b1324]">{fields.petType.label}</label>
                 <div className="relative">
                   <select
                     name="petType"
@@ -175,12 +177,10 @@ export default function AppointmentSection() {
                     className="w-full px-4 py-3.5 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-[#ffb016] focus:ring-1 focus:ring-[#ffb016] transition-all text-sm appearance-none text-gray-500"
                     required
                   >
-                    <option value="" disabled>Select pet type</option>
-                    <option value="Dog">Dog</option>
-                    <option value="Cat">Cat</option>
-                    <option value="Bird">Bird</option>
-                    <option value="Fish">Fish</option>
-                    <option value="Other">Other</option>
+                    <option value="" disabled>{fields.petType.placeholder}</option>
+                    {fields.petType.options.map((opt) => (
+                      <option key={opt} value={opt}>{opt}</option>
+                    ))}
                   </select>
                   <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
                 </div>
@@ -188,7 +188,7 @@ export default function AppointmentSection() {
 
               {/* Pet Age */}
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-[#0b1324]">Pet Age</label>
+                <label className="text-sm font-semibold text-[#0b1324]">{fields.petAge.label}</label>
                 <div className="relative">
                   <Calendar className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <input
@@ -196,7 +196,7 @@ export default function AppointmentSection() {
                     name="petAge"
                     value={formData.petAge}
                     onChange={handleChange}
-                    placeholder="Enter pet age"
+                    placeholder={fields.petAge.placeholder}
                     className="w-full pl-12 pr-4 py-3.5 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-[#ffb016] focus:ring-1 focus:ring-[#ffb016] transition-all text-sm"
                     required
                   />
@@ -205,7 +205,7 @@ export default function AppointmentSection() {
 
               {/* Appointment Date */}
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-[#0b1324]">Appointment Date</label>
+                <label className="text-sm font-semibold text-[#0b1324]">{fields.appointmentDate.label}</label>
                 <div className="relative">
                   <Calendar className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <input
@@ -222,7 +222,7 @@ export default function AppointmentSection() {
 
               {/* Appointment Time */}
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-[#0b1324]">Appointment Time</label>
+                <label className="text-sm font-semibold text-[#0b1324]">{fields.appointmentTime.label}</label>
                 <div className="relative">
                   <Clock className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <input
@@ -239,7 +239,7 @@ export default function AppointmentSection() {
 
               {/* Service Needed */}
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-[#0b1324]">Service Needed</label>
+                <label className="text-sm font-semibold text-[#0b1324]">{fields.serviceNeeded.label}</label>
                 <div className="relative">
                   <select
                     name="serviceNeeded"
@@ -248,8 +248,8 @@ export default function AppointmentSection() {
                     className="w-full px-4 py-3.5 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-[#ffb016] focus:ring-1 focus:ring-[#ffb016] transition-all text-sm appearance-none text-gray-500"
                     required
                   >
-                    <option value="" disabled>Select service</option>
-                    {data.services.items.map((service, index) => (
+                    <option value="" disabled>{fields.serviceNeeded.placeholder}</option>
+                    {site.services.items.map((service, index) => (
                       <option key={index} value={service.title}>
                         {service.title}
                       </option>
@@ -263,38 +263,40 @@ export default function AppointmentSection() {
 
             {/* Additional Notes */}
             <div className="space-y-2">
-              <label className="text-sm font-semibold text-[#0b1324]">Additional Notes <span className="text-gray-400 font-normal">(Optional)</span></label>
+              <label className="text-sm font-semibold text-[#0b1324]">
+                {fields.additionalNotes.label} <span className="text-gray-400 font-normal">(Optional)</span>
+              </label>
               <div className="relative">
                 <Edit3 className="absolute left-4 top-4 w-5 h-5 text-gray-400" />
                 <textarea
                   name="additionalNotes"
                   value={formData.additionalNotes}
                   onChange={handleChange}
-                  placeholder="Write any additional information..."
+                  placeholder={fields.additionalNotes.placeholder}
                   rows={4}
                   className="w-full pl-12 pr-4 py-3.5 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-[#ffb016] focus:ring-1 focus:ring-[#ffb016] transition-all text-sm resize-y"
                 ></textarea>
               </div>
             </div>
 
-            {/* Submit Button */}
+            {/* Submit */}
             <div className="flex justify-center pt-2">
               <button
                 type="submit"
                 className="bg-[#0b1324] hover:bg-[#1a2b4c] text-white px-8 py-4 rounded-xl font-semibold flex items-center justify-center gap-3 transition-colors w-full md:w-auto min-w-[280px]"
               >
                 <CalendarDays className="w-5 h-5 text-[#ffb016]" />
-                Book Appointment
+                {submitLabel}
                 <ArrowRight className="w-5 h-5 text-[#ffb016] ml-2" />
               </button>
             </div>
           </form>
         </div>
 
-        {/* Footer info */}
+        {/* Trust note */}
         <div className="flex items-center justify-center gap-2 mt-8 text-gray-500 text-sm">
           <ShieldCheck className="w-5 h-5 text-[#ffb016]" />
-          <span>We respect your time. Your information is safe with us.</span>
+          <span>{trustNote}</span>
         </div>
       </div>
     </section>

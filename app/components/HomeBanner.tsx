@@ -1,106 +1,114 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CalendarDays, PawPrint } from "lucide-react";
-import data from "@/data/data.json";
+import { site, SectionProps, BannerData } from "@/data";
 
 function FeatureIcon({ type }: { type: string }) {
   const common = "h-7 w-7";
 
+  // Premium Quality — award ribbon badge with paw
   if (type === "quality") {
     return (
       <svg viewBox="0 0 24 24" className={common} fill="none" aria-hidden>
+        {/* Badge circle */}
+        <circle cx="12" cy="9" r="5.4" stroke="#ffb016" strokeWidth="1.55" />
+        <circle cx="12" cy="9" r="3.55" stroke="#ffb016" strokeWidth="1.35" />
+        {/* Ribbon tails */}
         <path
-          d="M12 2.2l1.55 3.35 3.7.4-2.8 2.55.85 3.55L12 10.4 8.7 12.05l.85-3.55-2.8-2.55 3.7-.4L12 2.2z"
+          d="M9.1 13.6L7.4 21l4.6-2.55L16.6 21l-1.7-7.4"
           stroke="#ffb016"
-          strokeWidth="1.5"
+          strokeWidth="1.55"
           strokeLinejoin="round"
         />
-        <path
-          d="M8.8 13l-1.35 7.2L12 17.8l4.55 2.4L15.2 13"
-          stroke="#ffb016"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M10.55 7.1c.2-.55.7-.9 1.45-.9s1.25.35 1.45.9c.12.35-.05.7-.4.9l-.7.4.25.75c.1.3-.05.6-.35.7-.55.2-1.15.2-1.7 0-.3-.1-.45-.4-.35-.7l.25-.75-.7-.4c-.35-.2-.52-.55-.4-.9z"
-          fill="#ffb016"
-        />
+        {/* Paw inside badge */}
+        <circle cx="12" cy="9.2" r="0.85" fill="#ffb016" />
+        <circle cx="10.55" cy="8.1" r="0.55" fill="#ffb016" />
+        <circle cx="13.45" cy="8.1" r="0.55" fill="#ffb016" />
+        <circle cx="10.85" cy="10.25" r="0.55" fill="#ffb016" />
+        <circle cx="13.15" cy="10.25" r="0.55" fill="#ffb016" />
       </svg>
     );
   }
 
+  // Expert Care — person silhouette with medical +
   if (type === "care") {
     return (
       <svg viewBox="0 0 24 24" className={common} fill="none" aria-hidden>
-        <circle cx="12" cy="6.2" r="2.35" stroke="#ffb016" strokeWidth="1.5" />
+        <circle cx="12" cy="6.1" r="2.6" stroke="#ffb016" strokeWidth="1.55" />
         <path
-          d="M7.2 20.2v-3c0-2.4 2-4.35 4.8-4.35s4.8 1.95 4.8 4.35v3"
+          d="M6.8 20.3v-2.4c0-2.75 2.25-5 5.2-5s5.2 2.25 5.2 5v2.4"
           stroke="#ffb016"
-          strokeWidth="1.5"
+          strokeWidth="1.55"
           strokeLinecap="round"
         />
         <path
-          d="M12 10.8v3.4M10.3 12.5h3.4"
+          d="M12 11.35v4.1M10.1 13.4h3.8"
           stroke="#ffb016"
-          strokeWidth="1.5"
+          strokeWidth="1.7"
           strokeLinecap="round"
         />
       </svg>
     );
   }
 
+  // Fast Delivery — truck with paw on cargo
   if (type === "delivery") {
     return (
       <svg viewBox="0 0 24 24" className={common} fill="none" aria-hidden>
         <path
-          d="M3 15.2V8.5c0-.7.55-1.25 1.25-1.25h8.2c.7 0 1.25.55 1.25 1.25v6.7"
+          d="M2.8 15.4V7.6c0-.75.6-1.35 1.35-1.35h8.4c.75 0 1.35.6 1.35 1.35v7.8"
           stroke="#ffb016"
-          strokeWidth="1.5"
+          strokeWidth="1.55"
           strokeLinejoin="round"
         />
         <path
-          d="M13.7 10h3.15L19.7 13v2.2h-6"
+          d="M13.9 9.2h3.35L20.5 12.5v2.9h-6.6"
           stroke="#ffb016"
-          strokeWidth="1.5"
+          strokeWidth="1.55"
           strokeLinejoin="round"
         />
-        <circle cx="7.1" cy="17" r="1.65" stroke="#ffb016" strokeWidth="1.5" />
-        <circle cx="16.9" cy="17" r="1.65" stroke="#ffb016" strokeWidth="1.5" />
-        <path d="M8.75 17h6.5" stroke="#ffb016" strokeWidth="1.5" />
-        <circle cx="9" cy="11" r="1.05" fill="#ffb016" />
+        <circle cx="7" cy="17.35" r="1.75" stroke="#ffb016" strokeWidth="1.55" />
+        <circle cx="16.85" cy="17.35" r="1.75" stroke="#ffb016" strokeWidth="1.55" />
+        <path d="M8.75 17.35h6.35" stroke="#ffb016" strokeWidth="1.55" />
+        <circle cx="8.35" cy="10.55" r="0.7" fill="#ffb016" />
+        <circle cx="7.15" cy="9.55" r="0.45" fill="#ffb016" />
+        <circle cx="9.55" cy="9.55" r="0.45" fill="#ffb016" />
+        <circle cx="7.4" cy="11.45" r="0.45" fill="#ffb016" />
+        <circle cx="9.3" cy="11.45" r="0.45" fill="#ffb016" />
       </svg>
     );
   }
 
+  // Pet Happiness — heart with paw inside
   return (
     <svg viewBox="0 0 24 24" className={common} fill="none" aria-hidden>
       <path
-        d="M12 20s-6.6-4.05-6.6-8.85A3.55 3.55 0 0112 8.05a3.55 3.55 0 016.6 3.1C18.6 15.95 12 20 12 20z"
+        d="M12 20.4s-7-4.2-7-9.15A3.7 3.7 0 0112 8.2a3.7 3.7 0 017 3.05c0 4.95-7 9.15-7 9.15z"
         stroke="#ffb016"
-        strokeWidth="1.5"
+        strokeWidth="1.55"
         strokeLinejoin="round"
       />
-      <circle cx="12" cy="12.15" r="1.15" fill="#ffb016" />
-      <circle cx="10.55" cy="10.9" r="0.65" fill="#ffb016" />
-      <circle cx="13.45" cy="10.9" r="0.65" fill="#ffb016" />
-      <circle cx="10.85" cy="13.3" r="0.65" fill="#ffb016" />
-      <circle cx="13.15" cy="13.3" r="0.65" fill="#ffb016" />
+      <circle cx="12" cy="12.35" r="1" fill="#ffb016" />
+      <circle cx="10.45" cy="11.15" r="0.58" fill="#ffb016" />
+      <circle cx="13.55" cy="11.15" r="0.58" fill="#ffb016" />
+      <circle cx="10.75" cy="13.45" r="0.58" fill="#ffb016" />
+      <circle cx="13.25" cy="13.45" r="0.58" fill="#ffb016" />
     </svg>
   );
 }
 
-export default function HomeBanner() {
+export default function HomeBanner({ data, className }: SectionProps<BannerData> = {}) {
+  const componentData = data || site.banner;
   const {
     badge,
     title,
     titleHighlight,
     description,
-    primaryCta,
-    secondaryCta,
+    ctaPrimary: primaryCta,
+    ctaSecondary: secondaryCta,
     features,
     image,
-  } = data.banner;
+  } = componentData;
 
   return (
     <section className="relative w-full overflow-hidden bg-white">
@@ -144,14 +152,14 @@ export default function HomeBanner() {
               className="flex w-full items-center justify-center gap-2 rounded-md bg-[#ffb016] px-6 py-3.5 text-sm font-bold text-[#0b1324] shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#e09a0f] hover:shadow-md sm:w-auto sm:text-base"
             >
               <PawPrint className="h-4 w-4" strokeWidth={2.5} />
-              {primaryCta.text}
+              {primaryCta.label}
             </Link>
             <Link
               href={secondaryCta.href}
               className="flex w-full items-center justify-center gap-2 rounded-md border-[1.5px] border-[#0b1324] bg-white px-6 py-3.5 text-sm font-bold text-[#0b1324] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0b1324] hover:text-white sm:w-auto sm:text-base"
             >
               <CalendarDays className="h-4 w-4" strokeWidth={2.25} />
-              {secondaryCta.text}
+              {secondaryCta.label}
             </Link>
           </div>
         </div>

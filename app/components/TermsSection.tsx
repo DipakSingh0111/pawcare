@@ -1,7 +1,8 @@
-import data from "@/data/data.json";
+import { site, SectionProps, LegalContentData } from "@/data";
 
-export default function TermsSection() {
-  const { intro, sections, lastUpdated, footer } = data.terms;
+export default function TermsSection({ data, className }: SectionProps<LegalContentData> = {}) {
+  const componentData = data || site.legalContent;
+  const { intro, sections, lastUpdated, footer } = componentData.bySlug["terms"];
 
   return (
     <section className="py-16 md:py-24 bg-white">

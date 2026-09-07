@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { PawPrint, Heart } from "lucide-react";
-import data from "@/data/data.json";
+import { site, SectionProps, WhyChooseUsData } from "@/data";
 
 function WhyIcon({ type }: { type: string }) {
   const common = "w-10 h-10";
@@ -135,26 +135,27 @@ function WhyIcon({ type }: { type: string }) {
   return null;
 }
 
-export default function WhyChooseUsSection() {
-  const { whyChooseUs } = data;
+export default function WhyChooseUsSection({ data, className }: SectionProps<WhyChooseUsData> = {}) {
+  const componentData = data || site.whyChooseUs;
+  
 
   return (
-    <section className="site-section w-full overflow-hidden bg-white">
+    <section className="site-section w-full overflow-hidden bg-white !pt-4 sm:!pt-6 lg:!pt-8">
       <div className="site-container">
         {/* Header Section */}
-        <div className="flex flex-col items-center text-center mb-16">
+        <div className="mb-10 flex flex-col items-center text-center sm:mb-12">
           <div className="flex items-center justify-center space-x-3 mb-4">
             <div className="h-px w-8 bg-[#ffb016]"></div>
-            <PawPrint className="w-4 h-4 text-[#0b1324]" />
+            <PawPrint className="w-6 h-6 text-[#0b1324]" />
             <span className="text-[#ffb016] font-bold text-xs md:text-sm tracking-[0.2em] uppercase">
-              {whyChooseUs.eyebrow}
+              {componentData.tagline}
             </span>
             <div className="h-px w-8 bg-[#ffb016]"></div>
           </div>
 
           <h2 className="text-4xl md:text-[2.75rem] font-extrabold text-[#0b1324] mb-4 font-serif">
-            {whyChooseUs.title}{" "}
-            <span className="text-[#ffb016]">{whyChooseUs.titleHighlight}</span>
+            {componentData.title}{" "}
+            <span className="text-[#ffb016]">{componentData.titleHighlight}</span>
           </h2>
 
           <div className="flex items-center justify-center space-x-3 mb-6">
@@ -167,7 +168,7 @@ export default function WhyChooseUsSection() {
           </div>
 
           <p className="text-[#5a6577] max-w-2xl text-[15px] leading-relaxed whitespace-pre-line mx-auto">
-            {whyChooseUs.description}
+            {componentData.description}
           </p>
         </div>
 
@@ -232,9 +233,9 @@ export default function WhyChooseUsSection() {
                 </div>
                 <div className="flex flex-col pt-1">
                   <h3 className="text-white text-lg md:text-xl font-bold leading-tight">
-                    {whyChooseUs.leftCard.title} <br />
+                    {componentData.leftCard.title} <br />
                     <span className="text-[#ffb016]">
-                      {whyChooseUs.leftCard.titleHighlight}
+                      {componentData.leftCard.titleHighlight}
                     </span>
                   </h3>
                 </div>
@@ -243,14 +244,14 @@ export default function WhyChooseUsSection() {
               <div className="w-full h-[1px] bg-white/10 my-2 relative z-10"></div>
 
               <p className="text-white/80 text-xs md:text-sm leading-relaxed relative z-10 pr-6 mt-1">
-                {whyChooseUs.leftCard.description}
+                {componentData.leftCard.description}
               </p>
             </div>
           </div>
 
           {/* Right Side (Features Grid) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 relative z-10">
-            {whyChooseUs.features.map((feature, idx) => (
+            {componentData.features.map((feature, idx) => (
               <div
                 key={idx}
                 className="bg-[#f8f9fa] rounded-[24px] p-6 lg:p-7 flex flex-col items-start hover:shadow-md transition-shadow h-full"

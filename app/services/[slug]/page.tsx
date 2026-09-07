@@ -40,7 +40,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           { label: "Services", href: "/services" },
           { label: `${detail.hero.title} ${detail.hero.titleHighlight}` },
         ]}
-        hasGradient
+        hasGradient={false}
       />
       <ServiceDetailsHero detail={detail} />
       <ServiceWhyMatters detail={detail} />

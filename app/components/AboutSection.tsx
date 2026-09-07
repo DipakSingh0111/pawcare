@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Heart, PawPrint } from "lucide-react";
-import data from "@/data/data.json";
+import { site, SectionProps, AboutData } from "@/data";
 
 function AboutIcon({ type }: { type: string }) {
   const common = "h-5 w-5";
@@ -149,11 +149,12 @@ function AboutCollage({
   );
 }
 
-export default function AboutSection() {
-  const { eyebrow, title, description, features, cta, images } = data.about;
+export default function AboutSection({ data, className }: SectionProps<AboutData> = {}) {
+  const componentData = data || site.about;
+  const { tagline: eyebrow, title, description, images, features, cta } = componentData;
 
   return (
-    <section className="site-section relative overflow-hidden bg-white">
+    <section className="site-section relative overflow-hidden bg-white !pb-4 sm:!pb-5 lg:!pb-6">
       <PawPrint
         className="pointer-events-none absolute -bottom-6 right-[6%] h-40 w-40 text-[#f3ebe1] sm:h-56 sm:w-56"
         strokeWidth={1}
@@ -234,7 +235,7 @@ export default function AboutSection() {
                 fill="white"
               />
             </span>
-            <span>{cta.text}</span>
+            <span>{cta.label}</span>
             <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
           </Link>
         </div>

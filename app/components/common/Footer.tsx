@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail, MapPin, PawPrint, Heart } from "lucide-react";
-import data from "@/data/data.json";
+import { site, SectionProps, FooterData } from "@/data";
 
 function FeatureIcon({ type }: { type: string }) {
   if (type === "heart") {
@@ -91,12 +91,27 @@ function FeatureIcon({ type }: { type: string }) {
   );
 }
 
-export default function Footer() {
-  const { footer } = data;
+export default function Footer({ data, className }: SectionProps<FooterData> = {}) {
+  const footer = data || site.footer;
   const year = new Date().getFullYear();
 
+  // map data to component's expected structure
+  const contact = footer.contact;
+  const socials = {
+    facebook: footer.socialLinks?.find(s => s.platform === 'facebook')?.url || '#',
+    instagram: footer.socialLinks?.find(s => s.platform === 'instagram')?.url || '#',
+    twitter: footer.socialLinks?.find(s => s.platform === 'twitter')?.url || '#',
+    linkedin: footer.socialLinks?.find(s => s.platform === 'linkedin')?.url || '#',
+    youtube: footer.socialLinks?.find(s => s.platform === 'youtube')?.url || '#',
+    whatsapp: footer.socialLinks?.find(s => s.platform === 'whatsapp')?.url || '#'
+  };
+  const menus = footer.menus;
+  const features = footer.features || [];
+  const bottom = { links: footer.bottomLinks };
+  const copyright = footer.copyright;
+
   return (
-    <footer className="relative w-full overflow-hidden bg-[#F7F7F7]">
+    <footer className={`relative w-full overflow-hidden bg-[#F7F7F7] ${className || ''}`}>
       {/* Paw watermarks */}
       <PawPrint
         className="pointer-events-none absolute right-[6%] top-16 h-44 w-44 text-[#0b1324]/[0.04] sm:h-56 sm:w-56"
@@ -154,14 +169,14 @@ export default function Footer() {
                   <MapPin className="h-4 w-4 text-white" strokeWidth={2.25} />
                 </span>
                 <span className="max-w-[220px] leading-snug">
-                  {footer.contact.address}
+                  {contact.address}
                 </span>
               </div>
             </div>
 
             <div className="mt-7 flex items-center gap-3">
               <Link
-                href={footer.socials.facebook}
+                href={socials.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -172,7 +187,7 @@ export default function Footer() {
                 </svg>
               </Link>
               <Link
-                href={footer.socials.instagram}
+                href={socials.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -183,7 +198,7 @@ export default function Footer() {
                 </svg>
               </Link>
               <Link
-                href={footer.socials.whatsapp}
+                href={socials.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
@@ -194,7 +209,7 @@ export default function Footer() {
                 </svg>
               </Link>
               <Link
-                href={footer.socials.youtube}
+                href={socials.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"
@@ -236,11 +251,11 @@ export default function Footer() {
       {/* Features bar */}
       <div className="relative z-10 border-y border-[#e5e8ee] bg-[#F1F2F4]">
         <div className="site-container grid grid-cols-1 gap-6 py-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:py-9">
-          {footer.features.map((feature, index) => (
+          {features.map((feature: any, index: number) => (
             <div
               key={feature.title}
               className={`flex items-center gap-4 lg:px-6 ${
-                index < footer.features.length - 1
+                index < features.length - 1
                   ? "lg:border-r lg:border-[#d5dae3]"
                   : ""
               }`}
@@ -276,7 +291,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-x-0 gap-y-2 text-sm text-white/75">
-            {[...footer.bottom.links, { label: "Sitemap", href: "/sitemap" }].map((link, index, arr) => (
+            {[...bottom.links, { label: "Sitemap", href: "/sitemap" }].map((link, index, arr) => (
               <span key={link.href} className="flex items-center">
                 <Link
                   href={link.href}

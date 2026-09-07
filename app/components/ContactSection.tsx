@@ -1,9 +1,19 @@
 "use client";
+import { site, SectionProps, ContactData } from "@/data";
 
 import React, { useState } from "react";
 import { MapPin } from "lucide-react";
 
-export default function ContactSection() {
+export default function ContactSection({ data, className }: SectionProps<ContactData> = {}) {
+  const componentData = data || site.contact;
+
+  const getInTouch = (componentData as any).getInTouch;
+  const emailInfo = (componentData as any).email;
+  const callInfo = (componentData as any).call;
+  const addressInfo = (componentData as any).address;
+  const sendMessage = (componentData as any).sendMessage;
+  const findUs = (componentData as any).findUs;
+
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -30,20 +40,19 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="bg-[#fffaf5] py-16 md:py-24 space-y-20">
+    <section className={`bg-[#fffaf5] py-16 md:py-24 space-y-20 ${className || ""}`}>
       
       {/* 1. Get in Touch */}
       <div className="max-w-[1200px] mx-auto px-4 md:px-8">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#0b1324] mb-4 font-serif">
-            Get in Touch
+            {getInTouch?.title || "Get in Touch"}
           </h2>
           <div className="flex justify-center mb-6">
             <div className="h-[2px] w-12 bg-[#ffb016]"></div>
           </div>
           <p className="text-gray-600 max-w-xl mx-auto text-sm md:text-base">
-            Have questions or need assistance? Feel free to reach out to us<br className="hidden md:block" />
-            through email, phone, or visit us at our address.
+            {getInTouch?.description || "Have questions or need assistance? Feel free to reach out."}
           </p>
         </div>
 
@@ -52,31 +61,41 @@ export default function ContactSection() {
             
             {/* Email */}
             <div className="flex flex-col items-center pb-8 md:pb-0 md:pr-8">
-              <h3 className="text-lg font-bold text-[#0b1324] mb-3 font-serif">Email Us</h3>
-              <p className="text-gray-600 text-sm mb-4">We're happy to assist you via email.</p>
-              <a href="mailto:hello@pawcare.com" className="text-[#ffb016] font-semibold text-sm hover:underline mt-auto">
-                hello@pawcare.com
+              <h3 className="text-lg font-bold text-[#0b1324] mb-3 font-serif">
+                {emailInfo?.title || "Email Us"}
+              </h3>
+              <p className="text-gray-600 text-sm mb-4">
+                {emailInfo?.description || "We're happy to assist you via email."}
+              </p>
+              <a href={emailInfo?.href || `mailto:${emailInfo?.value}`} className="text-[#ffb016] font-semibold text-sm hover:underline mt-auto">
+                {emailInfo?.value || "hello@pawcare.com"}
               </a>
             </div>
 
             {/* Call */}
             <div className="flex flex-col items-center py-8 md:py-0 md:px-8">
-              <h3 className="text-lg font-bold text-[#0b1324] mb-3 font-serif">Call Us</h3>
-              <p className="text-gray-600 text-sm mb-1">Mon – Sat: 9:00 AM – 7:00 PM</p>
-              <p className="text-gray-600 text-sm mb-4">Sunday: 10:00 AM – 4:00 PM</p>
-              <a href="tel:+919876543210" className="text-[#ffb016] font-semibold text-sm hover:underline mt-auto">
-                +91 98765 43210
+              <h3 className="text-lg font-bold text-[#0b1324] mb-3 font-serif">
+                {callInfo?.title || "Call Us"}
+              </h3>
+              {(callInfo?.hours || []).map((h: string, i: number) => (
+                <p key={i} className="text-gray-600 text-sm mb-1">{h}</p>
+              ))}
+              <a href={callInfo?.href || `tel:${callInfo?.value}`} className="text-[#ffb016] font-semibold text-sm hover:underline mt-auto">
+                {callInfo?.value || "+91 98765 43210"}
               </a>
             </div>
 
             {/* Address */}
             <div className="flex flex-col items-center pt-8 md:pt-0 md:pl-8">
-              <h3 className="text-lg font-bold text-[#0b1324] mb-3 font-serif">Our Address</h3>
+              <h3 className="text-lg font-bold text-[#0b1324] mb-3 font-serif">
+                {addressInfo?.title || "Our Address"}
+              </h3>
               <p className="text-gray-600 text-sm leading-relaxed max-w-[250px]">
-                PawCare Pet Wellness Center<br />
-                123, Greenview Street,<br />
-                Koramangala, Bangalore – 560034,<br />
-                Karnataka, India
+                {(addressInfo?.lines || []).map((line: string, i: number) => (
+                  <React.Fragment key={i}>
+                    {line}{i < addressInfo.lines.length - 1 && <br />}
+                  </React.Fragment>
+                ))}
               </p>
             </div>
 
@@ -88,13 +107,13 @@ export default function ContactSection() {
       <div className="max-w-[1000px] mx-auto px-4 md:px-8">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#0b1324] mb-4 font-serif">
-            Send Us a Message
+            {sendMessage?.title || "Send Us a Message"}
           </h2>
           <div className="flex justify-center mb-6">
             <div className="h-[2px] w-12 bg-[#ffb016]"></div>
           </div>
           <p className="text-gray-600 text-sm md:text-base">
-            Fill out the form below and our team will get back to you as soon as possible.
+            {sendMessage?.description || "Fill out the form below and our team will get back to you as soon as possible."}
           </p>
         </div>
 
@@ -106,7 +125,7 @@ export default function ContactSection() {
                 name="fullName"
                 value={formData.fullName}
                 onChange={handleChange}
-                placeholder="Full Name"
+                placeholder={sendMessage?.fields?.fullName || "Full Name"}
                 className="w-full px-5 py-4 bg-[#fffaf5]/50 border border-gray-100 rounded-xl focus:outline-none focus:border-[#ffb016] transition-all text-sm"
                 required
               />
@@ -115,7 +134,7 @@ export default function ContactSection() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="Email Address"
+                placeholder={sendMessage?.fields?.email || "Email Address"}
                 className="w-full px-5 py-4 bg-[#fffaf5]/50 border border-gray-100 rounded-xl focus:outline-none focus:border-[#ffb016] transition-all text-sm"
                 required
               />
@@ -124,7 +143,7 @@ export default function ContactSection() {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="Phone Number"
+                placeholder={sendMessage?.fields?.phone || "Phone Number"}
                 className="w-full px-5 py-4 bg-[#fffaf5]/50 border border-gray-100 rounded-xl focus:outline-none focus:border-[#ffb016] transition-all text-sm"
                 required
               />
@@ -133,7 +152,7 @@ export default function ContactSection() {
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
-                placeholder="Subject"
+                placeholder={sendMessage?.fields?.subject || "Subject"}
                 className="w-full px-5 py-4 bg-[#fffaf5]/50 border border-gray-100 rounded-xl focus:outline-none focus:border-[#ffb016] transition-all text-sm"
                 required
               />
@@ -143,7 +162,7 @@ export default function ContactSection() {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              placeholder="Your Message"
+              placeholder={sendMessage?.fields?.message || "Your Message"}
               rows={6}
               className="w-full px-5 py-4 bg-[#fffaf5]/50 border border-gray-100 rounded-xl focus:outline-none focus:border-[#ffb016] transition-all text-sm resize-y"
               required
@@ -154,7 +173,7 @@ export default function ContactSection() {
                 type="submit"
                 className="bg-[#ffb016] hover:bg-[#e69300] text-white px-10 py-3.5 rounded-lg font-semibold transition-colors"
               >
-                Send Message
+                {sendMessage?.submitLabel || "Send Message"}
               </button>
             </div>
           </form>
@@ -165,19 +184,19 @@ export default function ContactSection() {
       <div className="max-w-[1200px] mx-auto px-4 md:px-8">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#0b1324] mb-4 font-serif">
-            Find Us
+            {findUs?.title || "Find Us"}
           </h2>
           <div className="flex justify-center mb-6">
             <div className="h-[2px] w-12 bg-[#ffb016]"></div>
           </div>
           <p className="text-gray-600 text-sm md:text-base">
-            Visit us at our center. We'd love to meet you and your pets!
+            {findUs?.description || "Visit us at our center. We'd love to meet you and your pets!"}
           </p>
         </div>
 
         <div className="relative w-full h-[400px] rounded-3xl overflow-hidden border border-gray-200">
           <iframe
-            src="https://www.google.com/maps?q=Koramangala,Bangalore&output=embed"
+            src={findUs?.mapSrc || "https://www.google.com/maps?q=Koramangala,Bangalore&output=embed"}
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -192,11 +211,15 @@ export default function ContactSection() {
               <MapPin className="w-6 h-6 text-[#ffb016]" fill="#ffb016" stroke="white" />
             </div>
             <div>
-              <h4 className="font-bold text-[#0b1324] text-sm mb-1">PawCare Pet Wellness Center</h4>
+              <h4 className="font-bold text-[#0b1324] text-sm mb-1">
+                {findUs?.mapLabel || "PawCare Pet Wellness Center"}
+              </h4>
               <p className="text-xs text-gray-500 leading-relaxed">
-                123, Greenview Street,<br />
-                Koramangala, Bangalore – 560034,<br />
-                Karnataka, India
+                {(findUs?.mapAddress || []).map((line: string, i: number) => (
+                  <React.Fragment key={i}>
+                    {line}{i < (findUs?.mapAddress?.length ?? 0) - 1 && <br />}
+                  </React.Fragment>
+                ))}
               </p>
             </div>
           </div>

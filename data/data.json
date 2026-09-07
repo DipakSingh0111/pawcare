@@ -187,6 +187,18 @@
                 }
               ]
             },
+            "partners": {
+              "components": [
+                {
+                  "key": "PageBanner",
+                  "component": "PawCareInnerBanner1"
+                },
+                {
+                  "key": "Partners",
+                  "component": "PawCarePartners1"
+                }
+              ]
+            },
             "faqs": {
               "components": [
                 {
@@ -388,6 +400,10 @@
                       "href": "/gallery"
                     },
                     {
+                      "label": "Partners",
+                      "href": "/partners"
+                    },
+                    {
                       "label": "FAQs",
                       "href": "/faqs"
                     },
@@ -504,38 +520,38 @@
               "items": [
                 {
                   "title": "Veterinary Care",
-                  "description": "Complete health checkups, vaccinations, and treatments by expert vets.",
+                  "description": "Expert health checkups, diagnosis, and treatments by experienced vets.",
                   "link": "/services/veterinary",
                   "slug": "veterinary",
                   "image": "/images/Veterinary_Care.png"
                 },
                 {
                   "title": "Grooming & Spa",
-                  "description": "Bathing, haircuts, nail trimming, and spa treatments for a fresh look.",
+                  "description": "Keep your pet clean, fresh, and looking their best always.",
                   "link": "/services/grooming",
                   "slug": "grooming",
-                  "image": "/images/Grooming_%26_Spa.png"
+                  "image": "/images/Grooming_&_Spa.png"
                 },
                 {
                   "title": "Boarding & Daycare",
-                  "description": "Safe, fun, and comfortable stay for your pets while you're away.",
+                  "description": "Safe, comfortable, and fun stays while you're away.",
                   "link": "/services/boarding",
                   "slug": "boarding",
-                  "image": "/images/Boarding_%26_Daycare.png"
+                  "image": "/images/Boarding_&_Daycare.png"
                 },
                 {
                   "title": "Nutrition & Diet",
-                  "description": "Personalized meal plans to keep your pets healthy and energetic.",
+                  "description": "Personalized diet plans and premium food for your pet's well-being.",
                   "link": "/services/nutrition",
                   "slug": "nutrition",
-                  "image": "/images/Nutrition_%26_Diet.png"
+                  "image": "/images/Nutrition_&_Diet.png"
                 },
                 {
                   "title": "Training & Behavior",
                   "description": "Obedience training and behavior correction with certified trainers.",
                   "link": "/services/training",
                   "slug": "training",
-                  "image": "/images/Training_%26_Behavior.png"
+                  "image": "/images/Training_&_Behavior.png"
                 },
                 {
                   "title": "Pet Wellness Plans",
@@ -1652,50 +1668,110 @@
                 {
                   "id": 1,
                   "name": "Priya Sharma",
+                  "role": "Pet Parent",
                   "location": "Bangalore, India",
                   "image": "/images/team_01.jpg",
                   "rating": 5,
-                  "quote": "The team at PawCare is amazing! They treated Bruno with so much love and care. I always feel he is in the best hands."
+                  "quote": "The team at PawCare is amazing! They treated Bruno with so much love and care during every visit. I always feel he is in the best hands, and their follow-up support gives me complete peace of mind."
                 },
                 {
                   "id": 2,
                   "name": "Rahul Verma",
+                  "role": "Cat Parent",
                   "location": "Delhi, India",
                   "image": "/images/team_02.jpg",
                   "rating": 5,
-                  "quote": "Excellent service and very professional staff. My cat, Whiskers, is usually shy, but she loves visiting PawCare!"
+                  "quote": "Excellent service and very professional staff. My cat, Whiskers, is usually shy around strangers, but she loves visiting PawCare! The team is patient, gentle, and truly understands feline behavior."
                 },
                 {
                   "id": 3,
                   "name": "Anjali Mehta",
+                  "role": "Pet Parent",
                   "location": "Mumbai, India",
                   "image": "/images/team_03.jpg",
                   "rating": 5,
-                  "quote": "From grooming to nutrition advice, everything is top-notch. Highly recommend PawCare to every pet parent."
+                  "quote": "From grooming to nutrition advice, everything is top-notch. The staff explains every step clearly and never rushes the process. Highly recommend PawCare to every pet parent looking for trusted care."
                 },
                 {
                   "id": 4,
                   "name": "Vikram Rao",
+                  "role": "Dog Parent",
                   "location": "Hyderabad, India",
                   "image": "/images/team_04.jpg",
                   "rating": 5,
-                  "quote": "They truly care for pets like family. The clinic is clean, friendly, and the doctors are very knowledgeable."
+                  "quote": "They truly care for pets like family. The clinic is clean, friendly, and the doctors are very knowledgeable. My dog gets excited every time we walk through the door, which says everything."
                 },
                 {
                   "id": 5,
                   "name": "Neha Kapoor",
+                  "role": "Pet Parent",
                   "location": "Pune, India",
                   "image": "/images/team_01.jpg",
                   "rating": 5,
-                  "quote": "PawCare's adoption support was wonderful. They helped us find our furry family member and guided us at every step."
+                  "quote": "PawCare's adoption support was wonderful. They helped us find our furry family member and guided us at every step—from matching to home visits and ongoing care tips. We felt supported throughout the entire journey."
                 },
                 {
                   "id": 6,
                   "name": "Arjun Nair",
+                  "role": "Dog Parent",
                   "location": "Chennai, India",
                   "image": "/images/team_02.jpg",
                   "rating": 5,
-                  "quote": "I trust PawCare completely for my dog's health. Their team is compassionate and always available."
+                  "quote": "I trust PawCare completely for my dog's health. Their team is compassionate, thorough, and always available when we need guidance. Appointments are smooth and the treatment plans are always clear."
+                },
+                {
+                  "id": 7,
+                  "name": "Sneha Iyer",
+                  "role": "Pet Parent",
+                  "location": "Ahmedabad, India",
+                  "image": "/images/team_03.jpg",
+                  "rating": 5,
+                  "quote": "Boarding was stress-free for both of us. Daily updates and playtime photos made me feel connected while I was away. The facility is safe, clean, and full of caring staff who treat pets like their own."
+                },
+                {
+                  "id": 8,
+                  "name": "Karan Malhotra",
+                  "role": "Dog Parent",
+                  "location": "Jaipur, India",
+                  "image": "/images/team_04.jpg",
+                  "rating": 5,
+                  "quote": "The training program changed my pup's behavior completely. Patient trainers and clear guidance for pet parents made the process easy to follow at home. We now enjoy calmer walks and happier days together."
+                },
+                {
+                  "id": 9,
+                  "name": "Meera Joshi",
+                  "role": "Cat Parent",
+                  "location": "Kolkata, India",
+                  "image": "/images/team_01.jpg",
+                  "rating": 5,
+                  "quote": "Grooming sessions are gentle and thorough. My Persian comes home looking fresh, calm, and happy every time. The groomers take real care with sensitive coats and never force a rushed session."
+                },
+                {
+                  "id": 10,
+                  "name": "Siddharth Reddy",
+                  "role": "Pet Parent",
+                  "location": "Bengaluru, India",
+                  "image": "/images/team_02.jpg",
+                  "rating": 5,
+                  "quote": "Their wellness plan keeps my pet's checkups, diet, and vaccines on track. Truly one place for complete care. The reminders and personalized advice have made pet parenting so much easier for our family."
+                },
+                {
+                  "id": 11,
+                  "name": "Divya Menon",
+                  "role": "Dog Parent",
+                  "location": "Kochi, India",
+                  "image": "/images/team_03.jpg",
+                  "rating": 5,
+                  "quote": "Emergency support was quick and reassuring. The vets explained everything clearly and treated my dog with so much kindness. We felt informed at every step and grateful for their calm, expert care."
+                },
+                {
+                  "id": 12,
+                  "name": "Amit Khanna",
+                  "role": "Pet Parent",
+                  "location": "Chandigarh, India",
+                  "image": "/images/team_04.jpg",
+                  "rating": 5,
+                  "quote": "Pet taxi is safe, punctual, and comfortable. Booking is easy and the drivers handle pets with real care. Whether it's a clinic visit or grooming drop-off, the ride always feels smooth and stress-free."
                 }
               ]
             }
@@ -1708,9 +1784,10 @@
                 "eyebrow": "IMAGE GALLERY",
                 "title": "Capturing Beautiful Moments",
                 "description": "Stories of love, trust, and companionship.",
+                "initialCount": 8,
                 "cta": {
                   "text": "View More Photos",
-                  "href": "#"
+                  "collapseText": "Show Less Photos"
                 },
                 "items": [
                   {
@@ -1744,6 +1821,38 @@
                   {
                     "src": "/images/gallery/gallery_08.png",
                     "alt": "Training and behavior session"
+                  },
+                  {
+                    "src": "/images/about_01.jpg",
+                    "alt": "Caring for pets with love"
+                  },
+                  {
+                    "src": "/images/about_02.jpg",
+                    "alt": "Happy pets at PawCare center"
+                  },
+                  {
+                    "src": "/images/about_03.jpg",
+                    "alt": "Pet bonding moment"
+                  },
+                  {
+                    "src": "/images/pets.png",
+                    "alt": "Pets enjoying PawCare care"
+                  },
+                  {
+                    "src": "/images/Veterinary_Care.png",
+                    "alt": "Expert veterinary checkup"
+                  },
+                  {
+                    "src": "/images/Grooming_&_Spa.png",
+                    "alt": "Professional grooming session"
+                  },
+                  {
+                    "src": "/images/Boarding_&_Daycare.png",
+                    "alt": "Fun boarding and daycare"
+                  },
+                  {
+                    "src": "/images/Training_&_Behavior.png",
+                    "alt": "Training and behavior class"
                   }
                 ]
               },
@@ -1779,6 +1888,68 @@
                   }
                 ]
               }
+            }
+          }
+        },
+        "Partners": {
+          "variants": {
+            "PawCarePartners1": {
+              "tagline": "OUR PARTNERS",
+              "title": "Stronger Together,",
+              "titleHighlight": "Greater Impact",
+              "description": "We collaborate with like-minded organizations and experts who share our mission of providing the best care and support for pets and pet parents.",
+              "items": [
+                {
+                  "id": "DD News",
+                  "name": "DD NEWS",
+                  "image": "/images/partners/dd_news.png"
+                },
+                {
+                  "id": "drools",
+                  "name": "drools",
+                  "image": "/images/partners/drools.jpg"
+                },
+                {
+                  "id": "elanco",
+                  "name": "elanco",
+                  "image": "/images/partners/elanco.png"
+                },
+                {
+                  "id": "fpj",
+                  "name": "fpj",
+                  "image": "/images/partners/fpj.png"
+                },
+                {
+                  "id": "park_animal",
+                  "name": "park animal",
+                  "image": "/images/partners/park_animal.png"
+                },
+                {
+                  "id": "pet_health",
+                  "name": "pet health trust",
+                  "image": "/images/partners/pet_health.jpg"
+                },
+                {
+                  "id": "Radio City",
+                  "name": "Radio City",
+                  "image": "/images/partners/Radio_City_Logo.jpg"
+                },
+                {
+                  "id": "Royal Canin",
+                  "name": "Royal Canin",
+                  "image": "/images/partners/royal_canin.jpg"
+                },
+                {
+                  "id": "The animal Hospital",
+                  "name": "The Animal Hospital",
+                  "image": "/images/partners/the_animal_hospital.webp"
+                },
+                {
+                  "id": "The time Group",
+                  "name": "The time Group",
+                  "image": "/images/partners/The_Times_Group_logo.png"
+                }
+              ]
             }
           }
         },
@@ -1832,7 +2003,7 @@
               "viewAllHref": "/blogs",
               "posts": [
                 {
-                  "category": "Pet Parents Corner",
+                  "category": "Adoption Stories",
                   "date": "May 18, 2024",
                   "title": "How to Introduce a New Pet to Your Home",
                   "description": "A step-by-step guide to help your new pet feel welcome and settle in comfortably.",
@@ -1859,7 +2030,7 @@
                   "icon": "bowl"
                 },
                 {
-                  "category": "Training & Behavior",
+                  "category": "Pet Parents Corner",
                   "date": "May 08, 2024",
                   "title": "Daily Exercise Ideas to Keep Your Pet Active",
                   "description": "Fun and easy exercise ideas to keep your pet physically fit and mentally stimulated.",
@@ -1948,43 +2119,76 @@
             "PawCareTeam1": {
               "tagline": "OUR TEAM",
               "title": "Meet Our",
-              "titleHighlight": "Experts",
-              "description": "Passionate professionals dedicated to giving your pets\nthe best care, love, and attention.",
+              "titleHighlight": "Pet Care Experts",
+              "description": "A passionate team of pet care professionals dedicated to providing the best care, love and attention for your furry family.",
+              "initialCount": 4,
               "cta": {
-                "label": "VIEW ALL TEAM",
-                "href": "/team"
+                "label": "VIEW OUR TEAM",
+                "collapseLabel": "SHOW LESS"
               },
               "members": [
                 {
-                  "id": "dr-ananya",
-                  "slug": "dr-ananya",
-                  "name": "Dr. Ananya Sharma",
-                  "role": "Lead Veterinarian",
-                  "description": "Specializes in preventive care and advanced clinical treatments for dogs and cats.",
+                  "id": "dr-priya-sharma",
+                  "slug": "dr-priya-sharma",
+                  "name": "Dr. Priya Sharma",
+                  "role": "Veterinarian",
+                  "description": "Expert in pet health and wellness with 8+ years of experience.",
                   "image": "/images/team_01.jpg"
                 },
                 {
-                  "id": "dr-rohan",
-                  "slug": "dr-rohan",
+                  "id": "rohit-verma",
+                  "slug": "rohit-verma",
+                  "name": "Rohit Verma",
+                  "role": "Pet Care Specialist",
+                  "description": "Ensures your pets feel happy, safe and comfortable.",
+                  "image": "/images/team_02.jpg"
+                },
+                {
+                  "id": "anjali-mehta",
+                  "slug": "anjali-mehta",
+                  "name": "Anjali Mehta",
+                  "role": "Pet Nutritionist",
+                  "description": "Specializes in creating healthy diets for pets of all ages.",
+                  "image": "/images/team_03.jpg"
+                },
+                {
+                  "id": "aman-khurana",
+                  "slug": "aman-khurana",
+                  "name": "Aman Khurana",
+                  "role": "Pet Groomer",
+                  "description": "Professional groomer ensuring style, hygiene and comfort.",
+                  "image": "/images/team_04.jpg"
+                },
+                {
+                  "id": "dr-rohan-mehta",
+                  "slug": "dr-rohan-mehta",
                   "name": "Dr. Rohan Mehta",
                   "role": "Veterinary Surgeon",
                   "description": "Expert in soft-tissue procedures and emergency surgical care for pets.",
                   "image": "/images/team_02.jpg"
                 },
                 {
-                  "id": "priya-nair",
-                  "slug": "priya-nair",
-                  "name": "Priya Nair",
-                  "role": "Senior Groomer",
-                  "description": "Creates calm, spa-like grooming experiences tailored to every breed and temperament.",
+                  "id": "sneha-iyer",
+                  "slug": "sneha-iyer",
+                  "name": "Sneha Iyer",
+                  "role": "Behavior Trainer",
+                  "description": "Helps pets build confidence through positive, science-backed training.",
                   "image": "/images/team_03.jpg"
                 },
                 {
-                  "id": "arjun-desai",
-                  "slug": "arjun-desai",
-                  "name": "Arjun Desai",
-                  "role": "Behavior Trainer",
-                  "description": "Helps pets build confidence through positive, science-backed training methods.",
+                  "id": "karan-malhotra",
+                  "slug": "karan-malhotra",
+                  "name": "Karan Malhotra",
+                  "role": "Wellness Coach",
+                  "description": "Creates personalized wellness plans for long-term pet health.",
+                  "image": "/images/team_01.jpg"
+                },
+                {
+                  "id": "meera-joshi",
+                  "slug": "meera-joshi",
+                  "name": "Meera Joshi",
+                  "role": "Boarding Supervisor",
+                  "description": "Keeps boarding stays safe, fun, and stress-free for every pet.",
                   "image": "/images/team_04.jpg"
                 }
               ]
@@ -1995,11 +2199,11 @@
           "variants": {
             "PawCareTeamDetail1": {
               "bySlug": {
-                "dr-ananya": {
-                  "name": "Dr. Ananya Sharma",
-                  "role": "Lead Veterinarian",
+                "dr-priya-sharma": {
+                  "name": "Dr. Priya Sharma",
+                  "role": "Veterinarian",
                   "image": "/images/team_01.jpg",
-                  "fullDescription": "Specializes in preventive care and advanced clinical treatments for dogs and cats. With years of experience and a deep love for animals, they bring skill, empathy, and dedication to every pet they care for.",
+                  "fullDescription": "Expert in pet health and wellness with 8+ years of experience. With years of experience and a deep love for animals, they bring skill, empathy, and dedication to every pet they care for.",
                   "stats": [
                     {
                       "title": "Experience",
@@ -2008,25 +2212,25 @@
                     },
                     {
                       "title": "Education",
-                      "value": "MVSc / Certified",
+                      "value": "Certified",
                       "icon": "graduation"
                     },
                     {
                       "title": "Specialty",
-                      "value": "Lead",
+                      "value": "Veterinarian",
                       "icon": "ribbon"
                     }
                   ],
                   "education": [
                     {
-                      "title": "Master of Veterinary Science",
-                      "institution": "National Veterinary University",
-                      "period": "2014 - 2016"
+                      "title": "Professional Certification",
+                      "institution": "PawCare Academy",
+                      "period": "2016 - 2018"
                     },
                     {
-                      "title": "Bachelor of Veterinary Science",
-                      "institution": "State Agricultural University",
-                      "period": "2008 - 2013"
+                      "title": "Advanced Pet Care Training",
+                      "institution": "National Pet Care Institute",
+                      "period": "2012 - 2015"
                     }
                   ],
                   "expertise": [
@@ -2056,7 +2260,190 @@
                     }
                   ]
                 },
-                "dr-rohan": {
+                "rohit-verma": {
+                  "name": "Rohit Verma",
+                  "role": "Pet Care Specialist",
+                  "image": "/images/team_02.jpg",
+                  "fullDescription": "Ensures your pets feel happy, safe and comfortable. With years of experience and a deep love for animals, they bring skill, empathy, and dedication to every pet they care for.",
+                  "stats": [
+                    {
+                      "title": "Experience",
+                      "value": "8+ Years",
+                      "icon": "briefcase"
+                    },
+                    {
+                      "title": "Education",
+                      "value": "Certified",
+                      "icon": "graduation"
+                    },
+                    {
+                      "title": "Specialty",
+                      "value": "Pet",
+                      "icon": "ribbon"
+                    }
+                  ],
+                  "education": [
+                    {
+                      "title": "Professional Certification",
+                      "institution": "PawCare Academy",
+                      "period": "2016 - 2018"
+                    },
+                    {
+                      "title": "Advanced Pet Care Training",
+                      "institution": "National Pet Care Institute",
+                      "period": "2012 - 2015"
+                    }
+                  ],
+                  "expertise": [
+                    {
+                      "title": "Preventive Care",
+                      "icon": "shield_check"
+                    },
+                    {
+                      "title": "Clinical Diagnosis",
+                      "icon": "stethoscope"
+                    },
+                    {
+                      "title": "Vaccinations",
+                      "icon": "syringe"
+                    },
+                    {
+                      "title": "Nutrition Guidance",
+                      "icon": "food_bowl"
+                    },
+                    {
+                      "title": "Care Planning",
+                      "icon": "clipboard"
+                    },
+                    {
+                      "title": "Pet Wellness",
+                      "icon": "pets"
+                    }
+                  ]
+                },
+                "anjali-mehta": {
+                  "name": "Anjali Mehta",
+                  "role": "Pet Nutritionist",
+                  "image": "/images/team_03.jpg",
+                  "fullDescription": "Specializes in creating healthy diets for pets of all ages. With years of experience and a deep love for animals, they bring skill, empathy, and dedication to every pet they care for.",
+                  "stats": [
+                    {
+                      "title": "Experience",
+                      "value": "8+ Years",
+                      "icon": "briefcase"
+                    },
+                    {
+                      "title": "Education",
+                      "value": "Certified",
+                      "icon": "graduation"
+                    },
+                    {
+                      "title": "Specialty",
+                      "value": "Pet",
+                      "icon": "ribbon"
+                    }
+                  ],
+                  "education": [
+                    {
+                      "title": "Professional Certification",
+                      "institution": "PawCare Academy",
+                      "period": "2016 - 2018"
+                    },
+                    {
+                      "title": "Advanced Pet Care Training",
+                      "institution": "National Pet Care Institute",
+                      "period": "2012 - 2015"
+                    }
+                  ],
+                  "expertise": [
+                    {
+                      "title": "Preventive Care",
+                      "icon": "shield_check"
+                    },
+                    {
+                      "title": "Clinical Diagnosis",
+                      "icon": "stethoscope"
+                    },
+                    {
+                      "title": "Vaccinations",
+                      "icon": "syringe"
+                    },
+                    {
+                      "title": "Nutrition Guidance",
+                      "icon": "food_bowl"
+                    },
+                    {
+                      "title": "Care Planning",
+                      "icon": "clipboard"
+                    },
+                    {
+                      "title": "Pet Wellness",
+                      "icon": "pets"
+                    }
+                  ]
+                },
+                "aman-khurana": {
+                  "name": "Aman Khurana",
+                  "role": "Pet Groomer",
+                  "image": "/images/team_04.jpg",
+                  "fullDescription": "Professional groomer ensuring style, hygiene and comfort. With years of experience and a deep love for animals, they bring skill, empathy, and dedication to every pet they care for.",
+                  "stats": [
+                    {
+                      "title": "Experience",
+                      "value": "8+ Years",
+                      "icon": "briefcase"
+                    },
+                    {
+                      "title": "Education",
+                      "value": "Certified",
+                      "icon": "graduation"
+                    },
+                    {
+                      "title": "Specialty",
+                      "value": "Pet",
+                      "icon": "ribbon"
+                    }
+                  ],
+                  "education": [
+                    {
+                      "title": "Professional Certification",
+                      "institution": "PawCare Academy",
+                      "period": "2016 - 2018"
+                    },
+                    {
+                      "title": "Advanced Pet Care Training",
+                      "institution": "National Pet Care Institute",
+                      "period": "2012 - 2015"
+                    }
+                  ],
+                  "expertise": [
+                    {
+                      "title": "Preventive Care",
+                      "icon": "shield_check"
+                    },
+                    {
+                      "title": "Clinical Diagnosis",
+                      "icon": "stethoscope"
+                    },
+                    {
+                      "title": "Vaccinations",
+                      "icon": "syringe"
+                    },
+                    {
+                      "title": "Nutrition Guidance",
+                      "icon": "food_bowl"
+                    },
+                    {
+                      "title": "Care Planning",
+                      "icon": "clipboard"
+                    },
+                    {
+                      "title": "Pet Wellness",
+                      "icon": "pets"
+                    }
+                  ]
+                },
+                "dr-rohan-mehta": {
                   "name": "Dr. Rohan Mehta",
                   "role": "Veterinary Surgeon",
                   "image": "/images/team_02.jpg",
@@ -2069,7 +2456,7 @@
                     },
                     {
                       "title": "Education",
-                      "value": "MVSc / Certified",
+                      "value": "Certified",
                       "icon": "graduation"
                     },
                     {
@@ -2080,14 +2467,14 @@
                   ],
                   "education": [
                     {
-                      "title": "Master of Veterinary Science",
-                      "institution": "National Veterinary University",
-                      "period": "2014 - 2016"
+                      "title": "Professional Certification",
+                      "institution": "PawCare Academy",
+                      "period": "2016 - 2018"
                     },
                     {
-                      "title": "Bachelor of Veterinary Science",
-                      "institution": "State Agricultural University",
-                      "period": "2008 - 2013"
+                      "title": "Advanced Pet Care Training",
+                      "institution": "National Pet Care Institute",
+                      "period": "2012 - 2015"
                     }
                   ],
                   "expertise": [
@@ -2117,72 +2504,11 @@
                     }
                   ]
                 },
-                "priya-nair": {
-                  "name": "Priya Nair",
-                  "role": "Senior Groomer",
-                  "image": "/images/team_03.jpg",
-                  "fullDescription": "Creates calm, spa-like grooming experiences tailored to every breed and temperament. With years of experience and a deep love for animals, they bring skill, empathy, and dedication to every pet they care for.",
-                  "stats": [
-                    {
-                      "title": "Experience",
-                      "value": "8+ Years",
-                      "icon": "briefcase"
-                    },
-                    {
-                      "title": "Education",
-                      "value": "MVSc / Certified",
-                      "icon": "graduation"
-                    },
-                    {
-                      "title": "Specialty",
-                      "value": "Senior",
-                      "icon": "ribbon"
-                    }
-                  ],
-                  "education": [
-                    {
-                      "title": "Master of Veterinary Science",
-                      "institution": "National Veterinary University",
-                      "period": "2014 - 2016"
-                    },
-                    {
-                      "title": "Bachelor of Veterinary Science",
-                      "institution": "State Agricultural University",
-                      "period": "2008 - 2013"
-                    }
-                  ],
-                  "expertise": [
-                    {
-                      "title": "Breed Cuts",
-                      "icon": "scissors"
-                    },
-                    {
-                      "title": "Spa Baths",
-                      "icon": "bath"
-                    },
-                    {
-                      "title": "Coat Care",
-                      "icon": "pets"
-                    },
-                    {
-                      "title": "Nail Care",
-                      "icon": "clipboard"
-                    },
-                    {
-                      "title": "Skin Health",
-                      "icon": "shield_check"
-                    },
-                    {
-                      "title": "Pet Comfort",
-                      "icon": "stethoscope"
-                    }
-                  ]
-                },
-                "arjun-desai": {
-                  "name": "Arjun Desai",
+                "sneha-iyer": {
+                  "name": "Sneha Iyer",
                   "role": "Behavior Trainer",
-                  "image": "/images/team_04.jpg",
-                  "fullDescription": "Helps pets build confidence through positive, science-backed training methods. With years of experience and a deep love for animals, they bring skill, empathy, and dedication to every pet they care for.",
+                  "image": "/images/team_03.jpg",
+                  "fullDescription": "Helps pets build confidence through positive, science-backed training. With years of experience and a deep love for animals, they bring skill, empathy, and dedication to every pet they care for.",
                   "stats": [
                     {
                       "title": "Experience",
@@ -2191,7 +2517,7 @@
                     },
                     {
                       "title": "Education",
-                      "value": "MVSc / Certified",
+                      "value": "Certified",
                       "icon": "graduation"
                     },
                     {
@@ -2202,40 +2528,162 @@
                   ],
                   "education": [
                     {
-                      "title": "Master of Veterinary Science",
-                      "institution": "National Veterinary University",
-                      "period": "2014 - 2016"
+                      "title": "Professional Certification",
+                      "institution": "PawCare Academy",
+                      "period": "2016 - 2018"
                     },
                     {
-                      "title": "Bachelor of Veterinary Science",
-                      "institution": "State Agricultural University",
-                      "period": "2008 - 2013"
+                      "title": "Advanced Pet Care Training",
+                      "institution": "National Pet Care Institute",
+                      "period": "2012 - 2015"
                     }
                   ],
                   "expertise": [
                     {
-                      "title": "Obedience",
-                      "icon": "clipboard"
-                    },
-                    {
-                      "title": "Behavior Fix",
-                      "icon": "pets"
-                    },
-                    {
-                      "title": "Puppy Training",
-                      "icon": "food_bowl"
-                    },
-                    {
-                      "title": "Socialization",
+                      "title": "Preventive Care",
                       "icon": "shield_check"
                     },
                     {
-                      "title": "Anxiety Care",
+                      "title": "Clinical Diagnosis",
                       "icon": "stethoscope"
                     },
                     {
-                      "title": "Owner Coaching",
+                      "title": "Vaccinations",
                       "icon": "syringe"
+                    },
+                    {
+                      "title": "Nutrition Guidance",
+                      "icon": "food_bowl"
+                    },
+                    {
+                      "title": "Care Planning",
+                      "icon": "clipboard"
+                    },
+                    {
+                      "title": "Pet Wellness",
+                      "icon": "pets"
+                    }
+                  ]
+                },
+                "karan-malhotra": {
+                  "name": "Karan Malhotra",
+                  "role": "Wellness Coach",
+                  "image": "/images/team_01.jpg",
+                  "fullDescription": "Creates personalized wellness plans for long-term pet health. With years of experience and a deep love for animals, they bring skill, empathy, and dedication to every pet they care for.",
+                  "stats": [
+                    {
+                      "title": "Experience",
+                      "value": "8+ Years",
+                      "icon": "briefcase"
+                    },
+                    {
+                      "title": "Education",
+                      "value": "Certified",
+                      "icon": "graduation"
+                    },
+                    {
+                      "title": "Specialty",
+                      "value": "Wellness",
+                      "icon": "ribbon"
+                    }
+                  ],
+                  "education": [
+                    {
+                      "title": "Professional Certification",
+                      "institution": "PawCare Academy",
+                      "period": "2016 - 2018"
+                    },
+                    {
+                      "title": "Advanced Pet Care Training",
+                      "institution": "National Pet Care Institute",
+                      "period": "2012 - 2015"
+                    }
+                  ],
+                  "expertise": [
+                    {
+                      "title": "Preventive Care",
+                      "icon": "shield_check"
+                    },
+                    {
+                      "title": "Clinical Diagnosis",
+                      "icon": "stethoscope"
+                    },
+                    {
+                      "title": "Vaccinations",
+                      "icon": "syringe"
+                    },
+                    {
+                      "title": "Nutrition Guidance",
+                      "icon": "food_bowl"
+                    },
+                    {
+                      "title": "Care Planning",
+                      "icon": "clipboard"
+                    },
+                    {
+                      "title": "Pet Wellness",
+                      "icon": "pets"
+                    }
+                  ]
+                },
+                "meera-joshi": {
+                  "name": "Meera Joshi",
+                  "role": "Boarding Supervisor",
+                  "image": "/images/team_04.jpg",
+                  "fullDescription": "Keeps boarding stays safe, fun, and stress-free for every pet. With years of experience and a deep love for animals, they bring skill, empathy, and dedication to every pet they care for.",
+                  "stats": [
+                    {
+                      "title": "Experience",
+                      "value": "8+ Years",
+                      "icon": "briefcase"
+                    },
+                    {
+                      "title": "Education",
+                      "value": "Certified",
+                      "icon": "graduation"
+                    },
+                    {
+                      "title": "Specialty",
+                      "value": "Boarding",
+                      "icon": "ribbon"
+                    }
+                  ],
+                  "education": [
+                    {
+                      "title": "Professional Certification",
+                      "institution": "PawCare Academy",
+                      "period": "2016 - 2018"
+                    },
+                    {
+                      "title": "Advanced Pet Care Training",
+                      "institution": "National Pet Care Institute",
+                      "period": "2012 - 2015"
+                    }
+                  ],
+                  "expertise": [
+                    {
+                      "title": "Preventive Care",
+                      "icon": "shield_check"
+                    },
+                    {
+                      "title": "Clinical Diagnosis",
+                      "icon": "stethoscope"
+                    },
+                    {
+                      "title": "Vaccinations",
+                      "icon": "syringe"
+                    },
+                    {
+                      "title": "Nutrition Guidance",
+                      "icon": "food_bowl"
+                    },
+                    {
+                      "title": "Care Planning",
+                      "icon": "clipboard"
+                    },
+                    {
+                      "title": "Pet Wellness",
+                      "icon": "pets"
                     }
                   ]
                 }
@@ -2592,6 +3040,10 @@
                       "href": "/gallery"
                     },
                     {
+                      "label": "Partners",
+                      "href": "/partners"
+                    },
+                    {
                       "label": "Site-Map",
                       "href": "/sitemap"
                     }
@@ -2706,6 +3158,57 @@
                 "ourOffice": "Our Office",
                 "officeHours": "Office Hours",
                 "sendMessage": "Send Message"
+              },
+              "getInTouch": {
+                "title": "Get in Touch",
+                "description": "Have questions or need assistance? Feel free to reach out to us through email, phone, or visit us at our address."
+              },
+              "email": {
+                "title": "Email Us",
+                "description": "We are happy to assist you via email.",
+                "value": "hello@pawcare.com",
+                "href": "mailto:hello@pawcare.com"
+              },
+              "call": {
+                "title": "Call Us",
+                "hours": [
+                  "Mon – Sat: 9:00 AM – 7:00 PM",
+                  "Sunday: 10:00 AM – 4:00 PM"
+                ],
+                "value": "+91 98765 43210",
+                "href": "tel:+919876543210"
+              },
+              "address": {
+                "title": "Our Address",
+                "lines": [
+                  "PawCare Pet Wellness Center",
+                  "123, Greenview Street,",
+                  "Koramangala, Bangalore – 560034,",
+                  "Karnataka, India"
+                ]
+              },
+              "sendMessage": {
+                "title": "Send Us a Message",
+                "description": "Fill out the form below and our team will get back to you as soon as possible.",
+                "submitLabel": "Send Message",
+                "fields": {
+                  "fullName": "Full Name",
+                  "email": "Email Address",
+                  "phone": "Phone Number",
+                  "subject": "Subject",
+                  "message": "Your Message"
+                }
+              },
+              "findUs": {
+                "title": "Find Us",
+                "description": "Visit us at our center. We'd love to meet you and your pets!",
+                "mapSrc": "https://www.google.com/maps?q=Koramangala,Bangalore&output=embed",
+                "mapLabel": "PawCare Pet Wellness Center",
+                "mapAddress": [
+                  "123, Greenview Street,",
+                  "Koramangala, Bangalore – 560034,",
+                  "Karnataka, India"
+                ]
               }
             }
           }
@@ -2771,6 +3274,111 @@
               },
               "cookie-policy": {
                 "title": "Cookie Policy"
+              }
+            }
+          }
+        },
+        "Appointment": {
+          "variants": {
+            "PawCareAppointment1": {
+              "tagline": "Appointment",
+              "title": "Book an Appointment",
+              "description": "Fill out the form below and we'll get back to you to confirm your appointment.",
+              "submitLabel": "Book Appointment",
+              "trustNote": "We respect your time. Your information is safe with us.",
+              "fields": {
+                "fullName": {
+                  "label": "Full Name",
+                  "placeholder": "Enter your full name"
+                },
+                "phone": {
+                  "label": "Phone Number",
+                  "placeholder": "Enter your phone number"
+                },
+                "email": {
+                  "label": "Email Address",
+                  "placeholder": "Enter your email address"
+                },
+                "petName": {
+                  "label": "Pet Name",
+                  "placeholder": "Enter your pet's name"
+                },
+                "petType": {
+                  "label": "Pet Type",
+                  "placeholder": "Select pet type",
+                  "options": [
+                    "Dog",
+                    "Cat",
+                    "Bird",
+                    "Fish",
+                    "Other"
+                  ]
+                },
+                "petAge": {
+                  "label": "Pet Age",
+                  "placeholder": "Enter pet age (e.g. 2 years)"
+                },
+                "appointmentDate": {
+                  "label": "Appointment Date",
+                  "placeholder": ""
+                },
+                "appointmentTime": {
+                  "label": "Appointment Time",
+                  "placeholder": ""
+                },
+                "serviceNeeded": {
+                  "label": "Service Needed",
+                  "placeholder": "Select service"
+                },
+                "additionalNotes": {
+                  "label": "Additional Notes",
+                  "placeholder": "Write any additional information..."
+                }
+              }
+            }
+          }
+        },
+        "BlogDetail": {
+          "variants": {
+            "PawCareBlogDetail1": {
+              "defaultReadTime": "6 min read",
+              "defaultIntro": "Our pets depend on us for their well-being, happiness, and everything in between. Providing daily care not only keeps them healthy but also strengthens the beautiful bond you share. Here are some simple yet effective ways to ensure your pet lives a long, happy, and fulfilling life.",
+              "tips": [
+                {
+                  "title": "1. Nutritious Food for a Strong Start",
+                  "description": "A balanced diet is the foundation of your pet's good health. Choose high-quality pet food that meets their age, breed, size, and activity level. Always provide fresh water and avoid feeding them harmful human foods."
+                },
+                {
+                  "title": "2. Daily Exercise Keeps Them Active",
+                  "description": "Regular exercise helps maintain a healthy weight, builds strong muscles, and keeps them mentally stimulated. Take your dog for walks, play fetch, or engage your cat with interactive toys."
+                },
+                {
+                  "title": "3. Regular Health Check-Ups",
+                  "description": "Routine vet visits help detect potential health issues early. Keep up with vaccinations, deworming, flea & tick prevention, and dental care to ensure your pet stays in top shape."
+                },
+                {
+                  "title": "4. Grooming and Hygiene",
+                  "description": "Brushing your pet's coat, trimming nails, cleaning ears, and maintaining oral hygiene are essential parts of their care routine. It keeps them comfortable and prevents infections."
+                },
+                {
+                  "title": "5. Love, Attention & Mental Stimulation",
+                  "description": "Pets thrive on love and companionship. Spend quality time with them, train them positively, and provide toys or activities that challenge their minds."
+                }
+              ],
+              "highlightBox": {
+                "title": "Remember: A happy pet makes a happy home!",
+                "description": "Little acts of care every day can make a big difference in your pet's life."
+              },
+              "sidebar": {
+                "aboutWidget": {
+                  "title": "About PawCare",
+                  "description": "At PawCare, we're dedicated to providing compassionate care and expert advice to help pets live healthier, happier lives.",
+                  "linkLabel": "Learn more about us",
+                  "linkHref": "/about"
+                },
+                "categoriesTitle": "Categories",
+                "recentPostsTitle": "Recent Posts",
+                "saveLabel": "Save for later"
               }
             }
           }

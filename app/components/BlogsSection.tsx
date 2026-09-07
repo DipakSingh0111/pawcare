@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Heart, Home, PawPrint } from "lucide-react";
-import data from "@/data/data.json";
+import { site, SectionProps, BlogData } from "@/data";
 
 function DotGrid({ className }: { className?: string }) {
   return (
@@ -42,10 +42,11 @@ function BlogIcon({ type }: { type: string }) {
   return <PawPrint className={common} strokeWidth={2} fill="currentColor" />;
 }
 
-export default function BlogsSection({ limit }: { limit?: number } = {}) {
-  const { eyebrow, title, titleHighlight, description, items } = data.blogs;
+export default function BlogsSection({ data, className }: SectionProps<BlogData> = {}) {
+  const componentData = data || site.blog;
+  const { tagline: eyebrow, title, titleHighlight, description, posts: items } = componentData;
   
-  const displayItems = limit ? items.slice(0, limit) : items;
+  const displayItems = items.slice(0, 3);
 
   return (
     <section className="site-section relative overflow-hidden bg-[#F7F8FA]">
@@ -60,7 +61,7 @@ export default function BlogsSection({ limit }: { limit?: number } = {}) {
         <div className="mx-auto max-w-2xl text-center">
           <div className="mb-3 flex flex-col items-center">
             <PawPrint
-              className="mb-1 h-4 w-4 text-[#0b1324]"
+              className="mb-1 h-6 w-6 text-[#0b1324]"
               strokeWidth={2.25}
             />
             <div className="flex items-center gap-3">
@@ -89,56 +90,64 @@ export default function BlogsSection({ limit }: { limit?: number } = {}) {
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-6 sm:mt-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-7">
-          {displayItems.map((item) => (
-            <article
-              key={item.href}
-              className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-[0_8px_28px_rgba(11,19,36,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_36px_rgba(11,19,36,0.1)]"
-            >
-              {/* Image panel */}
-              <div className="relative h-44 sm:h-48 bg-gray-100 overflow-hidden">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute left-4 top-4 z-10 rounded-lg bg-[#0b1324] px-3 py-2 text-center shadow-md">
-                  <p className="text-lg font-extrabold leading-none text-white">
-                    {item.day}
-                  </p>
-                  <p className="mt-0.5 text-[11px] font-semibold leading-none text-[#ffb016]">
-                    {item.month}
-                  </p>
-                  <p className="mt-0.5 text-[10px] leading-none text-white/80">
-                    {item.year}
-                  </p>
-                </div>
-              </div>
+          {displayItems.map((item: any) => {
+            const dateObj = new Date(item.date || new Date());
+            const day = dateObj.getDate();
+            const month = dateObj.toLocaleString('default', { month: 'short' });
+            const year = dateObj.getFullYear();
+            const href = `/blogs/${item.slug}`;
 
-              <div className="flex flex-1 flex-col px-5 py-5">
-                <div className="flex items-start gap-3">
-                  <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#ffb016]/40 bg-[#fff8eb]">
-                    <BlogIcon type={item.icon} />
-                  </span>
-                  <h3 className="text-[15px] font-bold leading-snug text-[#0b1324] sm:text-base">
-                    {item.title}
-                  </h3>
+            return (
+              <article
+                key={href}
+                className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-[0_8px_28px_rgba(11,19,36,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_36px_rgba(11,19,36,0.1)]"
+              >
+                {/* Image panel */}
+                <div className="relative h-44 sm:h-48 bg-gray-100 overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute left-4 top-4 z-10 rounded-lg bg-[#0b1324] px-3 py-2 text-center shadow-md">
+                    <p className="text-lg font-extrabold leading-none text-white">
+                      {day}
+                    </p>
+                    <p className="mt-0.5 text-[11px] font-semibold leading-none text-[#ffb016]">
+                      {month}
+                    </p>
+                    <p className="mt-0.5 text-[10px] leading-none text-white/80">
+                      {year}
+                    </p>
+                  </div>
                 </div>
 
-                <p className="mt-3 text-sm leading-relaxed text-[#5a6577]">
-                  {item.excerpt}
-                </p>
+                <div className="flex flex-1 flex-col px-5 py-5">
+                  <div className="flex items-start gap-3">
+                    <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#ffb016]/40 bg-[#fff8eb]">
+                      <BlogIcon type={item.icon} />
+                    </span>
+                    <h3 className="text-[15px] font-bold leading-snug text-[#0b1324] sm:text-base">
+                      {item.title}
+                    </h3>
+                  </div>
 
-                <Link
-                  href={item.href}
-                  className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#ffb016] transition-colors hover:text-[#e09a0f]"
-                >
-                  Read More
-                  <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
-                </Link>
-              </div>
-            </article>
-          ))}
+                  <p className="mt-3 text-sm leading-relaxed text-[#5a6577]">
+                    {item.description}
+                  </p>
+
+                  <Link
+                    href={href}
+                    className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#ffb016] transition-colors hover:text-[#e09a0f]"
+                  >
+                    Read More
+                    <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
+                  </Link>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
