@@ -1,4 +1,4 @@
-import { site, SectionProps, LegalContentData } from "@/data";
+import { site, SectionProps, LegalContentData } from "@/data/index";
 
 export default function CookiePolicySection({ data, className }: SectionProps<LegalContentData> = {}) {
   const componentData = data || site.legalContent;

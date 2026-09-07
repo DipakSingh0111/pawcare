@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail, MapPin, PawPrint, Heart } from "lucide-react";
-import { site, SectionProps, FooterData } from "@/data";
+import { site, SectionProps, FooterData } from "@/data/index";
 
 function FeatureIcon({ type }: { type: string }) {
   if (type === "heart") {

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PawPrint, Check, ArrowRight, ShieldCheck, Star } from "lucide-react";
-import { site, SectionProps, PricingData } from "@/data";
+import { site, SectionProps, PricingData } from "@/data/index";
 
 function DotGrid({ className }: { className?: string }) {
   return (

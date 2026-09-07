@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CalendarDays, PawPrint } from "lucide-react";
-import { site, SectionProps, BannerData } from "@/data";
+import { site, SectionProps, BannerData } from "@/data/index";
 
 function FeatureIcon({ type }: { type: string }) {
   const common = "h-7 w-7";

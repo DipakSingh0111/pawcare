@@ -8,7 +8,7 @@ import {
   PawPrint,
   ArrowRight,
 } from "lucide-react";
-import { site } from "@/data";
+import { site } from "@/data/index";
 
 export default function BlogDetailSection({ 
   blog, 

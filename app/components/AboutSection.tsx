@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Heart, PawPrint } from "lucide-react";
-import { site, SectionProps, AboutData } from "@/data";
+import { site, SectionProps, AboutData } from "@/data/index";
 
 function AboutIcon({ type }: { type: string }) {
   const common = "h-5 w-5";

@@ -1,5 +1,5 @@
 "use client";
-import { site, SectionProps, ContactData } from "@/data";
+import { site, SectionProps, ContactData } from "@/data/index";
 
 import React, { useState } from "react";
 import { MapPin } from "lucide-react";

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { site, SectionProps, SitemapData } from "@/data";
+import { site, SectionProps, SitemapData } from "@/data/index";
 
 export default function SitemapSection({ data, className }: SectionProps<SitemapData> = {}) {
   const componentData = data || site.sitemap;

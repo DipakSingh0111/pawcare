@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { PawPrint, Heart, ArrowRight, Minus, Plus } from "lucide-react";
-import { site, SectionProps, FAQData } from "@/data";
+import { site, SectionProps, FAQData } from "@/data/index";
 
 export default function FaqSection({ data, className }: SectionProps<FAQData> = {}) {
   const componentData = data || site.faq;

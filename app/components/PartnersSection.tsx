@@ -1,6 +1,6 @@
 import { PawPrint } from "lucide-react";
 import Image from "next/image";
-import { site, SectionProps, PartnersData } from "@/data";
+import { site, SectionProps, PartnersData } from "@/data/index";
 
 function DotGrid({ className }: { className?: string }) {
   return (

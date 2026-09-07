@@ -1,4 +1,4 @@
-import { site, SectionProps, PageBannerData } from "@/data";
+import { site, SectionProps, PageBannerData } from "@/data/index";
 import Link from "next/link";
 import { ChevronRight, Home } from "lucide-react";
 import Image from "next/image";

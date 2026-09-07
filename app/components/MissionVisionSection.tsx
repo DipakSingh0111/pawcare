@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
 import { Eye, Target, Heart, Shield, Check, PawPrint, Users } from "lucide-react";
-import { site, SectionProps, MissionVisionData } from "@/data";
+import { site, SectionProps, MissionVisionData } from "@/data/index";
 
 function FeatureIcon({ type }: { type: string }) {
   if (type === "shield") {

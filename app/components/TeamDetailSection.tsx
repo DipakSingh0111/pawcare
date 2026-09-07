@@ -1,4 +1,4 @@
-import { site, SectionProps, TeamDetailData } from "@/data";
+import { site, SectionProps, TeamDetailData } from "@/data/index";
 import Image from "next/image";
 import { PawPrint, Briefcase, GraduationCap, Award, ShieldCheck, Stethoscope, Syringe, Drumstick, ClipboardList, Dog, Scissors, Bath } from "lucide-react";
 

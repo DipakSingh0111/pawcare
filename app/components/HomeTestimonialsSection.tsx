@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { PawPrint, Star, ChevronLeft, ChevronRight } from "lucide-react";
-import { site, SectionProps, TestimonialData } from "@/data";
+import { site, SectionProps, TestimonialData } from "@/data/index";
 
 export default function HomeTestimonialsSection({ data, className }: SectionProps<TestimonialData> = {}) {
   const componentData = data || site.testimonial;

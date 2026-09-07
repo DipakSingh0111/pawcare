@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { MapPin, PawPrint, Star } from "lucide-react";
-import { site, SectionProps, TestimonialData } from "@/data";
+import { site, SectionProps, TestimonialData } from "@/data/index";
 
 function DotGrid({ className }: { className?: string }) {
   return (

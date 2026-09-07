@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import PageBanner from "@/app/components/common/PageBanner";
 import TeamDetailSection from "@/app/components/TeamDetailSection";
-import { site } from "@/data";
+import { site } from "@/data/index";
 
 type PageProps = {
   params: Promise<{ id: string }>;

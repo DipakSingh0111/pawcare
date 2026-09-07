@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { ChevronDown, PawPrint, ArrowRight, Menu, X } from "lucide-react";
-import { site, SectionProps, HeaderData } from "@/data";
+import { site, SectionProps, HeaderData } from "@/data/index";
 
 function MobileNavItem({ link, setOpen }: { link: any, setOpen: (open: boolean) => void }) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);

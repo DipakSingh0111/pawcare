@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { PawPrint, ArrowRight, ChevronUp } from "lucide-react";
-import { site, SectionProps, TeamData } from "@/data";
+import { site, SectionProps, TeamData } from "@/data/index";
 
 function DotGrid({ className }: { className?: string }) {
   return (

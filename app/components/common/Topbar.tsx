@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import { site, SectionProps, TopbarData } from "@/data";
+import { site, SectionProps, TopbarData } from "@/data/index";
 
 function Divider() {
   return (

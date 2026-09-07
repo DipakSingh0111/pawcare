@@ -1,12 +1,17 @@
-import { site } from "@/data";
+import siteData from "@/data/data.json";
 
-export type ServiceDetail = (typeof site.serviceDetail.bySlug)[keyof typeof site.serviceDetail.bySlug];
+const serviceDetailBySlug =
+  siteData.categories.PawCare.sections.ServiceDetail.variants.PawCareServiceDetail1
+    .bySlug;
+
+export type ServiceDetail =
+  (typeof serviceDetailBySlug)[keyof typeof serviceDetailBySlug];
 
 export function getServiceSlugs(): string[] {
-  return Object.keys(site.serviceDetail.bySlug);
+  return Object.keys(serviceDetailBySlug);
 }
 
 export function getServiceDetail(slug: string): ServiceDetail | null {
-  const details = site.serviceDetail.bySlug as Record<string, ServiceDetail>;
+  const details = serviceDetailBySlug as Record<string, ServiceDetail>;
   return details[slug] ?? null;
 }

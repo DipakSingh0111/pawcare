@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { PawPrint, Heart } from "lucide-react";
-import { site, SectionProps, WhyChooseUsData } from "@/data";
+import { site, SectionProps, WhyChooseUsData } from "@/data/index";
 
 function WhyIcon({ type }: { type: string }) {
   const common = "w-10 h-10";

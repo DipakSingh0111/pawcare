@@ -10,7 +10,7 @@ import {
   Play,
   X,
 } from "lucide-react";
-import { site, SectionProps, GalleryData } from "@/data";
+import { site, SectionProps, GalleryData } from "@/data/index";
 
 type VideoItem = { title: string; description: string; src: string };
 

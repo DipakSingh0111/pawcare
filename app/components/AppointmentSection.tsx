@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { User, Phone, Mail, PawPrint, Calendar, Clock, Edit3, ShieldCheck, ChevronDown, CalendarDays, ArrowRight } from "lucide-react";
-import { site, SectionProps, AppointmentData } from "@/data";
+import { site, SectionProps, AppointmentData } from "@/data/index";
 
 export default function AppointmentSection({ data, className }: SectionProps<AppointmentData> = {}) {
   const componentData = data || site.appointment;

@@ -1,3 +1,4 @@
+import { site } from "@/data/index";
 import PageBanner from "@/app/components/common/PageBanner";
 import LocationDetailSection from "@/app/components/LocationDetailSection";
 
