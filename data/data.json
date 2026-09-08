@@ -436,8 +436,7 @@
               "title": "Everything Your Pet Needs, In",
               "titleHighlight": "One Place",
               "description": "Discover premium pet food, toys, grooming, and expert care services — all designed to keep your pets healthy, happy, and loved. Shop easily and book trusted care anytime.",
-              "image": "/images/Banner_image.png"
-             ,
+              "image": "/images/Banner_image.png",
               "features": [
                 {
                   "icon": "quality",
@@ -1660,111 +1659,93 @@
               "items": [
                 {
                   "id": 1,
-                  "name": "Priya Sharma",
-                  "role": "Pet Parent",
+                  "name": "Sarah Jessica",
+                  "role": "Pet Lover",
                   "location": "Bangalore, India",
                   "image": "/images/team_01.jpg",
                   "rating": 5,
-                  "quote": "The team at PawCare is amazing! They treated Bruno with so much love and care during every visit. I always feel he is in the best hands, and their follow-up support gives me complete peace of mind."
+                  "quote": "Adopting Bella has completely transformed our home. She brings endless joy, energy, and love. The adoption process was smooth, and the team provided full support. Bella's playful nature and affectionate personality make every day brighter for our family. "
                 },
                 {
                   "id": 2,
-                  "name": "Rahul Verma",
-                  "role": "Cat Parent",
+                  "name": "Riya Sen",
+                  "role": "Pet Lover",
                   "location": "Delhi, India",
                   "image": "/images/team_02.jpg",
                   "rating": 5,
-                  "quote": "Excellent service and very professional staff. My cat, Whiskers, is usually shy around strangers, but she loves visiting PawCare! The team is patient, gentle, and truly understands feline behavior."
+                  "quote": "Adopting Bella has completely transformed our home. She brings endless joy, energy, and love. The adoption process was smooth, and the team provided full support. Bella's playful nature and affectionate personality make every day brighter for our family."
                 },
                 {
                   "id": 3,
-                  "name": "Anjali Mehta",
-                  "role": "Pet Parent",
+                  "name": "Jeniffer Lopez",
+                  "role": "Pet Lover",
                   "location": "Mumbai, India",
                   "image": "/images/team_03.jpg",
                   "rating": 5,
-                  "quote": "From grooming to nutrition advice, everything is top-notch. The staff explains every step clearly and never rushes the process. Highly recommend PawCare to every pet parent looking for trusted care."
+                  "quote": "Adopting Bella has completely transformed our home. She brings endless joy, energy, and love. The adoption process was smooth, and the team provided full support. Bella's playful nature and affectionate personality make every day brighter for our family."
                 },
                 {
                   "id": 4,
-                  "name": "Vikram Rao",
-                  "role": "Dog Parent",
+                  "name": "Alia Bhatt",
+                  "role": "Pet Lover",
                   "location": "Hyderabad, India",
                   "image": "/images/team_04.jpg",
                   "rating": 5,
-                  "quote": "They truly care for pets like family. The clinic is clean, friendly, and the doctors are very knowledgeable. My dog gets excited every time we walk through the door, which says everything."
+                  "quote": "Adopting Bella has completely transformed our home. She brings endless joy, energy, and love. The adoption process was smooth, and the team provided full support. Bella's playful nature and affectionate personality make every day brighter for our family."
                 },
                 {
                   "id": 5,
-                  "name": "Neha Kapoor",
-                  "role": "Pet Parent",
+                  "name": "Shradha",
+                  "role": "Pet Lover",
                   "location": "Pune, India",
                   "image": "/images/team_01.jpg",
                   "rating": 5,
-                  "quote": "PawCare's adoption support was wonderful. They helped us find our furry family member and guided us at every step—from matching to home visits and ongoing care tips. We felt supported throughout the entire journey."
+                  "quote": "Adopting Bella has completely transformed our home. She brings endless joy, energy, and love. The adoption process was smooth, and the team provided full support. Bella's playful nature and affectionate personality make every day brighter for our family."
                 },
                 {
                   "id": 6,
-                  "name": "Arjun Nair",
-                  "role": "Dog Parent",
+                  "name": "Kareena Kapoor",
+                  "role": "Pet Lover",
                   "location": "Chennai, India",
                   "image": "/images/team_02.jpg",
                   "rating": 5,
-                  "quote": "I trust PawCare completely for my dog's health. Their team is compassionate, thorough, and always available when we need guidance. Appointments are smooth and the treatment plans are always clear."
+                  "quote": "Adopting Bella has completely transformed our home. She brings endless joy, energy, and love. The adoption process was smooth, and the team provided full support. Bella's playful nature and affectionate personality make every day brighter for our family."
                 },
                 {
                   "id": 7,
-                  "name": "Sneha Iyer",
-                  "role": "Pet Parent",
+                  "name": "Shilpa Shetty",
+                  "role": "Pet Lover",
                   "location": "Ahmedabad, India",
                   "image": "/images/team_03.jpg",
                   "rating": 5,
-                  "quote": "Boarding was stress-free for both of us. Daily updates and playtime photos made me feel connected while I was away. The facility is safe, clean, and full of caring staff who treat pets like their own."
+                  "quote": "Adopting Bella has completely transformed our home. She brings endless joy, energy, and love. The adoption process was smooth, and the team provided full support. Bella's playful nature and affectionate personality make every day brighter for our family."
                 },
                 {
                   "id": 8,
-                  "name": "Karan Malhotra",
-                  "role": "Dog Parent",
+                  "name": "David Smith",
+                  "role": "Pet Lover",
                   "location": "Jaipur, India",
                   "image": "/images/team_04.jpg",
                   "rating": 5,
-                  "quote": "The training program changed my pup's behavior completely. Patient trainers and clear guidance for pet parents made the process easy to follow at home. We now enjoy calmer walks and happier days together."
+                  "quote": "Adopting Bella has completely transformed our home. She brings endless joy, energy, and love. The adoption process was smooth, and the team provided full support. Bella's playful nature and affectionate personality make every day brighter for our family."
                 },
                 {
                   "id": 9,
-                  "name": "Meera Joshi",
-                  "role": "Cat Parent",
+                  "name": "David Smith",
+                  "role": "Pet Lover",
                   "location": "Kolkata, India",
                   "image": "/images/team_01.jpg",
                   "rating": 5,
-                  "quote": "Grooming sessions are gentle and thorough. My Persian comes home looking fresh, calm, and happy every time. The groomers take real care with sensitive coats and never force a rushed session."
+                  "quote": "Adopting Bella has completely transformed our home. She brings endless joy, energy, and love. The adoption process was smooth, and the team provided full support. Bella's playful nature and affectionate personality make every day brighter for our family."
                 },
                 {
                   "id": 10,
-                  "name": "Siddharth Reddy",
-                  "role": "Pet Parent",
-                  "location": "Bengaluru, India",
+                  "name": "Sushmita Sen",
+                  "role": "Pet Lover",
+                  "location": "Kochi, India",
                   "image": "/images/team_02.jpg",
                   "rating": 5,
-                  "quote": "Their wellness plan keeps my pet's checkups, diet, and vaccines on track. Truly one place for complete care. The reminders and personalized advice have made pet parenting so much easier for our family."
-                },
-                {
-                  "id": 11,
-                  "name": "Divya Menon",
-                  "role": "Dog Parent",
-                  "location": "Kochi, India",
-                  "image": "/images/team_03.jpg",
-                  "rating": 5,
-                  "quote": "Emergency support was quick and reassuring. The vets explained everything clearly and treated my dog with so much kindness. We felt informed at every step and grateful for their calm, expert care."
-                },
-                {
-                  "id": 12,
-                  "name": "Amit Khanna",
-                  "role": "Pet Parent",
-                  "location": "Chandigarh, India",
-                  "image": "/images/team_04.jpg",
-                  "rating": 5,
-                  "quote": "Pet taxi is safe, punctual, and comfortable. Booking is easy and the drivers handle pets with real care. Whether it's a clinic visit or grooming drop-off, the ride always feels smooth and stress-free."
+                  "quote": "Adopting Bella has completely transformed our home. She brings endless joy, energy, and love. The adoption process was smooth, and the team provided full support. Bella's playful nature and affectionate personality make every day brighter for our family."
                 }
               ]
             }
