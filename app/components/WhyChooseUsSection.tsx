@@ -146,7 +146,7 @@ export default function WhyChooseUsSection({ data, className }: SectionProps<Why
         <div className="mb-10 flex flex-col items-center text-center sm:mb-12">
           <div className="flex items-center justify-center space-x-3 mb-4">
             <div className="h-px w-8 bg-[#ffb016]"></div>
-            <PawPrint className="w-6 h-6 text-[#0b1324]" />
+            <PawPrint className="w-6 h-6 text-[#0b1324] rotate-[12deg]" />
             <span className="text-[#ffb016] font-bold text-xs md:text-sm tracking-[0.2em] uppercase">
               {componentData.tagline}
             </span>

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { ChevronDown, PawPrint, ArrowRight, Menu, X } from "lucide-react";
 import { site, SectionProps, HeaderData } from "@/data/index";
 
@@ -65,6 +66,7 @@ function MobileNavItem({ link, setOpen }: { link: any, setOpen: (open: boolean) 
 
 export default function Navbar({ data, className }: SectionProps<HeaderData> = {}) {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
   const navbarData = data || site.header;
   
   // Map new schema to expected props
@@ -72,7 +74,7 @@ export default function Navbar({ data, className }: SectionProps<HeaderData> = {
   const links = navbarData.menuItems?.map((item: any) => ({
     label: item.label,
     href: item.href,
-    active: item.active,
+    active: pathname === item.href || (item.hasDropdown && item.dropdownItems?.some((sub: any) => pathname === sub.href)),
     hasDropdown: item.hasDropdown,
     subLinks: item.dropdownItems
   })) || [];
@@ -99,7 +101,7 @@ export default function Navbar({ data, className }: SectionProps<HeaderData> = {
             <div key={link.href} className="relative group">
               <Link
                 href={link.href}
-                className={`relative flex items-center gap-1 text-[15px] font-semibold transition-colors hover:text-[#ffb016] py-2 ${
+                className={`group/link relative flex items-center gap-1 text-[15px] font-semibold transition-colors hover:text-[#ffb016] py-2 ${
                   link.active ? "text-[#ffb016]" : "text-[#0b1324]"
                 }`}
               >
@@ -107,9 +109,11 @@ export default function Navbar({ data, className }: SectionProps<HeaderData> = {
                 {link.hasDropdown && (
                   <ChevronDown className="h-4 w-4" strokeWidth={2.25} />
                 )}
-                {link.active && (
-                  <span className="absolute -bottom-2 left-0 h-[3px] w-full rounded-full bg-[#ffb016]" />
-                )}
+                <span 
+                  className={`absolute -bottom-2 left-0 h-[3px] rounded-full bg-[#ffb016] transition-all duration-300 ease-out ${
+                    link.active ? "w-full" : "w-0 group-hover/link:w-full"
+                  }`} 
+                />
               </Link>
               
               {link.hasDropdown && link.subLinks && (

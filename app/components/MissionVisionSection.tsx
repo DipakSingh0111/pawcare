@@ -139,7 +139,7 @@ export default function MissionVisionSection({ data, className }: SectionProps<M
             </p>
             <span className="h-[1px] w-8 bg-[#ffab00]/60" />
           </div>
-          <PawPrint className="mx-auto mb-2 h-6 w-6 text-[#0b1324]" />
+          <PawPrint className="mx-auto mb-2 h-6 w-6 text-[#0b1324] rotate-[12deg]" />
           <h2 className="text-3xl font-extrabold text-[#0d1b3e] sm:text-4xl lg:text-5xl">
             {title}
           </h2>
@@ -195,7 +195,7 @@ export default function MissionVisionSection({ data, className }: SectionProps<M
             </div>
 
             {/* Features Row */}
-            <div className="grid grid-cols-4 divide-x divide-gray-200 pt-6">
+            <div className="grid grid-cols-2 gap-y-6 sm:grid-cols-4 sm:gap-y-0 sm:divide-x sm:divide-gray-200 pt-6">
               {mission.features.map(
                 (feature: { title: string; icon: string }) => (
                   <div

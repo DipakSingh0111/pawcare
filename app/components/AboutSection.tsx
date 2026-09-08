@@ -94,7 +94,7 @@ function AboutCollage({
   three: string;
 }) {
   return (
-    <div className="relative mx-auto h-[480px] w-full max-w-[480px] sm:h-[560px] lg:mx-0 lg:h-[580px] lg:max-w-[520px]">
+    <div className="relative mx-auto h-[480px] w-full max-w-[480px] sm:h-[560px] lg:h-[580px] lg:max-w-[520px]">
 
       {/* ── Gold rectangle behind top-left photo ── */}
       <div className="absolute left-[0%] top-[2%] z-[1] h-[47%] w-[43%] rounded-[2.25rem] bg-[#ffb016]" />
@@ -166,7 +166,7 @@ export default function AboutSection({ data, className }: SectionProps<AboutData
         aria-hidden
       />
 
-      <div className="site-container relative z-10 grid items-center gap-12 lg:grid-cols-2 lg:gap-14 xl:gap-16">
+      <div className="site-container relative z-10 grid items-center gap-8 lg:grid-cols-2 lg:gap-10 xl:gap-12">
         {/* Left — Collage */}
         <div className="animate-fade-up">
           <AboutCollage
@@ -181,7 +181,7 @@ export default function AboutSection({ data, className }: SectionProps<AboutData
           {/* Eyebrow */}
           <p className="mb-3 flex items-center gap-2 text-sm font-bold uppercase tracking-[0.14em] text-[#ffb016]">
             <PawPrint
-              className="h-4 w-4 text-[#0b1324]"
+              className="h-4 w-4 text-[#0b1324] rotate-[12deg]"
               strokeWidth={2.5}
               fill="#0b1324"
             />

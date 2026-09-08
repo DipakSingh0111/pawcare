@@ -59,7 +59,7 @@ export default function FaqSection({ data, className }: SectionProps<FAQData> = 
             </p>
             <span className="h-[2px] w-10 bg-[#ffab00]/60" />
           </div>
-          <PawPrint className="mx-auto mb-3 h-6 w-6 text-[#0b1324]" />
+          <PawPrint className="mx-auto mb-3 h-6 w-6 text-[#0b1324] rotate-[12deg]" />
           <h2 className="text-3xl font-extrabold text-[#0b1324] sm:text-4xl lg:text-[2.75rem] font-serif mb-4">
             {faqs.title}{" "}
             <span className="text-[#0b1324]">{faqs.titleHighlight}</span>

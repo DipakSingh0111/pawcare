@@ -18,7 +18,7 @@ export default function Topbar({ data, className }: SectionProps<TopbarData> = {
   return (
     <div className={`w-full bg-[#0b1324] text-white ${className || ''}`}>
       <div className="site-container flex flex-col items-center justify-between gap-2 py-2.5 text-[13px] md:flex-row md:gap-4">
-        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 md:justify-start lg:gap-x-5">
+        <div className="flex flex-col items-center gap-2 sm:flex-row sm:flex-wrap sm:justify-center md:justify-start lg:gap-x-5">
           <div className="flex items-center gap-2">
             <MapPin
               className="h-3.5 w-3.5 shrink-0 text-[#ffb016]"
@@ -54,7 +54,7 @@ export default function Topbar({ data, className }: SectionProps<TopbarData> = {
           </a>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 lg:gap-x-5">
+        <div className="mt-1 flex flex-col items-center gap-3 sm:mt-0 sm:flex-row sm:flex-wrap sm:justify-center lg:gap-x-5">
           <div className="flex items-center gap-2">
             <Clock
               className="h-3.5 w-3.5 shrink-0 text-[#ffb016]"

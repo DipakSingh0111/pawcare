@@ -126,9 +126,9 @@ export default function Footer({ data, className }: SectionProps<FooterData> = {
 
       {/* Main footer */}
       <div className="site-container relative z-10 py-14 lg:py-16">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.15fr_auto_1fr_1fr_1fr_1fr] lg:gap-8 xl:gap-10">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-[1.15fr_auto_1fr_1fr_1fr_1fr] lg:gap-8 xl:gap-10">
           {/* Brand + contact */}
-          <div className="max-w-sm">
+          <div className="max-w-sm sm:col-span-2 md:col-span-3 lg:col-span-1">
             <Link href="/" className="inline-block">
               <Image
                 src="/images/logo.png"

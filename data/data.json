@@ -380,13 +380,13 @@
                 },
                 {
                   "label": "Services",
-                  "href": "/services",
+                  "href": "/services"
+                },
+                {
+                  "label": "Resources",
+                  "href": "#",
                   "hasDropdown": true,
                   "dropdownItems": [
-                    {
-                      "label": "Our Services",
-                      "href": "/services"
-                    },
                     {
                       "label": "Pricing",
                       "href": "/pricing"
@@ -423,8 +423,8 @@
                 }
               ],
               "cta": {
-                "label": "Book Now",
-                "href": "/appointment"
+                "label": "Enquiry Now",
+                "href": "/contact"
               }
             }
           }
@@ -436,15 +436,8 @@
               "title": "Everything Your Pet Needs, In",
               "titleHighlight": "One Place",
               "description": "Discover premium pet food, toys, grooming, and expert care services — all designed to keep your pets healthy, happy, and loved. Shop easily and book trusted care anytime.",
-              "image": "/images/Banner_image.png",
-              "ctaPrimary": {
-                "label": "Shop Now",
-                "href": "/shop"
-              },
-              "ctaSecondary": {
-                "label": "Book a Service",
-                "href": "/services"
-              },
+              "image": "/images/Banner_image.png"
+             ,
               "features": [
                 {
                   "icon": "quality",
@@ -726,7 +719,7 @@
                     ],
                     "primaryBtn": {
                       "text": "Book Appointment",
-                      "href": "/book"
+                      "href": "/appointment"
                     },
                     "secondaryBtn": {
                       "text": "View Pricing",
@@ -842,7 +835,7 @@
                     ],
                     "primaryBtn": {
                       "text": "Book Appointment",
-                      "href": "/book"
+                      "href": "/appointment"
                     },
                     "secondaryBtn": {
                       "text": "View Pricing",
@@ -958,7 +951,7 @@
                     ],
                     "primaryBtn": {
                       "text": "Book Appointment",
-                      "href": "/book"
+                      "href": "/appointment"
                     },
                     "secondaryBtn": {
                       "text": "View Pricing",
@@ -1074,7 +1067,7 @@
                     ],
                     "primaryBtn": {
                       "text": "Book Appointment",
-                      "href": "/book"
+                      "href": "/appointment"
                     },
                     "secondaryBtn": {
                       "text": "View Pricing",
@@ -1190,7 +1183,7 @@
                     ],
                     "primaryBtn": {
                       "text": "Book Appointment",
-                      "href": "/book"
+                      "href": "/appointment"
                     },
                     "secondaryBtn": {
                       "text": "View Pricing",
@@ -1306,7 +1299,7 @@
                     ],
                     "primaryBtn": {
                       "text": "Book Appointment",
-                      "href": "/book"
+                      "href": "/appointment"
                     },
                     "secondaryBtn": {
                       "text": "View Pricing",
@@ -1422,7 +1415,7 @@
                     ],
                     "primaryBtn": {
                       "text": "Book Appointment",
-                      "href": "/book"
+                      "href": "/appointment"
                     },
                     "secondaryBtn": {
                       "text": "View Pricing",

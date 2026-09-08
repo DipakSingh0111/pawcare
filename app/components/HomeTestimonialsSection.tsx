@@ -34,7 +34,7 @@ export default function HomeTestimonialsSection({ data, className }: SectionProp
             <span className="h-[1.5px] w-10 shrink-0 bg-[#ffb016] sm:w-12" aria-hidden />
             <div className="mx-3 flex items-center gap-2">
               <PawPrint
-                className="h-4 w-4 shrink-0 text-[#ffb016]"
+                className="h-4 w-4 shrink-0 text-[#ffb016] rotate-[12deg]"
                 strokeWidth={2.5}
                 fill="#ffb016"
               />
@@ -45,7 +45,7 @@ export default function HomeTestimonialsSection({ data, className }: SectionProp
             <span className="h-[1.5px] w-10 shrink-0 bg-[#ffb016] sm:w-12" aria-hidden />
           </div>
 
-          <h2 className="whitespace-nowrap font-serif text-[1.35rem] font-extrabold tracking-tight text-[#0b1324] sm:text-3xl md:text-4xl lg:text-[2.5rem]">
+          <h2 className="font-serif text-[1.35rem] font-extrabold tracking-tight text-[#0b1324] sm:text-3xl md:text-4xl lg:text-[2.5rem] px-2 sm:px-0">
             {testimonials.title.trim()}{" "}
             <span className="text-[#ffb016]">{testimonials.titleHighlight}</span>
           </h2>
@@ -60,7 +60,7 @@ export default function HomeTestimonialsSection({ data, className }: SectionProp
             <span className="h-[1.5px] w-12 shrink-0 bg-[#ffb016] sm:w-14" aria-hidden />
           </div>
 
-          <p className="mx-auto whitespace-nowrap text-sm leading-relaxed text-[#5a6577] sm:text-base">
+          <p className="mx-auto text-sm leading-relaxed text-[#5a6577] sm:text-base px-4 sm:px-0">
             {testimonials.description}
           </p>
         </div>

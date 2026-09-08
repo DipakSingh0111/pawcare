@@ -52,7 +52,7 @@ export default function PricingSection({ data, className }: SectionProps<Pricing
           </h2>
 
           <PawPrint
-            className="mx-auto mt-4 h-4 w-4 text-[#ffb016]"
+            className="mx-auto mt-4 h-4 w-4 text-[#ffb016] rotate-[12deg]"
             strokeWidth={2.5}
             fill="#ffb016"
           />

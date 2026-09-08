@@ -108,7 +108,7 @@ export default function HomeBanner({ data, className }: SectionProps<BannerData>
     ctaSecondary: secondaryCta,
     features,
     image,
-  } = componentData;
+  } = componentData as any;
 
   return (
     <section className="relative w-full overflow-hidden bg-white">
@@ -128,7 +128,7 @@ export default function HomeBanner({ data, className }: SectionProps<BannerData>
         {/* Left content — aligns with logo */}
         <div className="relative z-10 flex w-full flex-col justify-center py-10 lg:min-h-[640px] lg:w-[48%] lg:py-16">
           <p className="animate-fade-up mb-5 flex items-center gap-2 text-sm font-semibold tracking-wide text-[#0b1324] sm:text-[0.95rem]">
-            <PawPrint className="h-4 w-4 shrink-0 text-[#0b1324]" strokeWidth={2.25} />
+            <PawPrint className="h-4 w-4 shrink-0 text-[#0b1324] rotate-[12deg]" strokeWidth={2.25} />
             <span>{badge}</span>
             <PawPrint
               className="h-4 w-4 shrink-0 text-[#ffb016]"
@@ -146,29 +146,35 @@ export default function HomeBanner({ data, className }: SectionProps<BannerData>
             {description}
           </p>
 
-          <div className="animate-fade-up animation-delay-300 mt-8 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 max-w-[320px] sm:max-w-none">
-            <Link
-              href={primaryCta.href}
-              className="flex w-full items-center justify-center gap-2 rounded-md bg-[#ffb016] px-6 py-3.5 text-sm font-bold text-[#0b1324] shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#e09a0f] hover:shadow-md sm:w-auto sm:text-base"
-            >
-              <PawPrint className="h-4 w-4" strokeWidth={2.5} />
-              {primaryCta.label}
-            </Link>
-            <Link
-              href={secondaryCta.href}
-              className="flex w-full items-center justify-center gap-2 rounded-md border-[1.5px] border-[#0b1324] bg-white px-6 py-3.5 text-sm font-bold text-[#0b1324] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0b1324] hover:text-white sm:w-auto sm:text-base"
-            >
-              <CalendarDays className="h-4 w-4" strokeWidth={2.25} />
-              {secondaryCta.label}
-            </Link>
-          </div>
+          {(primaryCta || secondaryCta) && (
+            <div className="animate-fade-up animation-delay-300 mt-8 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 max-w-[320px] sm:max-w-none">
+              {primaryCta && (
+                <Link
+                  href={primaryCta.href || "#"}
+                  className="flex w-full items-center justify-center gap-2 rounded-md bg-[#ffb016] px-6 py-3.5 text-sm font-bold text-[#0b1324] shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#e09a0f] hover:shadow-md sm:w-auto sm:text-base"
+                >
+                  <PawPrint className="h-4 w-4" strokeWidth={2.5} />
+                  {primaryCta.label}
+                </Link>
+              )}
+              {secondaryCta && (
+                <Link
+                  href={secondaryCta.href || "#"}
+                  className="flex w-full items-center justify-center gap-2 rounded-md border-[1.5px] border-[#0b1324] bg-white px-6 py-3.5 text-sm font-bold text-[#0b1324] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0b1324] hover:text-white sm:w-auto sm:text-base"
+                >
+                  <CalendarDays className="h-4 w-4" strokeWidth={2.25} />
+                  {secondaryCta.label}
+                </Link>
+              )}
+            </div>
+          )}
         </div>
       </div>
 
       {/* Feature bar */}
       <div className="site-container relative z-20 pb-0 lg:-mt-6">
         <div className="animate-fade-up animation-delay-400 grid grid-cols-1 overflow-hidden rounded-2xl bg-[#FDF8F3] sm:grid-cols-2 lg:grid-cols-4">
-          {features.map((feature, index) => {
+          {features.map((feature: any, index: number) => {
             const borders = [
               "border-b border-[#e8ddd0] sm:border-r lg:border-b-0",
               "border-b border-[#e8ddd0] lg:border-b-0 lg:border-r",
