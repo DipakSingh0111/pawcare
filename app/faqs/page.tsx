@@ -13,6 +13,7 @@ export default function FaqsPage() {
         title="FAQS"
         breadcrumbs={[
           { label: "Home", href: "/" },
+          { label: "Resources", href: "#" },
           { label: "FAQS" },
         ]}
       />

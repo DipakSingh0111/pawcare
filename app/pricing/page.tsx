@@ -13,6 +13,7 @@ export default function PricingPage() {
         title="Pricing"
         breadcrumbs={[
           { label: "Home", href: "/" },
+          { label: "Resources", href: "#" },
           { label: "Pricing" },
         ]}
       />

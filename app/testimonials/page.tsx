@@ -14,6 +14,7 @@ export default function TestimonialsPage() {
         title="Testimonials"
         breadcrumbs={[
           { label: "Home", href: "/" },
+          { label: "Resources", href: "#" },
           { label: "Testimonials" },
         ]}
       />

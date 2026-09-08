@@ -14,6 +14,7 @@ export default function MissionPage() {
         title="Vision & Mission"
         breadcrumbs={[
           { label: "Home", href: "/" },
+          { label: "About Us", href: "#" },
           { label: "Vision & Mission" },
         ]}
       />

@@ -14,6 +14,7 @@ export default function PartnersPage() {
         title="Partners"
         breadcrumbs={[
           { label: "Home", href: "/" },
+          { label: "Resources", href: "#" },
           { label: "Partners" },
         ]}
       />

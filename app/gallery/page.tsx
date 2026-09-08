@@ -14,6 +14,7 @@ export default function GalleryPage() {
         title="Gallery"
         breadcrumbs={[
           { label: "Home", href: "/" },
+          { label: "Resources", href: "#" },
           { label: "Gallery" },
         ]}
       />

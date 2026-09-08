@@ -13,6 +13,7 @@ export default function TeamPage() {
         title="Our Team"
         breadcrumbs={[
           { label: "Home", href: "/" },
+          { label: "About Us", href: "#" },
           { label: "Our Team" },
         ]}
       />

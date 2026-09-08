@@ -12,7 +12,11 @@ export default function WhyChooseUsPage() {
     <main className="min-h-screen bg-white">
       <PageBanner
         title="Why Choose Us"
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Why Choose Us" }]}
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "About Us", href: "#" },
+          { label: "Why Choose Us" },
+        ]}
       />
       <div className="py-10">
         <WhyChooseUsSection />

@@ -13,7 +13,11 @@ export default function AboutPage() {
     <main className="min-h-screen bg-white">
       <PageBanner
         title="About Us"
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "About Us" }]}
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "About Us", href: "#" },
+          { label: "About Us" },
+        ]}
       />
       <AboutSection />
       <MissionVisionSection />

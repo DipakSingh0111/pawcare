@@ -11,7 +11,11 @@ export default function LocationsPage() {
     <main className="min-h-screen bg-white">
       <PageBanner
         title="Locations"
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Locations" }]}
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Resources", href: "#" },
+          { label: "Locations" },
+        ]}
       />
       <LocationsSection />
     </main>
