@@ -333,9 +333,14 @@
                   "icon": "instagram"
                 },
                 {
-                  "platform": "map",
-                  "url": "https://maps.google.com",
-                  "icon": "map"
+                  "platform": "whatsapp",
+                  "url": "https://whatsapp.com",
+                  "icon": "whatsapp"
+                },
+                {
+                  "platform": "youtube",
+                  "url": "https://youtube.com",
+                  "icon": "youtube"
                 }
               ]
             }
@@ -1730,15 +1735,6 @@
                   "quote": "Adopting Bella has completely transformed our home. She brings endless joy, energy, and love. The adoption process was smooth, and the team provided full support. Bella's playful nature and affectionate personality make every day brighter for our family."
                 },
                 {
-                  "id": 9,
-                  "name": "David Smith",
-                  "role": "Pet Lover",
-                  "location": "Kolkata, India",
-                  "image": "/images/team_01.jpg",
-                  "rating": 5,
-                  "quote": "Adopting Bella has completely transformed our home. She brings endless joy, energy, and love. The adoption process was smooth, and the team provided full support. Bella's playful nature and affectionate personality make every day brighter for our family."
-                },
-                {
                   "id": 10,
                   "name": "Sushmita Sen",
                   "role": "Pet Lover",
@@ -2968,14 +2964,6 @@
                       "href": "/team"
                     },
                     {
-                      "label": "Testimonials",
-                      "href": "/testimonials"
-                    },
-                    {
-                      "label": "FAQs",
-                      "href": "/faqs"
-                    },
-                    {
                       "label": "Contact Us",
                       "href": "/contact"
                     }
@@ -2999,11 +2987,19 @@
                     {
                       "label": "Locations",
                       "href": "/locations"
+                    },
+                    {
+                      "label": "Testimonials",
+                      "href": "/testimonials"
+                    },
+                    {
+                      "label": "FAQs",
+                      "href": "/faqs"
                     }
                   ]
                 },
                 {
-                  "title": "Explore",
+                  "title": "Explore & Support",
                   "links": [
                     {
                       "label": "Blogs",
@@ -3020,12 +3016,7 @@
                     {
                       "label": "Site-Map",
                       "href": "/sitemap"
-                    }
-                  ]
-                },
-                {
-                  "title": "Support",
-                  "links": [
+                    },
                     {
                       "label": "Privacy Policy",
                       "href": "/privacy-policy"
@@ -3067,7 +3058,8 @@
                   "icon": "chat"
                 }
               ],
-              "copyright": "© 2026 Paw Care. All rights reserved. Powered by Lestow",
+              "copyright": "© 2026 Paw Care. All rights reserved.",
+              "poweredBy": "Lestow",
               "bottomLinks": [
                 {
                   "label": "Privacy Policy",

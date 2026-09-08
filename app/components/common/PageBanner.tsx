@@ -38,47 +38,49 @@ export default function PageBanner({ title, breadcrumbs, bgImage = "/images/page
       </div>
 
       <div className="max-w-[1440px] mx-auto px-4 md:px-8 xl:px-10 w-full relative z-10">
-        <h1 className="text-[2rem] leading-tight sm:text-4xl md:text-[3.25rem] font-extrabold text-[#0b1324] mb-3 sm:mb-4 font-serif">
-          {title}
-        </h1>
+        <div className="max-w-xl md:max-w-2xl lg:max-w-3xl">
+          <h1 className="text-[2rem] leading-tight sm:text-4xl md:text-[3.25rem] font-extrabold text-[#0b1324] mb-3 sm:mb-4 font-serif break-words">
+            {title}
+          </h1>
 
-        <nav className="flex items-center space-x-2 text-sm md:text-base font-semibold">
-          {breadcrumbs.map((crumb, idx) => {
-            const isLast = idx === breadcrumbs.length - 1;
+          <nav className="flex flex-wrap items-center gap-y-2 gap-x-2 text-sm md:text-base font-semibold">
+            {breadcrumbs.map((crumb, idx) => {
+              const isLast = idx === breadcrumbs.length - 1;
 
-            return (
-              <div key={idx} className="flex items-center">
-                {idx === 0 && (
-                  <Home
-                    className={`w-4 h-4 mr-1.5 ${iconColor}`}
-                    strokeWidth={2.5}
-                  />
-                )}
-                {idx > 0 && (
-                  <ChevronRight
-                    className={`w-4 h-4 mx-2 ${iconMuted}`}
-                    strokeWidth={2.5}
-                  />
-                )}
+              return (
+                <div key={idx} className="flex items-center">
+                  {idx === 0 && (
+                    <Home
+                      className={`w-4 h-4 mr-1.5 ${iconColor}`}
+                      strokeWidth={2.5}
+                    />
+                  )}
+                  {idx > 0 && (
+                    <ChevronRight
+                      className={`w-4 h-4 mr-2 ${iconMuted}`}
+                      strokeWidth={2.5}
+                    />
+                  )}
 
-                {crumb.href ? (
-                  <Link
-                    href={crumb.href}
-                    className={`${iconColor} hover:text-[#0b1324] transition-colors`}
-                  >
-                    {crumb.label}
-                  </Link>
-                ) : (
-                  <span
-                    className={isLast ? textColor : iconColor}
-                  >
-                    {crumb.label}
-                  </span>
-                )}
-              </div>
-            );
-          })}
-        </nav>
+                  {crumb.href ? (
+                    <Link
+                      href={crumb.href}
+                      className={`${iconColor} hover:text-[#0b1324] transition-colors`}
+                    >
+                      {crumb.label}
+                    </Link>
+                  ) : (
+                    <span
+                      className={isLast ? textColor : iconColor}
+                    >
+                      {crumb.label}
+                    </span>
+                  )}
+                </div>
+              );
+            })}
+          </nav>
+        </div>
       </div>
     </section>
   );
