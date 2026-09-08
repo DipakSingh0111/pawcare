@@ -49,7 +49,7 @@ export default function BlogsSection({ data, className }: SectionProps<BlogData>
   const displayItems = items.slice(0, 3);
 
   return (
-    <section className="site-section relative overflow-hidden bg-[#F7F8FA]">
+    <section className="site-section !pt-4 lg:!pt-6 relative overflow-hidden bg-[#F7F8FA]">
       <DotGrid className="absolute left-4 top-8 sm:left-8" />
       <PawPrint
         className="pointer-events-none absolute right-[6%] top-8 h-40 w-40 text-[#0b1324]/[0.04] sm:h-52 sm:w-52"

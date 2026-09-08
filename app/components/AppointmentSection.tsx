@@ -44,7 +44,7 @@ export default function AppointmentSection({ data, className }: SectionProps<App
   };
 
   return (
-    <section className={`py-16 md:py-24 bg-[#fffaf5] relative overflow-hidden ${className || ""}`}>
+    <section className={`py-10 md:py-16 bg-[#fffaf5] relative overflow-hidden ${className || ""}`}>
       {/* Background decorations */}
       <div className="absolute left-10 top-32 opacity-20 hidden md:block">
         <div className="grid grid-cols-4 gap-2">

@@ -40,7 +40,7 @@ export default function ContactSection({ data, className }: SectionProps<Contact
   };
 
   return (
-    <section className={`bg-[#fffaf5] py-16 md:py-24 space-y-20 ${className || ""}`}>
+    <section className={`bg-[#fffaf5] py-10 md:py-16 space-y-12 ${className || ""}`}>
       
       {/* 1. Get in Touch */}
       <div className="max-w-[1200px] mx-auto px-4 md:px-8">

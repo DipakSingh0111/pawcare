@@ -49,18 +49,18 @@ body {
 
 /* Consistent vertical rhythm between home sections */
 .site-section {
-  padding-block: 2rem; /* py-8 */
+  padding-block: 1.5rem; /* py-6 */
 }
 
 @media (min-width: 640px) {
   .site-section {
-    padding-block: 2.5rem; /* sm:py-10 */
+    padding-block: 2rem; /* sm:py-8 */
   }
 }
 
 @media (min-width: 1024px) {
   .site-section {
-    padding-block: 3rem; /* lg:py-12 */
+    padding-block: 2.5rem; /* lg:py-10 */
   }
 }
 

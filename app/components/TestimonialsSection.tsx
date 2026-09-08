@@ -17,7 +17,7 @@ export default function TestimonialsSection({ data, className }: SectionProps<Te
   const testimonials = componentData;
 
   return (
-    <section className="site-section relative w-full overflow-hidden bg-white">
+    <section className="site-section !pb-4 lg:!pb-6 relative w-full overflow-hidden bg-white">
       <DotGrid className="absolute top-10 left-4 sm:left-8 lg:left-12" />
       <DotGrid className="absolute right-4 bottom-10 sm:right-8 lg:right-12" />
       <PawPrint

@@ -5,7 +5,7 @@ export default function RefundPolicySection({ data, className }: SectionProps<Le
   const { intro, sections, lastUpdated, footer } = componentData.bySlug["refund-policy"];
 
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-10 md:py-16 bg-white">
       <div className="max-w-[900px] mx-auto px-4 md:px-8">
         <p className="text-gray-600 mb-10 leading-relaxed text-[15px] animate-fade-up">
           {intro}

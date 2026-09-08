@@ -31,7 +31,7 @@ export default function TeamSection({
 
   return (
     <section
-      className={`relative w-full overflow-hidden bg-[#FAFBFC] py-14 sm:py-16 lg:py-20 ${className ?? ""}`}
+      className={`relative w-full overflow-hidden bg-[#FAFBFC] py-10 sm:py-12 lg:py-16 ${className ?? ""}`}
     >
       <PawPrint
         className="pointer-events-none absolute top-10 left-[4%] h-36 w-36 -rotate-12 text-[#e8dcc8]/70 sm:h-48 sm:w-48"
