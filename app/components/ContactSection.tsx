@@ -43,7 +43,7 @@ export default function ContactSection({ data, className }: SectionProps<Contact
     <section className={`bg-[#fffaf5] py-10 md:py-16 space-y-12 ${className || ""}`}>
       
       {/* 1. Get in Touch */}
-      <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+      <div className="site-container">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#0b1324] mb-4 font-serif">
             {getInTouch?.title || "Get in Touch"}
@@ -104,7 +104,7 @@ export default function ContactSection({ data, className }: SectionProps<Contact
       </div>
 
       {/* 2. Send Us a Message */}
-      <div className="max-w-[1000px] mx-auto px-4 md:px-8">
+      <div className="site-container">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#0b1324] mb-4 font-serif">
             {sendMessage?.title || "Send Us a Message"}
@@ -181,7 +181,7 @@ export default function ContactSection({ data, className }: SectionProps<Contact
       </div>
 
       {/* 3. Find Us */}
-      <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+      <div className="site-container">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#0b1324] mb-4 font-serif">
             {findUs?.title || "Find Us"}

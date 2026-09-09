@@ -31,7 +31,7 @@ export default function TeamDetailSection({ member, data, className }: { member:
   const componentData = data || site.teamDetail;
   return (
     <section className="w-full bg-white pt-20 pb-24">
-      <div className="mx-auto max-w-[1440px] px-4 md:px-8 xl:px-10">
+      <div className="site-container">
         
         {/* Profile Section */}
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-20 items-center mb-16 relative">

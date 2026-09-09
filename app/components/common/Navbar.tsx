@@ -91,14 +91,19 @@ export default function Navbar({ data, className }: SectionProps<HeaderData> = {
     <div className={`relative w-full border-b border-[#eee8df] bg-white ${className || ''}`}>
       <div className="site-container flex items-center justify-between gap-4 py-3 lg:py-4">
         {/* Logo */}
-        <Link href="/" className="relative z-20 shrink-0" onClick={() => setOpen(false)}>
+        <Link
+          href="/"
+          className="relative z-20 flex shrink-0 items-center"
+          onClick={() => setOpen(false)}
+        >
           <Image
-            src="/images/logo.png"
+            src="/images/pawcare-logo.png"
             alt={logoText}
-            width={200}
-            height={72}
-            className="h-14 w-auto object-contain sm:h-16"
+            width={193}
+            height={56}
+            className="block h-14 w-auto sm:h-16"
             priority
+            unoptimized
           />
         </Link>
 

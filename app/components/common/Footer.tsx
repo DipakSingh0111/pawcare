@@ -142,11 +142,12 @@ export default function Footer({
           <div className="max-w-sm sm:col-span-2 md:col-span-3 lg:col-span-1">
             <Link href="/" className="inline-block">
               <Image
-                src="/images/logo.png"
+                src="/images/pawcare-logo.png"
                 alt="PawCare"
-                width={190}
-                height={70}
-                className="h-14 w-auto object-contain sm:h-16"
+                width={193}
+                height={56}
+                className="block h-14 w-auto sm:h-16"
+                unoptimized
               />
             </Link>
 

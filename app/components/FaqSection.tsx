@@ -49,7 +49,7 @@ export default function FaqSection({ data, className }: SectionProps<FAQData> = 
         />
       </svg>
 
-      <div className="mx-auto max-w-[1440px] px-4 md:px-8 xl:px-10 relative z-10">
+      <div className="site-container relative z-10">
         {/* Section Header */}
         <div className="mx-auto mb-16 max-w-2xl text-center">
           <div className="mb-2 flex items-center justify-center gap-2">
@@ -69,7 +69,7 @@ export default function FaqSection({ data, className }: SectionProps<FAQData> = 
           </p>
         </div>
 
-        <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-20 max-w-6xl mx-auto">
+        <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Left Column - Image & Contact Box */}
           <div className="flex flex-col items-center">
             <div className="relative mx-auto flex items-center justify-center h-[340px] w-[340px] sm:h-[420px] sm:w-[420px] mb-8">

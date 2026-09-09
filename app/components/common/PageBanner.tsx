@@ -37,7 +37,7 @@ export default function PageBanner({ title, breadcrumbs, bgImage = "/images/page
         )}
       </div>
 
-      <div className="max-w-[1440px] mx-auto px-4 md:px-8 xl:px-10 w-full relative z-10">
+      <div className="site-container relative z-10">
         <div className="max-w-xl md:max-w-2xl lg:max-w-3xl">
           <h1 className="text-[2rem] leading-tight sm:text-4xl md:text-[3.25rem] font-extrabold text-[#0b1324] mb-3 sm:mb-4 font-serif break-words">
             {title}

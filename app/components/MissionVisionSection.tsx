@@ -129,7 +129,7 @@ export default function MissionVisionSection({ data, className }: SectionProps<M
         />
       </svg>
 
-      <div className="mx-auto max-w-6xl px-4 relative z-10">
+      <div className="site-container relative z-10">
         {/* Section Header */}
         <div className="mx-auto mb-8 max-w-2xl text-center sm:mb-10">
           <div className="mb-2 flex items-center justify-center gap-2">

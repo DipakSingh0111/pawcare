@@ -63,7 +63,7 @@ export default function PricingSection({ data, className }: SectionProps<Pricing
         </div>
 
         {/* Cards — equal height & same alignment */}
-        <div className="mx-auto grid max-w-5xl grid-cols-1 items-stretch gap-6 pt-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
+        <div className="grid max-w-5xl grid-cols-1 items-stretch gap-6 pt-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
           {pricing.plans.map((plan) => (
             <div
               key={plan.id}

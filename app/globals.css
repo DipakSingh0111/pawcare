@@ -19,6 +19,7 @@
 }
 
 html {
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -27,23 +28,23 @@ body {
   font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
 }
 
-/* Matches Navbar/logo horizontal alignment on all breakpoints */
-.site-container {
+/* Shared page gutter — navbar logo & every section share this left edge */
+@utility site-container {
+  box-sizing: border-box;
   width: 100%;
   max-width: 1440px;
   margin-inline: auto;
-  padding-inline: 1rem; /* px-4 */
-}
+  padding-left: 1rem;
+  padding-right: 1rem;
 
-@media (min-width: 640px) {
-  .site-container {
-    padding-inline: 1.5rem; /* sm:px-6 */
+  @media (min-width: 640px) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
-}
 
-@media (min-width: 1024px) {
-  .site-container {
-    padding-inline: 2.5rem; /* lg:px-10 */
+  @media (min-width: 1024px) {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 

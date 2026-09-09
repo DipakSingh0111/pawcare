@@ -51,7 +51,7 @@ function FeatureIcon({ type }: { type: string }) {
     );
   }
 
-  // Fast Delivery — truck with paw on cargo
+  // Fast Delivery
   if (type === "delivery") {
     return (
       <svg viewBox="0 0 24 24" className={common} fill="none" aria-hidden>
@@ -67,8 +67,20 @@ function FeatureIcon({ type }: { type: string }) {
           strokeWidth="1.55"
           strokeLinejoin="round"
         />
-        <circle cx="7" cy="17.35" r="1.75" stroke="#ffb016" strokeWidth="1.55" />
-        <circle cx="16.85" cy="17.35" r="1.75" stroke="#ffb016" strokeWidth="1.55" />
+        <circle
+          cx="7"
+          cy="17.35"
+          r="1.75"
+          stroke="#ffb016"
+          strokeWidth="1.55"
+        />
+        <circle
+          cx="16.85"
+          cy="17.35"
+          r="1.75"
+          stroke="#ffb016"
+          strokeWidth="1.55"
+        />
         <path d="M8.75 17.35h6.35" stroke="#ffb016" strokeWidth="1.55" />
         <circle cx="8.35" cy="10.55" r="0.7" fill="#ffb016" />
         <circle cx="7.15" cy="9.55" r="0.45" fill="#ffb016" />
@@ -79,7 +91,7 @@ function FeatureIcon({ type }: { type: string }) {
     );
   }
 
-  // Pet Happiness — heart with paw inside
+  // Pet Happiness
   return (
     <svg viewBox="0 0 24 24" className={common} fill="none" aria-hidden>
       <path
@@ -97,7 +109,10 @@ function FeatureIcon({ type }: { type: string }) {
   );
 }
 
-export default function HomeBanner({ data, className }: SectionProps<BannerData> = {}) {
+export default function HomeBanner({
+  data,
+  className,
+}: SectionProps<BannerData> = {}) {
   const componentData = data || site.banner;
   const {
     badge,
@@ -112,23 +127,36 @@ export default function HomeBanner({ data, className }: SectionProps<BannerData>
 
   return (
     <section className="relative w-full overflow-hidden bg-white">
+      <div className="absolute inset-y-0 right-0 w-[45%] sm:w-[50%] lg:w-[50vw] h-full z-0 hidden lg:block">
+        <Image
+          src={image}
+          alt="Happy golden retriever and tabby cat on a sofa "
+          fill
+          priority
+          sizes="(max-width: 1024px) 50vw, 50vw"
+          className="animate-image-in object-cover object-left lg:object-center"
+        />
+      </div>
+
       <div className="site-container relative min-h-[560px] lg:min-h-[640px]">
-        {/* Hero image — baked-in left curve blends into white content area */}
-        <div className="relative -mx-4 h-[300px] w-[calc(100%+2rem)] sm:-mx-6 sm:h-[360px] sm:w-[calc(100%+3rem)] lg:absolute lg:inset-y-0 lg:right-0 lg:mx-0 lg:h-auto lg:w-[58%]">
+        <div className="relative -mx-4 h-[300px] w-[calc(100%+2rem)] sm:-mx-6 sm:h-[360px] sm:w-[calc(100%+3rem)] lg:hidden">
           <Image
             src={image}
-            alt="Happy golden retriever and tabby cat on a sofa"
+            alt="Happy golden retriever and tabby cat on a sofa "
             fill
             priority
             sizes="(max-width: 1024px) 100vw, 58vw"
-            className="animate-image-in object-cover object-[72%_center] lg:object-left lg:object-center"
+            className="animate-image-in object-cover object-[72%_center]"
           />
         </div>
 
-        {/* Left content — aligns with logo */}
+        {/* Left content */}
         <div className="relative z-10 flex w-full flex-col justify-center py-10 lg:min-h-[640px] lg:w-[48%] lg:py-16">
           <p className="animate-fade-up mb-5 flex items-center gap-2 text-sm font-semibold tracking-wide text-[#0b1324] sm:text-[0.95rem]">
-            <PawPrint className="h-4 w-4 shrink-0 text-[#0b1324] rotate-[12deg]" strokeWidth={2.25} />
+            <PawPrint
+              className="h-4 w-4 shrink-0 text-[#0b1324] rotate-[12deg]"
+              strokeWidth={2.25}
+            />
             <span>{badge}</span>
             <PawPrint
               className="h-4 w-4 shrink-0 text-[#ffb016]"
@@ -138,8 +166,7 @@ export default function HomeBanner({ data, className }: SectionProps<BannerData>
           </p>
 
           <h1 className="animate-fade-up animation-delay-100 max-w-[34rem] text-[2.25rem] font-extrabold leading-[1.12] tracking-tight text-[#0b1324] sm:text-[2.75rem] lg:text-[3.15rem]">
-            {title}{" "}
-            <span className="text-[#ffb016]">{titleHighlight}</span>
+            {title} <span className="text-[#ffb016]">{titleHighlight}</span>
           </h1>
 
           <p className="animate-fade-up animation-delay-200 mt-5 max-w-[28rem] text-[0.95rem] leading-relaxed text-[#5a6577] sm:text-base">
@@ -191,7 +218,9 @@ export default function HomeBanner({ data, className }: SectionProps<BannerData>
                   <FeatureIcon type={feature.icon} />
                 </div>
                 <div>
-                  <h3 className="text-base font-bold text-[#0b1324]">{feature.title}</h3>
+                  <h3 className="text-base font-bold text-[#0b1324]">
+                    {feature.title}
+                  </h3>
                   <p className="mt-1 text-sm leading-snug text-[#4a5568]">
                     {feature.description}
                   </p>
@@ -204,4 +233,3 @@ export default function HomeBanner({ data, className }: SectionProps<BannerData>
     </section>
   );
 }
-

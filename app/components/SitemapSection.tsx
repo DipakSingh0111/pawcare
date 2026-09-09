@@ -7,7 +7,7 @@ export default function SitemapSection({ data, className }: SectionProps<Sitemap
 
   return (
     <section className="site-section bg-white pt-16 pb-24">
-      <div className="site-container max-w-6xl mx-auto">
+      <div className="site-container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-16 gap-x-12">
           {/* First Row */}
           {groups.slice(0, 3).map((group) => (
