@@ -29,11 +29,11 @@ export default function PageBanner({ title, breadcrumbs, bgImage = "/images/page
         />
         {/* Overlay for text readability on all screen sizes */}
         {!hasGradient && (
-          <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-transparent w-full md:w-[60%] lg:w-[50%]"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/60 md:to-transparent w-full md:w-[60%] lg:w-[50%]"></div>
         )}
         
         {hasGradient && (
-          <div className="absolute inset-0 bg-gradient-to-r from-[#e69300] via-[#ffb016]/90 to-transparent w-full md:w-[65%]"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#e69300] via-[#ffb016]/90 to-[#ffb016]/60 md:to-transparent w-full md:w-[65%]"></div>
         )}
       </div>
 

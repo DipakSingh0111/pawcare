@@ -93,17 +93,17 @@ export default function TeamDetailSection({ member, data, className }: { member:
             </p>
 
             {/* Stats Banner */}
-            <div className="flex flex-col sm:flex-row divide-y sm:divide-y-0 sm:divide-x divide-gray-200 bg-[#FAFBFC] border border-gray-100 rounded-2xl p-2 w-fit shadow-sm">
+            <div className="flex flex-col sm:flex-row divide-y sm:divide-y-0 sm:divide-x divide-gray-200 bg-[#FAFBFC] border border-gray-100 rounded-2xl p-2 w-full sm:w-fit shadow-sm">
               {member.stats.map((stat: any, idx: number) => (
-                <div key={idx} className="flex items-center gap-4 px-6 py-4">
+                <div key={idx} className="flex items-center justify-center sm:justify-start gap-4 px-6 py-4">
                   <div className="flex-shrink-0">
                     <StatIcon type={stat.icon} />
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-[11px] text-gray-500 uppercase tracking-wider font-semibold mb-0.5">
+                    <span className="text-xs sm:text-[11px] text-gray-500 uppercase tracking-wider font-semibold mb-0.5 text-center sm:text-left">
                       {stat.title}
                     </span>
-                    <span className="text-[14px] font-bold text-[#0b1324]">
+                    <span className="text-base sm:text-[14px] font-bold text-[#0b1324] text-center sm:text-left">
                       {stat.value}
                     </span>
                   </div>
