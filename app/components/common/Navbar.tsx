@@ -4,7 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { ChevronDown, PawPrint, ArrowRight, Menu, X } from "lucide-react";
+import { ChevronDown, ArrowRight, Menu, X } from "lucide-react";
+import { PawPrint } from "@/app/components/common/PawPrint";
 import { site, SectionProps, HeaderData } from "@/data/index";
 import { motion, AnimatePresence } from "framer-motion";
 

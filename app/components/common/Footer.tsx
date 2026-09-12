@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Mail, MapPin, PawPrint, Heart } from "lucide-react";
+import { Phone, Mail, Heart } from "lucide-react";
+import { PawPrint } from "@/app/components/common/PawPrint";
+import { LocationPin } from "@/app/components/common/LocationPin";
 import { site, SectionProps, FooterData } from "@/data/index";
 
 function FeatureIcon({ type }: { type: string }) {
@@ -15,11 +17,11 @@ function FeatureIcon({ type }: { type: string }) {
           strokeWidth="2"
           strokeLinejoin="round"
         />
-        <circle cx="24" cy="26" r="2.2" fill="#ffb016" />
-        <circle cx="20.8" cy="23.4" r="1.4" fill="#ffb016" />
-        <circle cx="27.2" cy="23.4" r="1.4" fill="#ffb016" />
-        <circle cx="21.4" cy="28.4" r="1.4" fill="#ffb016" />
-        <circle cx="26.6" cy="28.4" r="1.4" fill="#ffb016" />
+        <circle cx="22" cy="22" r="1.3" fill="#ffb016" />
+        <circle cx="26" cy="22" r="1.3" fill="#ffb016" />
+        <circle cx="18.8" cy="24" r="1.2" fill="#ffb016" />
+        <circle cx="29.2" cy="24" r="1.2" fill="#ffb016" />
+        <ellipse cx="24" cy="27.8" rx="2.8" ry="2.2" fill="#ffb016" />
       </svg>
     );
   }
@@ -130,7 +132,7 @@ export default function Footer({
         aria-hidden
       />
       <PawPrint
-        className="pointer-events-none absolute bottom-40 right-[18%] h-28 w-28 rotate-12 text-[#0b1324]/[0.035] sm:h-36 sm:w-36"
+        className="pointer-events-none absolute bottom-40 right-[18%] h-28 w-28 text-[#0b1324]/[0.035] sm:h-36 sm:w-36"
         strokeWidth={1}
         aria-hidden
       />
@@ -178,7 +180,7 @@ export default function Footer({
 
               <div className="flex items-start gap-3.5 text-sm font-medium text-[#0b1324]">
                 <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#ffb016]">
-                  <MapPin className="h-4 w-4 text-white" strokeWidth={2.25} />
+                  <LocationPin className="h-5 w-5 text-white" />
                 </span>
                 <span className="max-w-[220px] leading-snug">
                   {contact.address}
@@ -223,15 +225,17 @@ export default function Footer({
           {features.map((feature: any, index: number) => (
             <div
               key={feature.title}
-              className={`flex items-center gap-4 lg:px-6 ${
+              className={`group flex items-center gap-4 lg:px-6 cursor-pointer ${
                 index < features.length - 1
                   ? "lg:border-r lg:border-[#d5dae3]"
                   : ""
               }`}
             >
-              <FeatureIcon type={feature.icon} />
+              <div className="shrink-0 transition-transform duration-300 ease-out group-hover:scale-115">
+                <FeatureIcon type={feature.icon} />
+              </div>
               <div>
-                <h4 className="text-[15px] font-bold text-[#0b1324]">
+                <h4 className="text-[15px] font-bold text-[#0b1324] transition-colors duration-300 group-hover:text-[#ffb016]">
                   {feature.title}
                 </h4>
                 <p className="mt-0.5 text-sm leading-snug text-[#0b1324]/65">

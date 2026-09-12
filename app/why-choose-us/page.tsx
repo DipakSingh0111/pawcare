@@ -14,7 +14,7 @@ export default function WhyChooseUsPage() {
         title="Why Choose Us"
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "About Us", href: "#" },
+          { label: "About Us", href: "/about" },
           { label: "Why Choose Us" },
         ]}
       />

@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Phone, Mail, Clock } from "lucide-react";
+import { LocationPin } from "@/app/components/common/LocationPin";
 import { site, SectionProps, TopbarData } from "@/data/index";
 
 function Divider() {
@@ -21,7 +22,7 @@ export default function Topbar({ data, className }: SectionProps<TopbarData> = {
         <div className="grid grid-cols-2 gap-x-2 gap-y-2.5 place-content-center sm:flex sm:flex-wrap sm:justify-center md:justify-between md:items-center">
           
           <div className="flex items-center gap-1.5 overflow-hidden">
-            <MapPin className="h-3.5 w-3.5 shrink-0 text-[#ffb016]" strokeWidth={2.25} />
+            <LocationPin className="h-3.5 w-3.5 shrink-0 text-[#ffb016]" />
             <span className="truncate">{location}</span>
           </div>
 

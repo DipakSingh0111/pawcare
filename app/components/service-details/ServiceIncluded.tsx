@@ -1,83 +1,218 @@
 import type { ServiceDetail } from "@/lib/services";
 
 function IncludedIcon({ type }: { type: string }) {
-  const common = "h-7 w-7";
+  const common = "h-8 w-8";
   const strokeDark = "#0b1324";
   const strokeOrange = "#ffb016";
 
   if (type === "bath") {
     return (
-      <svg viewBox="0 0 24 24" className={common} fill="none" strokeWidth="1.5" aria-hidden>
-        {/* Tub */}
-        <path d="M4 11h16c0 4.418-3.582 8-8 8s-8-3.582-8-8z" stroke={strokeDark} />
-        {/* Legs */}
-        <path d="M7 19v2M17 19v2" stroke={strokeDark} strokeLinecap="round" />
-        {/* Shower head / bubbles */}
-        <path d="M9 7c0-2 2-2 2-2" stroke={strokeDark} strokeLinecap="round" />
-        <path d="M11 5h2M12 4v2" stroke={strokeOrange} strokeLinecap="round" />
-        <circle cx="15" cy="7" r="1" fill={strokeOrange} stroke="none" />
-        <circle cx="8" cy="9" r="0.5" fill={strokeOrange} stroke="none" />
+      <svg viewBox="0 0 32 32" className={common} fill="none" aria-hidden="true">
+        {/* Bathtub rim */}
+        <path
+          d="M6 16.5h18"
+          stroke={strokeDark}
+          strokeWidth="1.75"
+          strokeLinecap="round"
+        />
+        {/* Bathtub basin */}
+        <path
+          d="M7 16.5v1.8c0 4 3 6.7 7.5 6.7s7.5-2.7 7.5-6.7v-1.8"
+          stroke={strokeDark}
+          strokeWidth="1.75"
+          strokeLinecap="round"
+        />
+        {/* Bathtub legs */}
+        <path
+          d="M9 25l-1.5 2.5M20.5 25l1.5 2.5"
+          stroke={strokeDark}
+          strokeWidth="1.75"
+          strokeLinecap="round"
+        />
+        {/* Shower pipe on right */}
+        <path
+          d="M21 16.5V9.5a2.5 2.5 0 0 0-2.5-2.5H16"
+          stroke={strokeDark}
+          strokeWidth="1.75"
+          strokeLinecap="round"
+        />
+        {/* Shower head */}
+        <path
+          d="M16.5 5.5l-2 3"
+          stroke={strokeDark}
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+        {/* Golden bubbles / sparkles floating up */}
+        <circle cx="9.5" cy="11.5" r="1.1" fill={strokeOrange} />
+        <circle cx="12.5" cy="8" r="1.5" fill={strokeOrange} />
+        <circle cx="14" cy="12" r="1" fill={strokeOrange} />
+        <circle cx="9" cy="8" r="0.8" fill={strokeOrange} />
       </svg>
     );
   }
+
   if (type === "brush") {
     return (
-      <svg viewBox="0 0 24 24" className={common} fill="none" strokeWidth="1.5" aria-hidden>
-        {/* Brush body */}
-        <path d="M7 17L17 7c1.1-1.1 2.8-1.1 3.9 0 1.1 1.1 1.1 2.8 0 3.9L11 21c-1.1 1.1-2.8 1.1-3.9 0-1.1-1.1-1.1-2.8 0-3.9z" stroke={strokeDark} />
-        {/* Handle details */}
-        <path d="M14 10l-4 4" stroke={strokeDark} />
-        {/* Orange bristles / lines */}
-        <path d="M8 12l2-2M10 14l2-2M12 16l2-2" stroke={strokeOrange} strokeLinecap="round" />
+      <svg viewBox="0 0 32 32" className={common} fill="none" aria-hidden="true">
+        {/* 45-degree angled slicker / grooming brush */}
+        <g transform="rotate(45 16 16)">
+          {/* Brush head */}
+          <rect
+            x="9"
+            y="7.5"
+            width="14"
+            height="5.5"
+            rx="1.5"
+            stroke={strokeDark}
+            strokeWidth="1.75"
+            fill="none"
+          />
+          {/* Parallel bristle teeth */}
+          <line x1="11" y1="7.5" x2="11" y2="4.5" stroke={strokeDark} strokeWidth="1.5" strokeLinecap="round" />
+          <line x1="14.3" y1="7.5" x2="14.3" y2="4.5" stroke={strokeDark} strokeWidth="1.5" strokeLinecap="round" />
+          <line x1="17.7" y1="7.5" x2="17.7" y2="4.5" stroke={strokeDark} strokeWidth="1.5" strokeLinecap="round" />
+          <line x1="21" y1="7.5" x2="21" y2="4.5" stroke={strokeDark} strokeWidth="1.5" strokeLinecap="round" />
+          {/* Brush handle */}
+          <rect
+            x="14.5"
+            y="13"
+            width="3"
+            height="12"
+            rx="1.5"
+            stroke={strokeDark}
+            strokeWidth="1.75"
+            fill="none"
+          />
+          {/* Detail ticks on handle */}
+          <line x1="15" y1="17" x2="17" y2="17" stroke={strokeOrange} strokeWidth="1.4" strokeLinecap="round" />
+          <line x1="15" y1="19.5" x2="17" y2="19.5" stroke={strokeOrange} strokeWidth="1.4" strokeLinecap="round" />
+          <line x1="15" y1="22" x2="17" y2="22" stroke={strokeOrange} strokeWidth="1.4" strokeLinecap="round" />
+        </g>
       </svg>
     );
   }
-  if (type === "scissors") {
+
+  if (type === "scissors" || type === "nail") {
     return (
-      <svg viewBox="0 0 24 24" className={common} fill="none" strokeWidth="1.5" aria-hidden>
-        {/* Blades */}
-        <path d="M9.5 9.5L4 4M14.5 14.5L20 20M9.5 14.5L4 20M14.5 9.5L20 4" stroke={strokeDark} strokeLinecap="round" />
-        {/* Center screw */}
-        <circle cx="12" cy="12" r="1" fill={strokeDark} stroke="none" />
-        {/* Handles (Orange) */}
-        <circle cx="8" cy="8" r="2.5" stroke={strokeOrange} />
-        <circle cx="16" cy="16" r="2.5" stroke={strokeDark} />
-        <circle cx="8" cy="16" r="2.5" stroke={strokeDark} />
-        <circle cx="16" cy="8" r="2.5" stroke={strokeOrange} />
+      <svg viewBox="0 0 32 32" className={common} fill="none" aria-hidden="true">
+        {/* Nail trimmer / scissors */}
+        {/* Left finger loop */}
+        <circle cx="11.5" cy="23" r="3.2" stroke={strokeDark} strokeWidth="1.75" />
+        {/* Right finger loop */}
+        <circle cx="20.5" cy="23" r="3.2" stroke={strokeDark} strokeWidth="1.75" />
+        {/* Left shaft to pivot */}
+        <path d="M12.5 20L16 16" stroke={strokeDark} strokeWidth="1.75" strokeLinecap="round" />
+        {/* Right shaft to pivot */}
+        <path d="M19.5 20L16 16" stroke={strokeDark} strokeWidth="1.75" strokeLinecap="round" />
+        {/* Pivot screw */}
+        <circle cx="16" cy="16" r="1.2" fill={strokeDark} />
+        {/* Orange curved trimmer blades in open V */}
+        <path
+          d="M16 16L12 8c1.6-.4 3.2.2 4 2"
+          stroke={strokeOrange}
+          strokeWidth="1.75"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M16 16L20 8c-1.6-.4-3.2.2-4 2"
+          stroke={strokeOrange}
+          strokeWidth="1.75"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
       </svg>
     );
   }
+
   if (type === "ear") {
     return (
-      <svg viewBox="0 0 24 24" className={common} fill="none" strokeWidth="1.5" aria-hidden>
-        {/* Ear Outline */}
-        <path d="M12 22c-4.5 0-7-4-7-9V7c0-3.5 2.5-5 6-5s6 1.5 6 5v6c0 5-2.5 9-5 9z" stroke={strokeDark} strokeLinecap="round" strokeLinejoin="round" />
-        {/* Inner ear lines */}
-        <path d="M10 12a3 3 0 0 0 4-2V8" stroke={strokeDark} strokeLinecap="round" />
-        {/* Orange sparkle */}
-        <path d="M14 16h2M15 15v2" stroke={strokeOrange} strokeLinecap="round" />
+      <svg viewBox="0 0 32 32" className={common} fill="none" aria-hidden="true">
+        {/* Clean, minimalist pet/human ear outline */}
+        <path
+          d="M14.5 6.5c4.5 0 8 3.2 8 7.8 0 3.6-2 6.5-4.2 9-1.5 1.7-2.8 2.7-4.3 2.7-3 0-5-2.2-5-5 0-1.8 1-3.2 2.5-4.2"
+          stroke={strokeDark}
+          strokeWidth="1.75"
+          strokeLinecap="round"
+        />
+        {/* Inner ear curve */}
+        <path
+          d="M15 11c2.2 0 4 1.8 4 3.8 0 2-1.5 3.2-3.2 4.2"
+          stroke={strokeDark}
+          strokeWidth="1.75"
+          strokeLinecap="round"
+        />
+        {/* Small golden sparkle to indicate hygiene */}
+        <circle cx="24.5" cy="9" r="1" fill={strokeOrange} />
+        <circle cx="26" cy="11.5" r="0.75" fill={strokeOrange} />
       </svg>
     );
   }
+
   if (type === "tooth") {
     return (
-      <svg viewBox="0 0 24 24" className={common} fill="none" strokeWidth="1.5" aria-hidden>
-        {/* Tooth Outline */}
-        <path d="M15 3H9C6 3 5 4.5 5 7v4c0 3 2 5 2 7v1.5a1.5 1.5 0 0 0 3 0V17c0-1 1-1.5 2-1.5s2 .5 2 1.5v2.5a1.5 1.5 0 0 0 3 0V18c0-2 2-4 2-7V7c0-2.5-1-4-4-4z" stroke={strokeDark} strokeLinecap="round" strokeLinejoin="round" />
-        {/* Orange sparkle */}
-        <path d="M11 9h2M12 8v2" stroke={strokeOrange} strokeLinecap="round" />
+      <svg viewBox="0 0 32 32" className={common} fill="none" aria-hidden="true">
+        {/* Molar tooth outline */}
+        <path
+          d="M10 7.5c2-1 4-1 6 .8 2-1.8 4-1.8 6-.8 1.6.8 2.2 2.2 2.2 3.8 0 3.6-1.5 6.6-2 10.2-.4 2.8-1.7 3.8-2.8 3.8-1.3 0-2.2-1.8-3.4-4.5-1.2 2.7-2.1 4.5-3.4 4.5-1.1 0-2.4-1-2.8-3.8-.5-3.6-2-6.6-2-10.2 0-1.6.6-3 2.2-3.8z"
+          stroke={strokeDark}
+          strokeWidth="1.75"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        {/* Three golden dots inside crown in gentle horizontal arc */}
+        <circle cx="13.2" cy="12" r="1" fill={strokeOrange} />
+        <circle cx="16" cy="11.2" r="1.2" fill={strokeOrange} />
+        <circle cx="18.8" cy="12" r="1" fill={strokeOrange} />
       </svg>
     );
   }
+
   if (type === "spray") {
     return (
-      <svg viewBox="0 0 24 24" className={common} fill="none" strokeWidth="1.5" aria-hidden>
-        {/* Spray Bottle */}
-        <path d="M7 10h10v10c0 1.1-.9 2-2 2H9c-1.1 0-2-.9-2-2V10z" stroke={strokeDark} strokeLinejoin="round" />
-        <path d="M10 10V6h4v4M12 6V3M10 3h4" stroke={strokeDark} strokeLinecap="round" strokeLinejoin="round" />
-        {/* Orange logo/shield inside */}
-        <path d="M12 13c-1.5 0-2.5 1-2.5 2.5S10.5 18 12 18s2.5-1 2.5-2.5S13.5 13 12 13z" stroke={strokeOrange} strokeLinecap="round" />
-        <path d="M12 14.5v1.5" stroke={strokeOrange} strokeLinecap="round" />
+      <svg viewBox="0 0 32 32" className={common} fill="none" aria-hidden="true">
+        {/* Fragrance spray bottle outline */}
+        {/* Bottle Body */}
+        <path
+          d="M9.5 15h13c1.4 0 2.5 1.1 2.5 2.5v7c0 1.7-1.3 3-3 3h-12c-1.7 0-3-1.3-3-3v-7c0-1.4 1.1-2.5 2.5-2.5z"
+          stroke={strokeDark}
+          strokeWidth="1.75"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        {/* Neck */}
+        <path
+          d="M14 15v-3.5h4V15"
+          stroke={strokeDark}
+          strokeWidth="1.75"
+          strokeLinejoin="round"
+        />
+        {/* Spray Nozzle / Cap */}
+        <path
+          d="M13.5 11.5h5M16 11.5V7.5M14 7.5h4"
+          stroke={strokeDark}
+          strokeWidth="1.75"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        {/* Golden emblem inside bottle body */}
+        <circle
+          cx="16"
+          cy="21.5"
+          r="2.6"
+          stroke={strokeOrange}
+          strokeWidth="1.6"
+        />
+        <line
+          x1="16"
+          y1="19.5"
+          x2="16"
+          y2="21.5"
+          stroke={strokeOrange}
+          strokeWidth="1.6"
+          strokeLinecap="round"
+        />
       </svg>
     );
   }
@@ -100,16 +235,16 @@ export default function ServiceIncluded({ detail }: { detail: ServiceDetail }) {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6 lg:gap-5">
+        <div className="grid grid-cols-2 gap-3.5 sm:grid-cols-3 lg:grid-cols-6 lg:gap-4 xl:gap-5">
           {included.items.map((item) => (
             <div
               key={item.title}
-              className="flex min-h-[140px] flex-col items-center justify-center rounded-2xl border border-[#f0ebe1] bg-white px-3 py-5 text-center"
+              className="flex min-h-[160px] sm:min-h-[175px] flex-col items-center justify-center rounded-2xl border border-gray-150 bg-white px-3 py-6 sm:px-4 sm:py-7 text-center shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all duration-300 hover:border-[#ffb016]/40 hover:shadow-md"
             >
-              <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-[#FFF6E5]">
+              <div className="mb-3.5 flex h-16 w-16 sm:h-[68px] sm:w-[68px] items-center justify-center rounded-full bg-[#ffeedb]/65 transition-transform duration-300 hover:scale-105">
                 <IncludedIcon type={item.icon} />
               </div>
-              <h3 className="text-sm font-bold leading-snug whitespace-pre-line text-[#0b1324]">
+              <h3 className="text-xs sm:text-[13.5px] font-bold leading-snug whitespace-pre-line text-[#0b1324]">
                 {item.title}
               </h3>
             </div>

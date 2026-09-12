@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Heart, Home, PawPrint } from "lucide-react";
+import { ArrowRight, Heart, Home } from "lucide-react";
+import { PawPrint } from "@/app/components/common/PawPrint";
 import { site, SectionProps, BlogData } from "@/data/index";
 
 function DotGrid({ className }: { className?: string }) {

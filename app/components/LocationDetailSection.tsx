@@ -1,17 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  MapPin,
   Clock,
   Phone,
   Mail,
   ChevronRight,
-  PawPrint,
   Home,
   Stethoscope,
   Utensils,
   Heart,
 } from "lucide-react";
+import { PawPrint } from "@/app/components/common/PawPrint";
+import { LocationPin } from "@/app/components/common/LocationPin";
 
 export default function LocationDetailSection({ activeSlug }: { activeSlug?: string }) {
   const locations = [
@@ -50,7 +50,7 @@ export default function LocationDetailSection({ activeSlug }: { activeSlug?: str
               {/* Contact Info Box */}
               <div className="w-full md:w-2/5 bg-[#fafaf9] rounded-2xl p-6 flex flex-col justify-center gap-6 shadow-sm">
                 <div className="flex items-start gap-4">
-                  <MapPin className="w-5 h-5 text-[#ffb016] mt-1 shrink-0" />
+                  <LocationPin className="w-5 h-5 text-[#ffb016] mt-1 shrink-0" />
                   <div>
                     <h4 className="text-[15px] font-bold text-[#0b1324] mb-1">
                       Address
@@ -177,7 +177,7 @@ export default function LocationDetailSection({ activeSlug }: { activeSlug?: str
                     }`}
                   >
                     <div className="flex items-center gap-3">
-                      <MapPin
+                      <LocationPin
                         className={`w-4 h-4 ${
                           loc.active ? "text-[#ffb016]" : "text-gray-400"
                         }`}

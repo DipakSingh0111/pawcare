@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { User, Phone, Mail, PawPrint, Calendar, Clock, Edit3, ShieldCheck, ChevronDown, CalendarDays, ArrowRight } from "lucide-react";
+import { User, Phone, Mail, Calendar, Clock, Edit3, ShieldCheck, ChevronDown, CalendarDays, ArrowRight } from "lucide-react";
+import { PawPrint } from "@/app/components/common/PawPrint";
 import { site, SectionProps, AppointmentData } from "@/data/index";
 
 export default function AppointmentSection({ data, className }: SectionProps<AppointmentData> = {}) {

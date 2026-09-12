@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { PawPrint, Check, ArrowRight, ShieldCheck, Star } from "lucide-react";
+import { Check, ArrowRight, ShieldCheck, Star } from "lucide-react";
+import { PawPrint } from "@/app/components/common/PawPrint";
 import { site, SectionProps, PricingData } from "@/data/index";
 
 function DotGrid({ className }: { className?: string }) {
@@ -12,7 +13,10 @@ function DotGrid({ className }: { className?: string }) {
   );
 }
 
-export default function PricingSection({ data, className }: SectionProps<PricingData> = {}) {
+export default function PricingSection({
+  data,
+  className,
+}: SectionProps<PricingData> = {}) {
   const componentData = data || site.pricing;
   const pricing = componentData;
 
@@ -30,8 +34,14 @@ export default function PricingSection({ data, className }: SectionProps<Pricing
         {/* Header */}
         <div className="mx-auto mb-12 max-w-2xl text-center sm:mb-14">
           <div className="mb-5 flex items-center justify-center">
-            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#ffb016]" aria-hidden />
-            <span className="h-px w-8 shrink-0 bg-[#ffb016] sm:w-10" aria-hidden />
+            <span
+              className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#ffb016]"
+              aria-hidden
+            />
+            <span
+              className="h-px w-8 shrink-0 bg-[#ffb016] sm:w-10"
+              aria-hidden
+            />
             <div className="mx-0 inline-flex items-center gap-2 rounded-full border border-[#ffb016] bg-white px-4 py-1.5 sm:px-5">
               <PawPrint
                 className="h-3.5 w-3.5 text-[#ffb016]"
@@ -42,8 +52,14 @@ export default function PricingSection({ data, className }: SectionProps<Pricing
                 {pricing.tagline}
               </p>
             </div>
-            <span className="h-px w-8 shrink-0 bg-[#ffb016] sm:w-10" aria-hidden />
-            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#ffb016]" aria-hidden />
+            <span
+              className="h-px w-8 shrink-0 bg-[#ffb016] sm:w-10"
+              aria-hidden
+            />
+            <span
+              className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#ffb016]"
+              aria-hidden
+            />
           </div>
 
           <h2 className="text-3xl font-extrabold tracking-tight text-[#0b1324] sm:text-4xl lg:text-[2.6rem]">
@@ -52,18 +68,17 @@ export default function PricingSection({ data, className }: SectionProps<Pricing
           </h2>
 
           <PawPrint
-            className="mx-auto mt-4 h-4 w-4 text-[#ffb016] rotate-[12deg]"
+            className="mx-auto mt-4 h-4 w-4 text-[#ffb016]"
             strokeWidth={2.5}
             fill="#ffb016"
           />
-
           <p className="mx-auto mt-4 max-w-lg whitespace-pre-line text-[0.95rem] leading-relaxed text-[#5a6577] sm:text-base">
             {pricing.description}
           </p>
         </div>
 
-        {/* Cards — equal height & same alignment */}
-        <div className="grid max-w-5xl grid-cols-1 items-stretch gap-6 pt-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
+        {/* Cards */}
+        <div className="mx-auto grid max-w-5xl grid-cols-1 items-stretch gap-6 pt-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
           {pricing.plans.map((plan) => (
             <div
               key={plan.id}
@@ -118,7 +133,7 @@ export default function PricingSection({ data, className }: SectionProps<Pricing
                   href="/contact"
                   className="group flex w-full items-center justify-center gap-2 rounded-md border-[1.5px] border-[#ffb016] px-6 py-3.5 text-[14px] font-bold transition-all duration-300 bg-white text-[#0b1324] hover:bg-[#ffb016] hover:text-white"
                 >
-                  <span>Choose Plan</span>
+                  <span>Enquiry Now</span>
                   <ArrowRight
                     className="h-[18px] w-[18px] transition-colors text-[#ffb016] group-hover:text-white"
                     strokeWidth={2}

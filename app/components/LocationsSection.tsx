@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Heart, MapPin, PawPrint } from "lucide-react";
+import { Heart } from "lucide-react";
+import { PawPrint } from "@/app/components/common/PawPrint";
+import { LocationPin } from "@/app/components/common/LocationPin";
 import { site, SectionProps, LocationsData } from "@/data/index";
 
 function DotGrid({ className }: { className?: string }) {
@@ -103,10 +105,8 @@ export default function LocationsSection({
 
                     {/* Navy pin badge */}
                     <div className="absolute -top-1 -left-1 z-10 flex h-[46px] w-[46px] items-center justify-center rounded-full bg-[#0b1324] sm:h-[54px] sm:w-[54px]">
-                      <MapPin
-                        className="h-5 w-5 text-[#ffb016] sm:h-6 sm:w-6"
-                        strokeWidth={2.5}
-                        fill="#ffb016"
+                      <LocationPin
+                        className="h-6 w-6 text-[#ffb016] sm:h-7 sm:w-7"
                       />
                     </div>
                   </div>
@@ -118,10 +118,8 @@ export default function LocationsSection({
                     </h3>
                     <span className="mt-2.5 mb-4 block h-[2.5px] w-[45px] rounded-full bg-[#ffb016]" />
                     <div className="flex items-start gap-2.5 text-[0.95rem] font-medium leading-[1.5] text-[#0b1324]">
-                      <MapPin
+                      <LocationPin
                         className="mt-0.5 h-[1.15rem] w-[1.15rem] shrink-0 text-[#ffb016]"
-                        strokeWidth={2.5}
-                        fill="#ffb016"
                       />
                       <span className="block pr-2">
                         {place.address.split(', ').map((part: string, i: number, arr: string[]) => (

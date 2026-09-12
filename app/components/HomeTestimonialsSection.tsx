@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { PawPrint, Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { PawPrint } from "@/app/components/common/PawPrint";
 import { site, SectionProps, TestimonialData } from "@/data/index";
 
 export default function HomeTestimonialsSection({ data, className }: SectionProps<TestimonialData> = {}) {
@@ -22,6 +23,14 @@ export default function HomeTestimonialsSection({ data, className }: SectionProp
     setActiveArrow('prev');
   };
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % reviews.length);
+      setActiveArrow('next');
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [reviews.length]);
+
   const currentReview = reviews[currentIndex];
 
   return (
@@ -34,7 +43,7 @@ export default function HomeTestimonialsSection({ data, className }: SectionProp
             <span className="h-[1.5px] w-10 shrink-0 bg-[#ffb016] sm:w-12" aria-hidden />
             <div className="mx-3 flex items-center gap-2">
               <PawPrint
-                className="h-4 w-4 shrink-0 text-[#ffb016] rotate-[12deg]"
+                className="h-4 w-4 shrink-0 text-[#ffb016]"
                 strokeWidth={2.5}
                 fill="#ffb016"
               />

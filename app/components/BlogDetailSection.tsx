@@ -5,9 +5,9 @@ import {
   Clock,
   Bookmark,
   ChevronRight,
-  PawPrint,
   ArrowRight,
 } from "lucide-react";
+import { PawPrint } from "@/app/components/common/PawPrint";
 import { site } from "@/data/index";
 
 export default function BlogDetailSection({ 

@@ -1,4 +1,4 @@
-import { PawPrint } from "lucide-react";
+import { PawPrint } from "@/app/components/common/PawPrint";
 import Image from "next/image";
 import { site, SectionProps, PartnersData } from "@/data/index";
 

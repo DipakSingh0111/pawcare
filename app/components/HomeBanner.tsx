@@ -1,31 +1,32 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CalendarDays, PawPrint } from "lucide-react";
+import { CalendarDays } from "lucide-react";
+import { PawPrint } from "@/app/components/common/PawPrint";
 import { site, SectionProps, BannerData } from "@/data/index";
 
-function FeatureIcon({ type }: { type: string }) {
-  const common = "h-7 w-7";
+function FeatureIcon({ type, className }: { type: string; className?: string }) {
+  const common = `h-[22px] w-[22px] transition-transform duration-300 ease-out group-hover:scale-125 ${className || ""}`;
 
   // Premium Quality — award ribbon badge with paw
   if (type === "quality") {
     return (
       <svg viewBox="0 0 24 24" className={common} fill="none" aria-hidden>
         {/* Badge circle */}
-        <circle cx="12" cy="9" r="5.4" stroke="#ffb016" strokeWidth="1.55" />
-        <circle cx="12" cy="9" r="3.55" stroke="#ffb016" strokeWidth="1.35" />
+        <circle cx="12" cy="9" r="5.4" stroke="#ffb016" strokeWidth="1.7" />
+        <circle cx="12" cy="9" r="3.55" stroke="#ffb016" strokeWidth="1.4" />
         {/* Ribbon tails */}
         <path
           d="M9.1 13.6L7.4 21l4.6-2.55L16.6 21l-1.7-7.4"
           stroke="#ffb016"
-          strokeWidth="1.55"
+          strokeWidth="1.7"
           strokeLinejoin="round"
         />
         {/* Paw inside badge */}
-        <circle cx="12" cy="9.2" r="0.85" fill="#ffb016" />
-        <circle cx="10.55" cy="8.1" r="0.55" fill="#ffb016" />
-        <circle cx="13.45" cy="8.1" r="0.55" fill="#ffb016" />
-        <circle cx="10.85" cy="10.25" r="0.55" fill="#ffb016" />
-        <circle cx="13.15" cy="10.25" r="0.55" fill="#ffb016" />
+        <circle cx="11.2" cy="7.7" r="0.45" fill="#ffb016" />
+        <circle cx="12.8" cy="7.7" r="0.45" fill="#ffb016" />
+        <circle cx="9.9" cy="8.4" r="0.4" fill="#ffb016" />
+        <circle cx="14.1" cy="8.4" r="0.4" fill="#ffb016" />
+        <ellipse cx="12" cy="9.8" rx="1.1" ry="0.85" fill="#ffb016" />
       </svg>
     );
   }
@@ -34,17 +35,17 @@ function FeatureIcon({ type }: { type: string }) {
   if (type === "care") {
     return (
       <svg viewBox="0 0 24 24" className={common} fill="none" aria-hidden>
-        <circle cx="12" cy="6.1" r="2.6" stroke="#ffb016" strokeWidth="1.55" />
+        <circle cx="12" cy="6.1" r="2.6" stroke="#ffb016" strokeWidth="1.7" />
         <path
           d="M6.8 20.3v-2.4c0-2.75 2.25-5 5.2-5s5.2 2.25 5.2 5v2.4"
           stroke="#ffb016"
-          strokeWidth="1.55"
+          strokeWidth="1.7"
           strokeLinecap="round"
         />
         <path
           d="M12 11.35v4.1M10.1 13.4h3.8"
           stroke="#ffb016"
-          strokeWidth="1.7"
+          strokeWidth="1.75"
           strokeLinecap="round"
         />
       </svg>
@@ -58,13 +59,13 @@ function FeatureIcon({ type }: { type: string }) {
         <path
           d="M2.8 15.4V7.6c0-.75.6-1.35 1.35-1.35h8.4c.75 0 1.35.6 1.35 1.35v7.8"
           stroke="#ffb016"
-          strokeWidth="1.55"
+          strokeWidth="1.7"
           strokeLinejoin="round"
         />
         <path
           d="M13.9 9.2h3.35L20.5 12.5v2.9h-6.6"
           stroke="#ffb016"
-          strokeWidth="1.55"
+          strokeWidth="1.7"
           strokeLinejoin="round"
         />
         <circle
@@ -72,21 +73,21 @@ function FeatureIcon({ type }: { type: string }) {
           cy="17.35"
           r="1.75"
           stroke="#ffb016"
-          strokeWidth="1.55"
+          strokeWidth="1.7"
         />
         <circle
           cx="16.85"
           cy="17.35"
           r="1.75"
           stroke="#ffb016"
-          strokeWidth="1.55"
+          strokeWidth="1.7"
         />
-        <path d="M8.75 17.35h6.35" stroke="#ffb016" strokeWidth="1.55" />
-        <circle cx="8.35" cy="10.55" r="0.7" fill="#ffb016" />
-        <circle cx="7.15" cy="9.55" r="0.45" fill="#ffb016" />
-        <circle cx="9.55" cy="9.55" r="0.45" fill="#ffb016" />
-        <circle cx="7.4" cy="11.45" r="0.45" fill="#ffb016" />
-        <circle cx="9.3" cy="11.45" r="0.45" fill="#ffb016" />
+        <path d="M8.75 17.35h6.35" stroke="#ffb016" strokeWidth="1.7" />
+        <circle cx="7.7" cy="9.5" r="0.35" fill="#ffb016" />
+        <circle cx="9" cy="9.5" r="0.35" fill="#ffb016" />
+        <circle cx="6.7" cy="10.1" r="0.3" fill="#ffb016" />
+        <circle cx="10" cy="10.1" r="0.3" fill="#ffb016" />
+        <ellipse cx="8.35" cy="11.2" rx="0.9" ry="0.7" fill="#ffb016" />
       </svg>
     );
   }
@@ -97,14 +98,14 @@ function FeatureIcon({ type }: { type: string }) {
       <path
         d="M12 20.4s-7-4.2-7-9.15A3.7 3.7 0 0112 8.2a3.7 3.7 0 017 3.05c0 4.95-7 9.15-7 9.15z"
         stroke="#ffb016"
-        strokeWidth="1.55"
+        strokeWidth="1.7"
         strokeLinejoin="round"
       />
-      <circle cx="12" cy="12.35" r="1" fill="#ffb016" />
-      <circle cx="10.45" cy="11.15" r="0.58" fill="#ffb016" />
-      <circle cx="13.55" cy="11.15" r="0.58" fill="#ffb016" />
-      <circle cx="10.75" cy="13.45" r="0.58" fill="#ffb016" />
-      <circle cx="13.25" cy="13.45" r="0.58" fill="#ffb016" />
+      <circle cx="11.1" cy="11.2" r="0.5" fill="#ffb016" />
+      <circle cx="12.9" cy="11.2" r="0.5" fill="#ffb016" />
+      <circle cx="9.7" cy="12.1" r="0.45" fill="#ffb016" />
+      <circle cx="14.3" cy="12.1" r="0.45" fill="#ffb016" />
+      <ellipse cx="12" cy="13.7" rx="1.2" ry="0.9" fill="#ffb016" />
     </svg>
   );
 }
@@ -154,7 +155,7 @@ export default function HomeBanner({
         <div className="relative z-10 flex w-full flex-col justify-center py-10 lg:min-h-[580px] lg:w-[48%] lg:py-16">
           <p className="animate-fade-up mb-5 flex items-center gap-2 text-sm font-semibold tracking-wide text-[#0b1324] sm:text-[0.95rem]">
             <PawPrint
-              className="h-4 w-4 shrink-0 text-[#0b1324] rotate-[12deg]"
+              className="h-4 w-4 shrink-0 text-[#0b1324]"
               strokeWidth={2.25}
             />
             <span>{badge}</span>
@@ -212,13 +213,13 @@ export default function HomeBanner({
             return (
               <div
                 key={feature.title}
-                className={`flex items-start gap-4 px-6 py-7 sm:px-7 ${borders[index]}`}
+                className={`group flex items-start gap-4 px-6 py-7 sm:px-7 cursor-pointer transition-colors duration-300 hover:bg-[#fffcf7] ${borders[index]}`}
               >
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#0b1324]">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#0b1324] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_6px_20px_rgba(11,19,36,0.18)]">
                   <FeatureIcon type={feature.icon} />
                 </div>
                 <div>
-                  <h3 className="text-base font-bold text-[#0b1324]">
+                  <h3 className="text-base font-bold text-[#0b1324] transition-colors duration-300 group-hover:text-[#ffb016]">
                     {feature.title}
                   </h3>
                   <p className="mt-1 text-sm leading-snug text-[#4a5568]">

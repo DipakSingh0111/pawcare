@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Heart, PawPrint } from "lucide-react";
+import { ArrowRight, Heart } from "lucide-react";
+import { PawPrint } from "@/app/components/common/PawPrint";
 import { site, SectionProps, AboutData } from "@/data/index";
 
 function AboutIcon({ type }: { type: string }) {
@@ -26,11 +27,11 @@ function AboutIcon({ type }: { type: string }) {
           strokeWidth="1.6"
           strokeLinejoin="round"
         />
-        <circle cx="12" cy="11" r="1.15" fill="#ffb016" />
-        <circle cx="10.4" cy="9.7" r="0.7" fill="#ffb016" />
-        <circle cx="13.6" cy="9.7" r="0.7" fill="#ffb016" />
-        <circle cx="10.7" cy="12.2" r="0.7" fill="#ffb016" />
-        <circle cx="13.3" cy="12.2" r="0.7" fill="#ffb016" />
+        <circle cx="10.8" cy="9.3" r="0.6" fill="#ffb016" />
+        <circle cx="13.2" cy="9.3" r="0.6" fill="#ffb016" />
+        <circle cx="9.2" cy="10.4" r="0.55" fill="#ffb016" />
+        <circle cx="14.8" cy="10.4" r="0.55" fill="#ffb016" />
+        <ellipse cx="12" cy="12.4" rx="1.3" ry="1" fill="#ffb016" />
       </svg>
     );
   }
@@ -161,7 +162,7 @@ export default function AboutSection({ data, className }: SectionProps<AboutData
         aria-hidden
       />
       <PawPrint
-        className="pointer-events-none absolute bottom-20 right-[20%] h-24 w-24 rotate-[18deg] text-[#f6f0e8] sm:h-36 sm:w-36"
+        className="pointer-events-none absolute bottom-20 right-[20%] h-24 w-24 text-[#f6f0e8] sm:h-36 sm:w-36"
         strokeWidth={1}
         aria-hidden
       />
@@ -181,7 +182,7 @@ export default function AboutSection({ data, className }: SectionProps<AboutData
           {/* Eyebrow */}
           <p className="mb-3 flex items-center gap-2 text-sm font-bold uppercase tracking-[0.14em] text-[#ffb016]">
             <PawPrint
-              className="h-4 w-4 text-[#0b1324] rotate-[12deg]"
+              className="h-4 w-4 text-[#0b1324]"
               strokeWidth={2.5}
               fill="#0b1324"
             />
@@ -207,12 +208,14 @@ export default function AboutSection({ data, className }: SectionProps<AboutData
           {/* 2×2 Feature grid */}
           <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-6">
             {features.map((feature) => (
-              <div key={feature.title} className="flex items-start gap-3.5">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#0b1324]">
-                  <AboutIcon type={feature.icon} />
+              <div key={feature.title} className="group flex items-start gap-3.5 cursor-pointer">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#0b1324] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_4px_14px_rgba(11,19,36,0.18)]">
+                  <div className="transition-transform duration-300 ease-out group-hover:scale-120">
+                    <AboutIcon type={feature.icon} />
+                  </div>
                 </div>
                 <div>
-                  <h3 className="text-[14px] font-bold leading-snug text-[#0b1324] sm:text-[15px]">
+                  <h3 className="text-[14px] font-bold leading-snug text-[#0b1324] sm:text-[15px] transition-colors duration-300 group-hover:text-[#ffb016]">
                     {feature.title}
                   </h3>
                   <p className="mt-0.5 text-[13px] leading-snug text-[#5a6577]">

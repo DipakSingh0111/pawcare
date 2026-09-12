@@ -2,7 +2,7 @@
 import { site, SectionProps, ContactData } from "@/data/index";
 
 import React, { useState } from "react";
-import { MapPin } from "lucide-react";
+import { LocationPin } from "@/app/components/common/LocationPin";
 
 export default function ContactSection({ data, className }: SectionProps<ContactData> = {}) {
   const componentData = data || site.contact;
@@ -208,7 +208,7 @@ export default function ContactSection({ data, className }: SectionProps<Contact
           
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:-translate-x-0 md:-translate-y-0 md:top-auto md:bottom-8 md:left-8 bg-white p-5 rounded-2xl shadow-xl flex gap-4 items-start max-w-[320px]">
             <div className="bg-[#ffb016]/10 p-3 rounded-full shrink-0">
-              <MapPin className="w-6 h-6 text-[#ffb016]" fill="#ffb016" stroke="white" />
+              <LocationPin className="w-6 h-6 text-[#ffb016]" />
             </div>
             <div>
               <h4 className="font-bold text-[#0b1324] text-sm mb-1">

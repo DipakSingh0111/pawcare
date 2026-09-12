@@ -1,16 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
-import { PawPrint } from "lucide-react";
+import { PawPrint } from "@/app/components/common/PawPrint";
 
 export default function NotFound() {
   return (
     <main className="min-h-screen bg-white flex flex-col items-center justify-center pt-20 px-4 overflow-hidden relative">
       {/* Background decorations */}
       <div className="absolute left-[10%] bottom-[20%] opacity-10">
-        <PawPrint className="w-16 h-16 text-[#ffb016] transform -rotate-12" />
+        <PawPrint className="w-16 h-16 text-[#ffb016]" />
       </div>
       <div className="absolute right-[15%] bottom-[15%] opacity-10">
-        <PawPrint className="w-24 h-24 text-[#ffb016] transform rotate-12" />
+        <PawPrint className="w-24 h-24 text-[#ffb016]" />
       </div>
 
       <div className="text-center z-10 max-w-2xl mx-auto w-full">

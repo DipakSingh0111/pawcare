@@ -1,5 +1,7 @@
 import Image from "next/image";
-import { MapPin, PawPrint, Star } from "lucide-react";
+import { Star } from "lucide-react";
+import { PawPrint } from "@/app/components/common/PawPrint";
+import { LocationPin } from "@/app/components/common/LocationPin";
 import { site, SectionProps, TestimonialData } from "@/data/index";
 
 function DotGrid({ className }: { className?: string }) {
@@ -125,10 +127,8 @@ export default function TestimonialsSection({ data, className }: SectionProps<Te
                     {review.name}
                   </h3>
                   <p className="mt-0.5 flex items-center gap-1 text-sm text-[#5a6577]">
-                    <MapPin
+                    <LocationPin
                       className="h-3.5 w-3.5 text-[#8bc34a]"
-                      strokeWidth={2.25}
-                      fill="#8bc34a"
                     />
                     {review.location}
                   </p>

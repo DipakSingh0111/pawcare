@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { CheckCircle2, PawPrint } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
+import { PawPrint } from "@/app/components/common/PawPrint";
 import type { ServiceDetail } from "@/lib/services";
 
 export default function ServiceWhyMatters({ detail }: { detail: ServiceDetail }) {

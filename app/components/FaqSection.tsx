@@ -3,142 +3,166 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { PawPrint, Heart, ArrowRight, Minus, Plus } from "lucide-react";
+import { Heart, ArrowRight, Minus, Plus } from "lucide-react";
+import { PawPrint } from "@/app/components/common/PawPrint";
 import { site, SectionProps, FAQData } from "@/data/index";
 
-export default function FaqSection({ data, className }: SectionProps<FAQData> = {}) {
+export default function FaqSection({
+  data,
+  className,
+}: SectionProps<FAQData> = {}) {
   const componentData = data || site.faq;
   const faqs = componentData;
   const [openIdx, setOpenIdx] = useState<number>(0);
 
   return (
-    <section className="relative overflow-hidden bg-[#faf9f6] py-10 lg:py-12">
-      {/* Background Decoratives */}
-      <PawPrint className="pointer-events-none absolute left-[8%] top-[10%] h-8 w-8 -rotate-12 text-[#ffab00]/20" />
-      <PawPrint className="pointer-events-none absolute right-[10%] top-[25%] h-12 w-12 rotate-12 text-[#ffab00]/15" />
-      <PawPrint className="pointer-events-none absolute bottom-[15%] left-[5%] h-16 w-16 -rotate-[20deg] text-[#ffab00]/10" />
-      <PawPrint className="pointer-events-none absolute bottom-[30%] right-[15%] h-6 w-6 rotate-[25deg] text-[#ffab00]/20" />
+    <section className={`relative overflow-hidden bg-white py-14 sm:py-18 lg:py-20 ${className || ""}`}>
+      {/* ── Background Curved Dashed Track (Top-Left) ── */}
+      <svg
+        className="pointer-events-none absolute left-0 top-[18%] hidden w-[320px] lg:block text-[#ffab00]"
+        height="120"
+        viewBox="0 0 320 120"
+        fill="none"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M 0 100 Q 120 70 200 40 T 320 20"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeDasharray="4 5"
+          opacity="0.35"
+        />
+      </svg>
 
-      {/* Curved SVG Dashed Lines */}
-      <svg
-        className="pointer-events-none absolute left-0 top-[15%] hidden w-full text-[#ffab00]/25 lg:block"
-        height="120"
-        viewBox="0 0 1200 120"
-        fill="none"
-        preserveAspectRatio="none"
-      >
-        <path
-          d="M0 60 Q 300 0, 600 60 T 1200 60"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeDasharray="6 6"
-        />
-      </svg>
-      <svg
-        className="pointer-events-none absolute right-0 bottom-[15%] hidden w-1/2 text-[#ffab00]/25 lg:block"
-        height="120"
-        viewBox="0 0 600 120"
-        fill="none"
-        preserveAspectRatio="none"
-      >
-        <path
-          d="M0 60 Q 300 120, 600 60"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeDasharray="6 6"
-        />
-      </svg>
+      {/* ── Background Subtle Paw Prints ── */}
+      {/* Top Left Paws */}
+      <PawPrint
+        className="pointer-events-none absolute left-[4%] top-[14%] h-7 w-7 text-[#ffab00]/25"
+        fill="#ffab00"
+        strokeWidth={0}
+      />
+      <PawPrint
+        className="pointer-events-none absolute left-[8%] top-[19%] h-5 w-5 text-[#ffab00]/20"
+        fill="#ffab00"
+        strokeWidth={0}
+      />
+
+      {/* Top Right Paws */}
+      <PawPrint
+        className="pointer-events-none absolute right-[5%] top-[12%] h-10 w-10 text-[#ffab00]/20"
+        fill="#ffab00"
+        strokeWidth={0}
+      />
+
+      {/* Bottom Left Paw */}
+      <PawPrint
+        className="pointer-events-none absolute bottom-[10%] left-[3%] h-12 w-12 text-[#ffab00]/15"
+        fill="#ffab00"
+        strokeWidth={0}
+      />
 
       <div className="site-container relative z-10">
-        {/* Section Header */}
-        <div className="mx-auto mb-16 max-w-2xl text-center">
-          <div className="mb-2 flex items-center justify-center gap-2">
-            <span className="h-[2px] w-10 bg-[#ffab00]/60" />
-            <p className="text-lg font-bold uppercase tracking-widest text-[#ffab00]">
-              {faqs.tagline}
+        {/* ── Section Header ── */}
+        <div className="mx-auto mb-12 sm:mb-14 lg:mb-16 max-w-2xl text-center">
+          <div className="mb-2 flex items-center justify-center gap-3">
+            <span className="h-[1.5px] w-12 sm:w-16 bg-[#ffab00]" />
+            <p className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.2em] text-[#ffab00]">
+              {faqs.tagline || "FAQS"}
             </p>
-            <span className="h-[2px] w-10 bg-[#ffab00]/60" />
+            <span className="h-[1.5px] w-12 sm:w-16 bg-[#ffab00]" />
           </div>
-          <PawPrint className="mx-auto mb-3 h-6 w-6 text-[#0b1324] rotate-[12deg]" />
-          <h2 className="text-3xl font-extrabold text-[#0b1324] sm:text-4xl lg:text-[2.75rem] font-serif mb-4">
-            {faqs.title}{" "}
-            <span className="text-[#0b1324]">{faqs.titleHighlight}</span>
+
+          <div className="mb-2.5 flex justify-center">
+            <PawPrint className="h-3 w-3 text-[#ffab00]" fill="#ffab00" strokeWidth={0} />
+          </div>
+
+          <h2 className="text-3xl font-extrabold text-[#0b1324] sm:text-4xl lg:text-[2.75rem] tracking-tight leading-tight">
+            {faqs.title} {faqs.titleHighlight}
           </h2>
-          <p className="mt-4 text-[15px] text-slate-500 sm:text-base leading-relaxed max-w-xl mx-auto">
+
+          <p className="mt-3 text-sm sm:text-base leading-relaxed text-[#5a6577] max-w-xl mx-auto">
             {faqs.description}
           </p>
         </div>
 
-        <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
-          {/* Left Column - Image & Contact Box */}
-          <div className="flex flex-col items-center">
-            <div className="relative mx-auto flex items-center justify-center h-[340px] w-[340px] sm:h-[420px] sm:w-[420px] mb-8">
-              {/* Golden ring border */}
-              <div className="absolute inset-0 rounded-full border-[1.5px] border-[#ffab00]" />
+        {/* ── Two-Column Layout (Equal 50/50 Width & Stretched Height) ── */}
+        <div className="grid items-stretch gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-16">
+          {/* ── Left Column: Circular Image & Contact Card (Top-to-Bottom Equal Alignment) ── */}
+          <div className="flex flex-col justify-between items-center gap-8 lg:gap-0 h-full">
+            {/* Circular Image with Outer Orange Ring */}
+            <div className="relative mx-auto flex items-center justify-center h-[280px] w-[280px] sm:h-[320px] sm:w-[320px] lg:h-[340px] lg:w-[340px] xl:h-[360px] xl:w-[360px]">
+              {/* Golden ring border offset */}
+              <div className="absolute inset-0 -translate-x-2 -translate-y-2 rounded-full border-[1.5px] border-[#ffab00]" />
 
               {/* Main Image Container */}
-              <div className="relative h-[95%] w-[95%] overflow-hidden rounded-full border-[6px] border-white shadow-md">
+              <div className="relative h-full w-full overflow-hidden rounded-full border-[7px] border-white shadow-[0_10px_32px_rgba(11,19,36,0.08)] bg-white">
                 <Image
-                  src={faqs.image}
+                  src={faqs.image || "/images/pets.png"}
                   alt="Pets"
                   fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 640px) 340px, 420px"
+                  className="object-cover object-[center_35%]"
+                  sizes="(max-width: 640px) 280px, (max-width: 1024px) 320px, 360px"
+                  priority
                 />
               </div>
             </div>
 
-            {/* Contact Box */}
-            <div className="relative mt-4 w-[90%] sm:w-[400px] bg-[#fffbf2] rounded-xl border border-orange-100 p-6 sm:p-8 shadow-sm z-10">
+            {/* Contact Card (Aligns with Bottom of Right Accordion) */}
+            <div className="w-full max-w-[380px] sm:max-w-[420px] bg-[#fffbf2] rounded-2xl border border-[#ffab00]/25 p-5 sm:p-6 shadow-[0_4px_20px_rgba(0,0,0,0.03)] z-10">
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#ffab00]">
-                  <Heart className="h-6 w-6 text-white" fill="white" />
-                  <PawPrint className="absolute h-3 w-3 text-[#ffab00] fill-[#ffab00] translate-x-[2px] translate-y-[2px]" />
+                <div className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#ffab00] shadow-sm">
+                  <Heart className="h-6 w-6 text-white" fill="white" strokeWidth={0} />
+                  <PawPrint
+                    className="absolute h-3.5 w-3.5 text-[#ffab00]"
+                    fill="#ffab00"
+                    strokeWidth={0}
+                  />
                 </div>
                 <div>
-                  <h4 className="text-lg font-extrabold text-[#0b1324] mb-2">
+                  <h4 className="text-[17px] font-extrabold text-[#0b1324] mb-1">
                     {faqs.contactBox.title}
                   </h4>
-                  <p className="text-sm text-slate-600 mb-5 leading-relaxed">
+                  <p className="text-xs sm:text-[13px] text-slate-600 mb-4 leading-relaxed">
                     {faqs.contactBox.description}
                   </p>
                   <Link
                     href={faqs.contactBox.buttonHref}
-                    className="inline-flex items-center gap-2 rounded-full bg-[#0b1324] px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-[#0b1324]/80"
+                    className="inline-flex items-center gap-2 rounded-full bg-[#0b1324] px-5 py-2.5 text-xs sm:text-sm font-bold text-white transition-all hover:bg-[#0b1324]/85 hover:shadow-md"
                   >
-                    {faqs.contactBox.buttonText}
-                    <ArrowRight className="h-4 w-4" />
+                    <span>{faqs.contactBox.buttonText}</span>
+                    <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column - Accordion */}
-          <div className="flex flex-col space-y-3 lg:mt-4">
+          {/* ── Right Column: FAQ Accordion ── */}
+          <div className="flex flex-col space-y-3">
             {faqs.items.map((faq, idx) => {
               const isOpen = openIdx === idx;
 
               return (
                 <div
                   key={idx}
-                  className={`overflow-hidden rounded-md border transition-all duration-300 ${
+                  className={`overflow-hidden rounded-2xl border transition-all duration-300 ${
                     isOpen
-                      ? "border-[#ffab00] bg-white shadow-sm"
-                      : "border-gray-200 bg-white hover:border-orange-200"
+                      ? "border-[#ffab00] bg-[#fffdf9] shadow-sm"
+                      : "border-gray-100 bg-white shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:border-orange-200/70"
                   }`}
                 >
                   <button
                     onClick={() => setOpenIdx(isOpen ? -1 : idx)}
-                    className="flex w-full items-center justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5 text-left"
+                    className="flex w-full items-center justify-between gap-4 px-5 py-4 sm:px-6 sm:py-4.5 text-left"
                     aria-expanded={isOpen}
                   >
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-3.5 sm:gap-4">
                       <div
-                        className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full border transition-colors ${
+                        className={`flex h-6 w-6 sm:h-7 sm:w-7 shrink-0 items-center justify-center rounded-full transition-colors ${
                           isOpen
-                            ? "border-[#ffab00] bg-[#ffab00] text-white"
-                            : "border-[#ffab00] bg-white text-[#ffab00]"
+                            ? "bg-[#ffab00] text-white shadow-sm"
+                            : "border border-[#ffab00] bg-white text-[#ffab00]"
                         }`}
                       >
                         {isOpen ? (
@@ -147,7 +171,7 @@ export default function FaqSection({ data, className }: SectionProps<FAQData> = 
                           <Plus className="h-3.5 w-3.5" strokeWidth={3} />
                         )}
                       </div>
-                      <span className="text-[15px] font-bold text-[#0b1324]">
+                      <span className="text-[14.5px] sm:text-[15.5px] font-bold text-[#0b1324] leading-snug">
                         {faq.question}
                       </span>
                     </div>
@@ -163,7 +187,7 @@ export default function FaqSection({ data, className }: SectionProps<FAQData> = 
                   >
                     <div className="overflow-hidden">
                       <div className="px-5 pb-5 pt-1 sm:px-6 sm:pb-6 pl-14 sm:pl-16">
-                        <p className="text-sm leading-relaxed text-slate-500">
+                        <p className="text-sm leading-relaxed text-[#5a6577]">
                           {faq.answer}
                         </p>
                       </div>

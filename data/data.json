@@ -589,20 +589,20 @@
                     "image": "/images/Veterinary_Care.png",
                     "features": [
                       {
-                        "title": "Certified Experts",
-                        "icon": "shield"
+                        "title": "Professional\nCare",
+                        "icon": "heart_paw"
                       },
                       {
-                        "title": "Gentle Approach",
+                        "title": "Pet-Safe\nProducts",
                         "icon": "leaf"
                       },
                       {
-                        "title": "Quality Assured",
-                        "icon": "check_shield"
+                        "title": "Hygienic &\nSafe Environment",
+                        "icon": "shield_check"
                       },
                       {
-                        "title": "Pet-First Care",
-                        "icon": "star"
+                        "title": "Stress-Free\nExperience",
+                        "icon": "happy_pet"
                       }
                     ],
                     "primaryBtn": {
@@ -665,31 +665,31 @@
                       {
                         "stepNumber": "01",
                         "title": "Consultation",
-                        "description": "We understand your pet's needs and preferences.",
+                        "description": "We understand your pet's needs.",
                         "icon": "message"
                       },
                       {
                         "stepNumber": "02",
-                        "title": "Preparation",
-                        "description": "Gentle prep for a calm, stress-free experience.",
+                        "title": "Gentle Grooming",
+                        "description": "We groom with care using safe products.",
                         "icon": "bath"
                       },
                       {
                         "stepNumber": "03",
-                        "title": "Care Session",
-                        "description": "Expert service tailored to your pet.",
+                        "title": "Dry & Style",
+                        "description": "We dry and style for a clean, fresh look.",
                         "icon": "hairdryer"
                       },
                       {
                         "stepNumber": "04",
-                        "title": "Quality Check",
-                        "description": "We review comfort, safety, and results.",
+                        "title": "Final Check",
+                        "description": "We ensure your pet is comfortable & happy.",
                         "icon": "heart_check"
                       },
                       {
                         "stepNumber": "05",
-                        "title": "Handover",
-                        "description": "Tips and follow-up for continued care.",
+                        "title": "Happy Pet",
+                        "description": "Your pet leaves clean, happy & healthy!",
                         "icon": "heart"
                       }
                     ]
@@ -705,20 +705,20 @@
                     "image": "/images/Grooming_&_Spa.png",
                     "features": [
                       {
-                        "title": "Certified Experts",
-                        "icon": "shield"
+                        "title": "Professional\nGroomers",
+                        "icon": "heart_paw"
                       },
                       {
-                        "title": "Gentle Approach",
+                        "title": "Pet-Safe\nProducts",
                         "icon": "leaf"
                       },
                       {
-                        "title": "Quality Assured",
-                        "icon": "check_shield"
+                        "title": "Hygienic &\nSafe Environment",
+                        "icon": "shield_check"
                       },
                       {
-                        "title": "Pet-First Care",
-                        "icon": "star"
+                        "title": "Stress-Free\nExperience",
+                        "icon": "happy_pet"
                       }
                     ],
                     "primaryBtn": {
@@ -781,31 +781,31 @@
                       {
                         "stepNumber": "01",
                         "title": "Consultation",
-                        "description": "We understand your pet's needs and preferences.",
+                        "description": "We understand your pet's needs.",
                         "icon": "message"
                       },
                       {
                         "stepNumber": "02",
-                        "title": "Preparation",
-                        "description": "Gentle prep for a calm, stress-free experience.",
+                        "title": "Gentle Grooming",
+                        "description": "We groom with care using safe products.",
                         "icon": "bath"
                       },
                       {
                         "stepNumber": "03",
-                        "title": "Care Session",
-                        "description": "Expert service tailored to your pet.",
+                        "title": "Dry & Style",
+                        "description": "We dry and style for a clean, fresh look.",
                         "icon": "hairdryer"
                       },
                       {
                         "stepNumber": "04",
-                        "title": "Quality Check",
-                        "description": "We review comfort, safety, and results.",
+                        "title": "Final Check",
+                        "description": "We ensure your pet is comfortable & happy.",
                         "icon": "heart_check"
                       },
                       {
                         "stepNumber": "05",
-                        "title": "Handover",
-                        "description": "Tips and follow-up for continued care.",
+                        "title": "Happy Pet",
+                        "description": "Your pet leaves clean, happy & healthy!",
                         "icon": "heart"
                       }
                     ]
@@ -821,20 +821,20 @@
                     "image": "/images/Boarding_&_Daycare.png",
                     "features": [
                       {
-                        "title": "Certified Experts",
-                        "icon": "shield"
+                        "title": "Professional\nCare",
+                        "icon": "heart_paw"
                       },
                       {
-                        "title": "Gentle Approach",
+                        "title": "Pet-Safe\nProducts",
                         "icon": "leaf"
                       },
                       {
-                        "title": "Quality Assured",
-                        "icon": "check_shield"
+                        "title": "Hygienic &\nSafe Environment",
+                        "icon": "shield_check"
                       },
                       {
-                        "title": "Pet-First Care",
-                        "icon": "star"
+                        "title": "Stress-Free\nExperience",
+                        "icon": "happy_pet"
                       }
                     ],
                     "primaryBtn": {
@@ -897,31 +897,31 @@
                       {
                         "stepNumber": "01",
                         "title": "Consultation",
-                        "description": "We understand your pet's needs and preferences.",
+                        "description": "We understand your pet's needs.",
                         "icon": "message"
                       },
                       {
                         "stepNumber": "02",
-                        "title": "Preparation",
-                        "description": "Gentle prep for a calm, stress-free experience.",
+                        "title": "Gentle Grooming",
+                        "description": "We groom with care using safe products.",
                         "icon": "bath"
                       },
                       {
                         "stepNumber": "03",
-                        "title": "Care Session",
-                        "description": "Expert service tailored to your pet.",
+                        "title": "Dry & Style",
+                        "description": "We dry and style for a clean, fresh look.",
                         "icon": "hairdryer"
                       },
                       {
                         "stepNumber": "04",
-                        "title": "Quality Check",
-                        "description": "We review comfort, safety, and results.",
+                        "title": "Final Check",
+                        "description": "We ensure your pet is comfortable & happy.",
                         "icon": "heart_check"
                       },
                       {
                         "stepNumber": "05",
-                        "title": "Handover",
-                        "description": "Tips and follow-up for continued care.",
+                        "title": "Happy Pet",
+                        "description": "Your pet leaves clean, happy & healthy!",
                         "icon": "heart"
                       }
                     ]
@@ -937,20 +937,20 @@
                     "image": "/images/Nutrition_&_Diet.png",
                     "features": [
                       {
-                        "title": "Certified Experts",
-                        "icon": "shield"
+                        "title": "Professional\nCare",
+                        "icon": "heart_paw"
                       },
                       {
-                        "title": "Gentle Approach",
+                        "title": "Pet-Safe\nProducts",
                         "icon": "leaf"
                       },
                       {
-                        "title": "Quality Assured",
-                        "icon": "check_shield"
+                        "title": "Hygienic &\nSafe Environment",
+                        "icon": "shield_check"
                       },
                       {
-                        "title": "Pet-First Care",
-                        "icon": "star"
+                        "title": "Stress-Free\nExperience",
+                        "icon": "happy_pet"
                       }
                     ],
                     "primaryBtn": {
@@ -1013,31 +1013,31 @@
                       {
                         "stepNumber": "01",
                         "title": "Consultation",
-                        "description": "We understand your pet's needs and preferences.",
+                        "description": "We understand your pet's needs.",
                         "icon": "message"
                       },
                       {
                         "stepNumber": "02",
-                        "title": "Preparation",
-                        "description": "Gentle prep for a calm, stress-free experience.",
+                        "title": "Gentle Grooming",
+                        "description": "We groom with care using safe products.",
                         "icon": "bath"
                       },
                       {
                         "stepNumber": "03",
-                        "title": "Care Session",
-                        "description": "Expert service tailored to your pet.",
+                        "title": "Dry & Style",
+                        "description": "We dry and style for a clean, fresh look.",
                         "icon": "hairdryer"
                       },
                       {
                         "stepNumber": "04",
-                        "title": "Quality Check",
-                        "description": "We review comfort, safety, and results.",
+                        "title": "Final Check",
+                        "description": "We ensure your pet is comfortable & happy.",
                         "icon": "heart_check"
                       },
                       {
                         "stepNumber": "05",
-                        "title": "Handover",
-                        "description": "Tips and follow-up for continued care.",
+                        "title": "Happy Pet",
+                        "description": "Your pet leaves clean, happy & healthy!",
                         "icon": "heart"
                       }
                     ]
@@ -1053,20 +1053,20 @@
                     "image": "/images/Training_&_Behavior.png",
                     "features": [
                       {
-                        "title": "Certified Experts",
-                        "icon": "shield"
+                        "title": "Professional\nTrainers",
+                        "icon": "heart_paw"
                       },
                       {
-                        "title": "Gentle Approach",
+                        "title": "Pet-Safe\nProducts",
                         "icon": "leaf"
                       },
                       {
-                        "title": "Quality Assured",
-                        "icon": "check_shield"
+                        "title": "Hygienic &\nSafe Environment",
+                        "icon": "shield_check"
                       },
                       {
-                        "title": "Pet-First Care",
-                        "icon": "star"
+                        "title": "Stress-Free\nExperience",
+                        "icon": "happy_pet"
                       }
                     ],
                     "primaryBtn": {
@@ -1129,31 +1129,31 @@
                       {
                         "stepNumber": "01",
                         "title": "Consultation",
-                        "description": "We understand your pet's needs and preferences.",
+                        "description": "We understand your pet's needs.",
                         "icon": "message"
                       },
                       {
                         "stepNumber": "02",
-                        "title": "Preparation",
-                        "description": "Gentle prep for a calm, stress-free experience.",
+                        "title": "Gentle Grooming",
+                        "description": "We groom with care using safe products.",
                         "icon": "bath"
                       },
                       {
                         "stepNumber": "03",
-                        "title": "Care Session",
-                        "description": "Expert service tailored to your pet.",
+                        "title": "Dry & Style",
+                        "description": "We dry and style for a clean, fresh look.",
                         "icon": "hairdryer"
                       },
                       {
                         "stepNumber": "04",
-                        "title": "Quality Check",
-                        "description": "We review comfort, safety, and results.",
+                        "title": "Final Check",
+                        "description": "We ensure your pet is comfortable & happy.",
                         "icon": "heart_check"
                       },
                       {
                         "stepNumber": "05",
-                        "title": "Handover",
-                        "description": "Tips and follow-up for continued care.",
+                        "title": "Happy Pet",
+                        "description": "Your pet leaves clean, happy & healthy!",
                         "icon": "heart"
                       }
                     ]
@@ -1169,20 +1169,20 @@
                     "image": "/images/Pet_Wellness_Plans.png",
                     "features": [
                       {
-                        "title": "Certified Experts",
-                        "icon": "shield"
+                        "title": "Professional\nCare",
+                        "icon": "heart_paw"
                       },
                       {
-                        "title": "Gentle Approach",
+                        "title": "Pet-Safe\nProducts",
                         "icon": "leaf"
                       },
                       {
-                        "title": "Quality Assured",
-                        "icon": "check_shield"
+                        "title": "Hygienic &\nSafe Environment",
+                        "icon": "shield_check"
                       },
                       {
-                        "title": "Pet-First Care",
-                        "icon": "star"
+                        "title": "Stress-Free\nExperience",
+                        "icon": "happy_pet"
                       }
                     ],
                     "primaryBtn": {
@@ -1245,31 +1245,31 @@
                       {
                         "stepNumber": "01",
                         "title": "Consultation",
-                        "description": "We understand your pet's needs and preferences.",
+                        "description": "We understand your pet's needs.",
                         "icon": "message"
                       },
                       {
                         "stepNumber": "02",
-                        "title": "Preparation",
-                        "description": "Gentle prep for a calm, stress-free experience.",
+                        "title": "Gentle Grooming",
+                        "description": "We groom with care using safe products.",
                         "icon": "bath"
                       },
                       {
                         "stepNumber": "03",
-                        "title": "Care Session",
-                        "description": "Expert service tailored to your pet.",
+                        "title": "Dry & Style",
+                        "description": "We dry and style for a clean, fresh look.",
                         "icon": "hairdryer"
                       },
                       {
                         "stepNumber": "04",
-                        "title": "Quality Check",
-                        "description": "We review comfort, safety, and results.",
+                        "title": "Final Check",
+                        "description": "We ensure your pet is comfortable & happy.",
                         "icon": "heart_check"
                       },
                       {
                         "stepNumber": "05",
-                        "title": "Handover",
-                        "description": "Tips and follow-up for continued care.",
+                        "title": "Happy Pet",
+                        "description": "Your pet leaves clean, happy & healthy!",
                         "icon": "heart"
                       }
                     ]
@@ -1285,20 +1285,20 @@
                     "image": "/images/Pet_Taxi_Service.png",
                     "features": [
                       {
-                        "title": "Certified Experts",
-                        "icon": "shield"
+                        "title": "Professional\nCare",
+                        "icon": "heart_paw"
                       },
                       {
-                        "title": "Gentle Approach",
+                        "title": "Pet-Safe\nProducts",
                         "icon": "leaf"
                       },
                       {
-                        "title": "Quality Assured",
-                        "icon": "check_shield"
+                        "title": "Hygienic &\nSafe Environment",
+                        "icon": "shield_check"
                       },
                       {
-                        "title": "Pet-First Care",
-                        "icon": "star"
+                        "title": "Stress-Free\nExperience",
+                        "icon": "happy_pet"
                       }
                     ],
                     "primaryBtn": {
@@ -1361,31 +1361,31 @@
                       {
                         "stepNumber": "01",
                         "title": "Consultation",
-                        "description": "We understand your pet's needs and preferences.",
+                        "description": "We understand your pet's needs.",
                         "icon": "message"
                       },
                       {
                         "stepNumber": "02",
-                        "title": "Preparation",
-                        "description": "Gentle prep for a calm, stress-free experience.",
+                        "title": "Gentle Grooming",
+                        "description": "We groom with care using safe products.",
                         "icon": "bath"
                       },
                       {
                         "stepNumber": "03",
-                        "title": "Care Session",
-                        "description": "Expert service tailored to your pet.",
+                        "title": "Dry & Style",
+                        "description": "We dry and style for a clean, fresh look.",
                         "icon": "hairdryer"
                       },
                       {
                         "stepNumber": "04",
-                        "title": "Quality Check",
-                        "description": "We review comfort, safety, and results.",
+                        "title": "Final Check",
+                        "description": "We ensure your pet is comfortable & happy.",
                         "icon": "heart_check"
                       },
                       {
                         "stepNumber": "05",
-                        "title": "Handover",
-                        "description": "Tips and follow-up for continued care.",
+                        "title": "Happy Pet",
+                        "description": "Your pet leaves clean, happy & healthy!",
                         "icon": "heart"
                       }
                     ]
@@ -1401,20 +1401,20 @@
                     "image": "/images/pets.png",
                     "features": [
                       {
-                        "title": "Certified Experts",
-                        "icon": "shield"
+                        "title": "Professional\nCare",
+                        "icon": "heart_paw"
                       },
                       {
-                        "title": "Gentle Approach",
+                        "title": "Pet-Safe\nProducts",
                         "icon": "leaf"
                       },
                       {
-                        "title": "Quality Assured",
-                        "icon": "check_shield"
+                        "title": "Hygienic &\nSafe Environment",
+                        "icon": "shield_check"
                       },
                       {
-                        "title": "Pet-First Care",
-                        "icon": "star"
+                        "title": "Stress-Free\nExperience",
+                        "icon": "happy_pet"
                       }
                     ],
                     "primaryBtn": {
@@ -1477,31 +1477,31 @@
                       {
                         "stepNumber": "01",
                         "title": "Consultation",
-                        "description": "We understand your pet's needs and preferences.",
+                        "description": "We understand your pet's needs.",
                         "icon": "message"
                       },
                       {
                         "stepNumber": "02",
-                        "title": "Preparation",
-                        "description": "Gentle prep for a calm, stress-free experience.",
+                        "title": "Gentle Grooming",
+                        "description": "We groom with care using safe products.",
                         "icon": "bath"
                       },
                       {
                         "stepNumber": "03",
-                        "title": "Care Session",
-                        "description": "Expert service tailored to your pet.",
+                        "title": "Dry & Style",
+                        "description": "We dry and style for a clean, fresh look.",
                         "icon": "hairdryer"
                       },
                       {
                         "stepNumber": "04",
-                        "title": "Quality Check",
-                        "description": "We review comfort, safety, and results.",
+                        "title": "Final Check",
+                        "description": "We ensure your pet is comfortable & happy.",
                         "icon": "heart_check"
                       },
                       {
                         "stepNumber": "05",
-                        "title": "Handover",
-                        "description": "Tips and follow-up for continued care.",
+                        "title": "Happy Pet",
+                        "description": "Your pet leaves clean, happy & healthy!",
                         "icon": "heart"
                       }
                     ]
@@ -1927,35 +1927,35 @@
           "variants": {
             "PawCareMissionVision1": {
               "eyebrow": "OUR PURPOSE",
-              "title": "Vision & Mission",
-              "description": "Guided by compassion and expertise, we strive to create a healthier, happier world for every pet.",
+              "title": "Our Mission & Vision",
+              "description": "Guided by love, driven by purpose – our mission and vision inspire everything we do for pets and the people who love them.",
               "vision": {
                 "label": "Our",
                 "titleHighlight": "Vision",
-                "description": "To be the most trusted pet care partner—where every pet feels loved, every parent feels confident, and every life is nurtured with excellence.",
+                "description": "A world where every pet is healthy, happy, and loved. We envision a compassionate community where pets receive the best care, respect, and a nurturing environment to thrive.",
                 "image": "/images/pets.png"
               },
               "mission": {
                 "label": "Our",
                 "titleHighlight": "Mission",
-                "description": "We deliver compassionate, professional pet care through expert teams, premium services, and a pet-first approach that puts wellbeing above everything else.",
+                "description": "To provide exceptional pet care services with compassion, integrity, and expertise. We are committed to enhancing the well-being of pets and building lasting relationships with pet parents through trust and dedication.",
                 "image": "/images/pets.png",
                 "features": [
                   {
-                    "title": "Trusted Care",
-                    "icon": "shield"
+                    "title": "Compassionate Care",
+                    "icon": "heart-paw"
                   },
                   {
-                    "title": "Pet First",
+                    "title": "Trusted & Reliable",
+                    "icon": "shield-check"
+                  },
+                  {
+                    "title": "Pet Well-being First",
                     "icon": "paw"
                   },
                   {
-                    "title": "Community",
-                    "icon": "community"
-                  },
-                  {
-                    "title": "With Love",
-                    "icon": "heart"
+                    "title": "Stronger Together Every Day",
+                    "icon": "together"
                   }
                 ]
               }
@@ -2037,7 +2037,7 @@
               "title": "Frequently Asked",
               "titleHighlight": "Questions",
               "description": "Find quick answers to common questions about our services, care, and how we help your pets.",
-              "image": "/images/about_01.jpg",
+              "image": "/images/pets.png",
               "contactBox": {
                 "title": "Still Have Questions?",
                 "description": "We're here to help! Reach out to our friendly team for any more information.",

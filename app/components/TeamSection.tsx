@@ -3,7 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { PawPrint, ArrowRight, ChevronUp } from "lucide-react";
+import { ArrowRight, ChevronUp } from "lucide-react";
+import { PawPrint } from "@/app/components/common/PawPrint";
 import { site, SectionProps, TeamData } from "@/data/index";
 
 function DotGrid({ className }: { className?: string }) {
@@ -34,7 +35,7 @@ export default function TeamSection({
       className={`relative w-full overflow-hidden bg-[#FAFBFC] py-10 sm:py-12 lg:py-16 ${className ?? ""}`}
     >
       <PawPrint
-        className="pointer-events-none absolute top-10 left-[4%] h-36 w-36 -rotate-12 text-[#e8dcc8]/70 sm:h-48 sm:w-48"
+        className="pointer-events-none absolute top-10 left-[4%] h-36 w-36 text-[#e8dcc8]/70 sm:h-48 sm:w-48"
         strokeWidth={1}
         aria-hidden
       />
