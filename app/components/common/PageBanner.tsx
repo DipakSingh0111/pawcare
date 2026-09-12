@@ -17,7 +17,7 @@ export default function PageBanner({ title, breadcrumbs, bgImage = "/images/page
   const iconMuted = hasGradient ? "text-white/70" : "text-[#0b1324]/50";
 
   return (
-    <section className="relative w-full h-[300px] sm:h-[400px] lg:h-[450px] flex items-center overflow-hidden">
+    <section className="relative w-full h-[250px] sm:h-[300px] lg:h-[350px] flex items-center overflow-hidden">
       {/* Background Image */}
       <div className={`absolute inset-0 z-0 ${hasGradient ? 'bg-[#e69300]' : 'bg-[#ffb016]'}`}>
         <Image

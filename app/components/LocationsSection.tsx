@@ -86,25 +86,25 @@ export default function LocationsSection({
               <Link
                 key={place.city}
                 href={`/location/${slug}`}
-                className="group relative flex flex-col rounded-2xl border border-[#eee8df] bg-white p-5 shadow-[0_8px_28px_rgba(11,19,36,0.05)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(11,19,36,0.08)] sm:p-6"
+                className="group relative flex flex-col rounded-[24px] bg-[#fdfbf7] p-5 shadow-[0_4px_20px_rgba(11,19,36,0.03)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(11,19,36,0.06)] sm:p-6"
               >
-                <div className="flex items-center gap-5 pb-8">
+                <div className="flex items-center gap-5 pb-10 sm:gap-6 sm:pb-12">
                   {/* Circular landmark image */}
-                  <div className="relative h-[108px] w-[108px] shrink-0 sm:h-[118px] sm:w-[118px]">
-                    <div className="relative h-full w-full overflow-hidden rounded-full border-[5px] border-white bg-gray-100 shadow-[0_4px_16px_rgba(11,19,36,0.1)]">
+                  <div className="relative h-[120px] w-[120px] shrink-0 sm:h-[140px] sm:w-[140px]">
+                    <div className="relative h-full w-full overflow-hidden rounded-full bg-gray-100">
                       <Image
                         src={place.image}
                         alt={place.city}
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
-                        sizes="118px"
+                        sizes="(max-width: 640px) 120px, 140px"
                       />
                     </div>
 
                     {/* Navy pin badge */}
-                    <div className="absolute -top-1 -left-1 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-[#0b1324] shadow-md ring-2 ring-white">
+                    <div className="absolute -top-1 -left-1 z-10 flex h-[46px] w-[46px] items-center justify-center rounded-full bg-[#0b1324] sm:h-[54px] sm:w-[54px]">
                       <MapPin
-                        className="h-4 w-4 text-[#ffb016]"
+                        className="h-5 w-5 text-[#ffb016] sm:h-6 sm:w-6"
                         strokeWidth={2.5}
                         fill="#ffb016"
                       />
@@ -113,27 +113,34 @@ export default function LocationsSection({
 
                   {/* City + address */}
                   <div className="min-w-0 flex-1">
-                    <h3 className="text-xl font-extrabold text-[#0b1324] sm:text-[1.35rem]">
+                    <h3 className="text-2xl font-extrabold text-[#0b1324] sm:text-[1.65rem]">
                       {place.city}
                     </h3>
-                    <span className="mt-2 mb-3 block h-[2px] w-10 rounded-full bg-[#ffb016]" />
-                    <p className="flex items-start gap-1.5 text-sm leading-relaxed text-[#5a6577]">
+                    <span className="mt-2.5 mb-4 block h-[2.5px] w-[45px] rounded-full bg-[#ffb016]" />
+                    <div className="flex items-start gap-2.5 text-[0.95rem] font-medium leading-[1.5] text-[#0b1324]">
                       <MapPin
-                        className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#ffb016]"
-                        strokeWidth={2.25}
+                        className="mt-0.5 h-[1.15rem] w-[1.15rem] shrink-0 text-[#ffb016]"
+                        strokeWidth={2.5}
+                        fill="#ffb016"
                       />
-                      <span>{place.address}</span>
-                    </p>
+                      <span className="block pr-2">
+                        {place.address.split(', ').map((part: string, i: number, arr: string[]) => (
+                          <span key={i} className="block">
+                            {part}{i < arr.length - 1 ? ',' : ''}
+                          </span>
+                        ))}
+                      </span>
+                    </div>
                   </div>
                 </div>
 
-                {/* Bottom line + left paw */}
-                <div className="absolute right-5 bottom-5 left-5 sm:right-6 sm:bottom-6 sm:left-6">
-                  <div className="relative h-px w-full bg-[#e8eaee]">
-                    <span className="absolute top-1/2 left-0 -translate-y-1/2 bg-white pr-2">
+                {/* Bottom line + center paw */}
+                <div className="absolute right-5 bottom-6 left-5 sm:right-6 sm:bottom-7 sm:left-6">
+                  <div className="relative flex h-px w-full items-center justify-center bg-[#e8e2d8]">
+                    <span className="bg-[#fdfbf7] px-4 text-[#ffb016]">
                       <PawPrint
-                        className="h-3.5 w-3.5 text-[#ffb016]"
-                        strokeWidth={2.25}
+                        className="h-6 w-6"
+                        strokeWidth={2.5}
                         fill="#ffb016"
                       />
                     </span>

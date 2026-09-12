@@ -136,10 +136,10 @@ export default function Footer({
       />
 
       {/* Main footer */}
-      <div className="site-container relative z-10 pt-8 pb-8 lg:pt-10 lg:pb-8">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-[1.25fr_auto_1fr_1fr_1fr] lg:gap-8 xl:gap-10">
+      <div className="site-container relative z-10 pt-10 pb-10 lg:pt-12 lg:pb-10">
+        <div className="flex flex-col gap-10 lg:flex-row lg:gap-8 xl:gap-12">
           {/* Brand + contact */}
-          <div className="max-w-sm sm:col-span-2 md:col-span-3 lg:col-span-1">
+          <div className="max-w-sm lg:w-[32%] xl:w-[28%] shrink-0">
             <Link href="/" className="inline-block">
               <Image
                 src="/images/pawcare-logo.png"
@@ -191,27 +191,29 @@ export default function Footer({
           <div className="hidden w-px bg-[#d9dee7] lg:block" aria-hidden />
 
           {/* Link columns */}
-          {footer.menus.map((menu) => (
-            <div key={menu.title} className="lg:pt-3">
-              <h3 className="text-base font-bold text-[#0b1324]">
-                {menu.title}
-              </h3>
-              <span className="mt-2 mb-5 block h-[3px] w-8 rounded-full bg-[#ffb016]" />
-              <ul className="space-y-3">
-                {menu.links.map((link) => (
-                  <li key={link.href + link.label}>
-                    <Link
-                      href={link.href}
-                      onClick={() => window.scrollTo(0, 0)}
-                      className="text-sm text-[#0b1324]/75 transition-colors hover:text-[#ffb016]"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 flex-1 lg:pt-3">
+            {footer.menus.map((menu) => (
+              <div key={menu.title}>
+                <h3 className="text-base font-bold text-[#0b1324]">
+                  {menu.title}
+                </h3>
+                <span className="mt-2 mb-5 block h-[3px] w-8 rounded-full bg-[#ffb016]" />
+                <ul className="space-y-3">
+                  {menu.links.map((link) => (
+                    <li key={link.href + link.label}>
+                      <Link
+                        href={link.href}
+                        onClick={() => window.scrollTo(0, 0)}
+                        className="text-sm text-[#0b1324]/75 transition-colors hover:text-[#ffb016]"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 

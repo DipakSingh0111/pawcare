@@ -138,7 +138,7 @@ export default function HomeBanner({
         />
       </div>
 
-      <div className="site-container relative min-h-[560px] lg:min-h-[640px]">
+      <div className="site-container relative min-h-[500px] lg:min-h-[580px]">
         <div className="relative -mx-4 h-[300px] w-[calc(100%+2rem)] sm:-mx-6 sm:h-[360px] sm:w-[calc(100%+3rem)] lg:hidden">
           <Image
             src={image}
@@ -151,7 +151,7 @@ export default function HomeBanner({
         </div>
 
         {/* Left content */}
-        <div className="relative z-10 flex w-full flex-col justify-center py-10 lg:min-h-[640px] lg:w-[48%] lg:py-16">
+        <div className="relative z-10 flex w-full flex-col justify-center py-10 lg:min-h-[580px] lg:w-[48%] lg:py-16">
           <p className="animate-fade-up mb-5 flex items-center gap-2 text-sm font-semibold tracking-wide text-[#0b1324] sm:text-[0.95rem]">
             <PawPrint
               className="h-4 w-4 shrink-0 text-[#0b1324] rotate-[12deg]"
