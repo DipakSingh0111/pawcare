@@ -35,11 +35,11 @@ export default function PartnersSection({
             <span className="h-[1.5px] w-10 shrink-0 bg-[#ffb016] sm:w-12" aria-hidden />
             <div className="mx-3 flex items-center gap-2">
               <PawPrint
-                className="h-4 w-4 shrink-0 text-[#ffb016]"
+                className="h-6 w-6 shrink-0 text-[#ffb016]"
                 strokeWidth={2.5}
                 fill="#ffb016"
               />
-              <p className="text-sm font-bold tracking-[0.16em] text-[#ffb016] uppercase">
+              <p className="text-base sm:text-lg font-bold tracking-[0.16em] text-[#ffb016] uppercase">
                 {partners.tagline}
               </p>
             </div>
@@ -54,7 +54,7 @@ export default function PartnersSection({
           <div className="mt-4 flex w-full items-center justify-center">
             <span className="h-[1.5px] w-12 shrink-0 bg-[#ffb016] sm:w-14" aria-hidden />
             <PawPrint
-              className="mx-2.5 h-4 w-4 shrink-0 text-[#ffb016]"
+              className="mx-2.5 h-6 w-6 shrink-0 text-[#ffb016]"
               strokeWidth={2.5}
               fill="#ffb016"
             />

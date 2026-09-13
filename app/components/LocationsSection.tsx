@@ -50,7 +50,7 @@ export default function LocationsSection({
             fill="#0b1324"
           />
 
-          <span className="mb-3 text-sm font-bold tracking-[0.16em] text-[#ffb016] uppercase">
+          <span className="mb-3 text-base sm:text-lg font-bold tracking-[0.16em] text-[#ffb016] uppercase">
             {locations.tagline}
           </span>
 
@@ -62,7 +62,7 @@ export default function LocationsSection({
           <div className="mt-4 mb-5 flex w-full items-center justify-center">
             <span className="h-[1.5px] w-12 shrink-0 bg-[#ffb016] sm:w-14" aria-hidden />
             <Heart
-              className="mx-2.5 h-4 w-4 shrink-0 text-[#ffb016]"
+              className="mx-2.5 h-6 w-6 shrink-0 text-[#ffb016]"
               strokeWidth={2.25}
             />
             <span className="h-[1.5px] w-12 shrink-0 bg-[#ffb016] sm:w-14" aria-hidden />

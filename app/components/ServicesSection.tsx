@@ -49,7 +49,7 @@ export default function ServicesSection({
             />
             <div className="flex items-center gap-3">
               <span className="h-[2px] w-8 bg-[#ffb016] sm:w-10" />
-              <p className="text-sm font-bold tracking-[0.16em] text-[#ffb016] uppercase">
+              <p className="text-base sm:text-lg font-bold tracking-[0.16em] text-[#ffb016] uppercase">
                 {eyebrow}
               </p>
               <span className="h-[2px] w-8 bg-[#ffb016] sm:w-10" />
@@ -64,7 +64,7 @@ export default function ServicesSection({
           <div className="mt-4 flex w-full items-center justify-center">
             <span className="h-[2px] w-12 shrink-0 bg-[#ffb016] sm:w-14" aria-hidden />
             <Heart
-              className="mx-2.5 h-4 w-4 shrink-0 text-[#ffb016]"
+              className="mx-2.5 h-6 w-6 shrink-0 text-[#ffb016]"
               strokeWidth={2.25}
             />
             <span className="h-[2px] w-12 shrink-0 bg-[#ffb016] sm:w-14" aria-hidden />

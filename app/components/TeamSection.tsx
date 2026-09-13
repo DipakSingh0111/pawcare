@@ -60,7 +60,7 @@ export default function TeamSection({
         <div className="mx-auto mb-12 max-w-2xl text-center sm:mb-14">
           <div className="mb-3 flex items-center justify-center gap-3">
             <span className="h-[1.5px] w-8 bg-[#ffb016] sm:w-10" />
-            <p className="text-[13px] font-bold tracking-[0.2em] text-[#ffb016] uppercase">
+            <p className="text-sm sm:text-base font-bold tracking-[0.2em] text-[#ffb016] uppercase">
               {team.tagline}
             </p>
             <span className="h-[1.5px] w-8 bg-[#ffb016] sm:w-10" />

@@ -44,11 +44,11 @@ export default function PricingSection({
             />
             <div className="mx-0 inline-flex items-center gap-2 rounded-full border border-[#ffb016] bg-white px-4 py-1.5 sm:px-5">
               <PawPrint
-                className="h-3.5 w-3.5 text-[#ffb016]"
+                className="h-5 w-5 sm:h-6 sm:w-6 text-[#ffb016]"
                 strokeWidth={2.5}
                 fill="#ffb016"
               />
-              <p className="text-xs font-bold tracking-[0.16em] text-[#ffb016] uppercase">
+              <p className="text-sm sm:text-base font-bold tracking-[0.16em] text-[#ffb016] uppercase">
                 {pricing.tagline}
               </p>
             </div>
